@@ -1,0 +1,47 @@
+<nav class="navbar navbar-default navbar-static-top app-navbar">
+    <div class="container">
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-left">
+                <li class="app-title">
+                    <a routerLink="home">
+                        Let's plant a tree 
+                        <span class="glyphicon glyphicon-tree-deciduous app-tree"></span>
+                    </a>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav">
+                <li class="{{ getNavItemClass('home') }}">
+                    <a routerLink="home">Home</a>
+                </li>
+                <li class="{{ getNavItemClass('event') }}">
+                    <a routerLink="event">Events</a>
+                </li>
+                <li class="{{ getNavItemClass('gallery') }}">
+                    <a routerLink="gallery">Gallery</a>
+                </li>
+                <li class="{{ getNavItemClass('about') }}">
+                    <a routerLink="about">About</a>
+                </li>
+                <li class="{{ getNavItemClass('contact') }}">
+                    <a routerLink="contact">Contact</a>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li class="{{ getNavItemClass('myprofile') }}" *ngIf="isSignedIn">
+                    <a routerLink="myprofile">
+                        <i class="glyphicon glyphicon-user"></i>
+                    </a>
+                </li>
+                <li *ngIf="!isSignedIn" class="navbar-btn navbar-signup">
+                    <button type="button" (click)="onClickSignUp()" class="btn btn-danger btn-sm navbar-signup-btn">Sign Up</button>
+                </li>
+                <li *ngIf="!isSignedIn" class="navbar-btn">
+                    <button type="button" (click)="onClickLogIn()" class="btn btn-default btn-sm navbar-login-btn">Log in</button>
+                </li>
+                <li *ngIf="isSignedIn" class="navbar-btn">
+                    <button type="button" (click)="onClickLogOut()" class="btn btn-default btn-sm">Log out</button>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>

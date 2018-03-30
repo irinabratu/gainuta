@@ -1,0 +1,69 @@
+## CLI
+
+- npm install -g @angular/cli
+- ng new static
+- cd static
+- ng build
+- ng serve
+- go to localhost:4200
+- ng generate component home-page --inline-template --inline-style
+- npm install @angular/router --save
+- npm install bootstrap
+- npm install jquery
+- config angular-cli.json styles/scripts
+- npm install -g firebase-tools
+- firebase login
+- firebase init
+- ng build -prod
+- firebase use --add
+- firebase use letsplantatreengo1
+- firebase deploy
+- [ ] What do you want to use as your public directory? dist
+- [ ] Configure as a single-page app (rewrite all urls to /index.html)? Yes
+- [ ] File dist/index.html already exists. Overwrite? No
+- ng generate component app-contact-form --spec=false
+- npm install ngx-date-picker --save
+- [ ] https://www.npmjs.com/package/ngx-date-picker
+- npm install
+- npm install -g typescript@latest
+- npm install jquery --save
+- npm install moment --save
+- npm install --save font-awesome angular2-fontawesome
+-
+- npm uninstall -g @angular/cli angular-cli
+- npm cache clean
+- npm install -g @angular/cli@latest
+-
+- npm install @angular/animations --save
+- npm install ng2-toastr --save
+- npm install -g firebase-tools
+- npm install linqts --save
+- npm install handlebars@latest
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+- npm install @angular/common@latest @angular/compiler@latest @angular/compiler-cli@latest @angular/core@latest @angular/forms@latest @angular/http@latest @angular/platform-browser@latest @angular/platform-browser-dynamic@latest @angular/platform-server@latest @angular/router@latest @angular/animations@latest typescript@latest --save

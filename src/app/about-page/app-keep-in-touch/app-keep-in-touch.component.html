@@ -1,0 +1,13 @@
+<div class="row text-center keep-box">
+    <div class="row">
+        <span class="keep-title">Keep in Touch</span>
+    </div>
+    <div class="row keep-email">
+        <div class="col-md-8 col-md-offset-2">
+            <input type="text" [(ngModel)]="model.Email" name="Email" class="form-control" placeholder="Email address..." maxlength="64" />
+        </div>
+    </div>
+    <div class="row keep-button">
+        <button type="button" class="btn btn-success" (click)="onClickSubscribe()">Sign up</button>
+    </div>
+</div>

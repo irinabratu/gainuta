@@ -1,0 +1,50 @@
+.full-width {
+    width: 100vw;
+    position: relative;
+    left: 49.298%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+}
+
+.home-header {
+    background-image: url(../../assets/images/home-head.jpg);
+    /*background-size: cover;*/
+    background-position: center;
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
+    width: 1920px;
+    height: 550px;
+    color: white;
+}
+
+.home-header-top {
+    padding-top: 125px;
+}
+
+.home-header-title {
+    font-size: 48px;
+}
+
+.home-header-text {
+    padding-top: 50px;
+    font-size: 18px;
+}
+
+.home-body {
+    margin-top: 20px;
+    background-color: inherit !important;
+}
+
+.home-subscribe {
+    background-image: url(../../assets/images/subscribe-row.jpg);
+    background-position: center;
+    width: 1920px;
+    height: 228px;
+}
+
+.home-aboutus {
+    padding-top: 100px;
+    padding-bottom: 50px;
+    font-size: 36px; 
+}
+

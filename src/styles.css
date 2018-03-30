@@ -1,0 +1,50 @@
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+@font-face {
+    src: url('assets/fonts/SourceSansPro-Semibold.otf');
+    font-family: 'Source Sans Pro Semibold'
+}
+
+@font-face {
+    src: url('assets/fonts/Istok-Regular.ttf');
+    font-family: 'Istok Regular'
+}
+
+@font-face {
+    src: url('assets/fonts/Istok-Bold.ttf');
+    font-family: 'Istok Bold'
+}
+
+@font-face {
+    src: url('assets/fonts/Istok-Italic.ttf');
+    font-family: 'Istok Italic'
+}
+
+@font-face {
+    src: url('assets/fonts/Istok-BoldItalic.ttf');
+    font-family: 'Istok BoldItalic'
+}
+
+body {
+    font-family: 'Istok Regular' !important;
+}
+
+.jumbotron {
+    background-color: #f7f7f7 !important;
+}
+
+.first-row {
+    padding-top: 20px;
+}
+
+.black-hr {
+    border-color: black;
+}
+
+.bold-text {
+    font-weight: bold;
+}
+
+/*.btn {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif !important;
+}*/

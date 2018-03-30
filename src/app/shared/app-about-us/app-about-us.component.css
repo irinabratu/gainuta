@@ -1,0 +1,30 @@
+.aboutus-donate-row {
+    padding-top: 30px;
+}
+
+.aboutus-donate-image {
+    height:30px;
+}
+
+.aboutus-donate-text {
+    padding-right: 8px;
+}
+
+.aboutus-payment-method {
+    padding-top: 10px;
+}
+
+.aboutus-bubbles {
+    padding-top: 20px;
+}
+
+.aboutus-bubbles-title {
+    font-size: 24px;
+}
+
+.aboutus-bubbles-text {
+    font-size: 16px;
+    padding-top: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+}

@@ -1,0 +1,23 @@
+<div class="container" style="color: white;">
+    
+    <div class="first-row">
+    
+    </div>
+
+    <div class="row text-center-title">
+        <span class="subscribe-title">
+            Subscribe
+        </span>
+    </div>
+
+    <div class="row text-center-text">
+        <span class="subscribe-text">
+            Sign up to hear about our events
+        </span>
+    </div>
+
+    <div class="row text-center-email">
+            <input type="email" [(ngModel)]="model.Email" name="Email" class="subscribe-email" placeholder="Email Address ..." maxlength="128" required/>
+            <button type="button" class="btn btn-default btn-sm subscribe-signup-btn" (click)="onClickSubscribe()">Sign Up</button>
+    </div>
+</div>

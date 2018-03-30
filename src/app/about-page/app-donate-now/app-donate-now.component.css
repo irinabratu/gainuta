@@ -1,0 +1,28 @@
+.jumbo-height {
+    min-height: 350px;
+}
+
+.donate-title {
+    font-size: 32px;
+}
+
+.donate-description { 
+    padding-top: 30px; 
+    font-size: 18px;
+}
+
+.donate-button { 
+    padding-top: 50px;
+}
+
+.donate-image {
+    height:30px;
+}
+
+.donate-button-text { 
+    padding-right: 8px;
+}
+
+.donate-payment-method {
+    padding-top: 20px;
+}

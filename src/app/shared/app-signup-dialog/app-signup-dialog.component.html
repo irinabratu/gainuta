@@ -1,0 +1,39 @@
+<div class="row">
+    <form name="signupForm" #signupForm="ngForm">
+        <div class="modal-header">
+            <h2 class="modal-title">Sign up</h2>
+        </div>
+
+        <div class="modal-body">
+            <div class="form-group">
+                <label>Name*</label>
+                <input type="text" name="Name" [(ngModel)]="model.Name" #Name="ngModel" class="form-control" required/>
+            </div>
+
+            <div class="form-group">
+                <label>Email*</label>
+                <input type="email" name="Email" [(ngModel)]="model.Email" #Email="ngModel" class="form-control" required/>
+            </div>
+
+            <div class="form-group">
+                <label>Phone</label>
+                <input type="text" name="Phone" [(ngModel)]="model.Phone" #Phone="ngModel" class="form-control"/>
+            </div>
+
+            <div class="form-group">
+                <label>Password*</label>
+                <input type="password" name="Password" [(ngModel)]="model.Password" #Password="ngModel" class="form-control" required/>
+            </div>
+
+            <div class="form-group">
+                <label>Repeat password*</label>
+                <input type="password" name="RepeatPassword" [(ngModel)]="model.RepeatPassword" #RepeatPassword="ngModel" class="form-control" required/>
+            </div>
+        </div>
+
+        <div class="modal-footer">
+            <button type="submit" class="btn btn-success" (click)="onClickSubmit()">Submit</button>
+            <button type="button" class="btn btn-default" (click)="onClickCancel()">Cancel</button>
+        </div>
+    </form>
+</div>

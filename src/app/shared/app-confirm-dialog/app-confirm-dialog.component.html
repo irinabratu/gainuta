@@ -1,0 +1,18 @@
+<div class="row">
+    <div class="modal-header">
+        <h2 class="modal-title">
+            Confirm
+        </h2>
+    </div>
+    <div class="modal-body">
+        <div class="row">
+            <div class="col-md-12">
+                {{ message }}
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="submit" class="btn btn-success ok-btn" (click)="onClickOk()">OK</button>
+        <button type="button" class="btn btn-default" (click)="onClickCancel()">Cancel</button>
+    </div>
+</div>

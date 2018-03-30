@@ -1,0 +1,21 @@
+.contact-header {
+    height: 220px;
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    font-family: Abel,Tahoma,sans-serif;
+}
+
+.contact {
+    padding-bottom: 0.02px;
+    font-size: 33px;
+}
+
+.help {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.help-text {
+    font-size: 16px;
+}

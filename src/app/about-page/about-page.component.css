@@ -1,0 +1,41 @@
+.about-box-group {
+    color: white; 
+    padding-top: 30px;
+    padding-left: 15px; 
+    padding-right: 15px;
+}
+
+.about-box {
+    min-height:400px;
+    background-position: center;
+}
+
+.about-box-content {
+    background-color: rgba(17, 17, 17, 0.5);
+    position: absolute;
+    text-align: center;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.about-box-title {
+    position: relative;
+    top: 20%;
+    font-size: 28px;
+}
+
+.about-box-description {
+    position: relative;
+    top: 35%;
+    font-size: 16px;
+    float: left;
+}
+
+.donate-box {
+    padding-top: 50px; padding-bottom: 10px;
+}
