@@ -8,7 +8,8 @@ import { MatDialogModule } from '@angular/material';
 import { ToastModule } from 'ng2-toastr/ng2-toastr';
 import { ToastOptions } from 'ng2-toastr';
 import { ToastrCustomOption } from '../utils/toastr-custom-option';
-import { MatFormFieldModule } from '@angular/material/form-field';
+// import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatFormFieldModule, MatInputModule } from '@angular/material';
 
 import { AppComponent } from './app.component';
 import { HomePageComponent } from './home-page/home-page.component';
@@ -80,6 +81,7 @@ const appRoutes: Routes = [
         BrowserAnimationsModule,
         MatDialogModule,
         MatFormFieldModule,
+        MatInputModule,
         ToastModule.forRoot(),
     ],
     providers: [{

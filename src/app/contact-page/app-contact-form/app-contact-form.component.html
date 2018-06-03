@@ -3,26 +3,27 @@
         <div class="row">
             <div class="col-md-6">
                 <div class="form-group">
-                    <label>Name</label>
-                    <!-- <input type="text" [(ngModel)]="model.Name" #Name name="Name" class="form-control" maxlength="64" required /> -->
                     <mat-form-field>
-                        <input matInput placeholder="Input" [(ngModel)]="model.Name" name="Name">
+                        <input matInput placeholder="Nume" [(ngModel)]="model.Name" name="Nume">
                     </mat-form-field>
                 </div>
                 <div class="form-group">
-                    <label>Email</label>
-                    <input type="email" [(ngModel)]="model.Email" name="Email" class="form-control" maxlength="64" required />
+                    <mat-form-field>
+                        <input matInput placeholder="Email" [(ngModel)]="model.Email" name="Email">
+                    </mat-form-field>
                 </div>
                 <div class="form-group">
-                    <label>Phone</label>
-                    <input type="text" [(ngModel)]="model.Phone" name="Phone" class="form-control" maxlength="64" />
+                    <mat-form-field>
+                        <input matInput placeholder="Telefon" [(ngModel)]="model.Phone" name="Phone">
+                    </mat-form-field>
                 </div>
                 <div class="form-group">
-                    <label>Message</label>
-                    <textarea [(ngModel)]="model.Message" name="Message" class="form-control message-input" rows="3" maxlength="256" required></textarea>
+                    <mat-form-field>
+                        <textarea matInput placeholder="Mesaj" [(ngModel)]="model.Message" name="Message"></textarea>
+                    </mat-form-field>                
                 </div>
                 <div class="form-group">
-                    <button type="submit" class="btn btn-success pull-right" (click)="onClickSend()">Send</button>
+                    <button type="submit" class="btn btn-success pull-right" (click)="onClickSend()">Trimite</button>
                 </div>
                 <br />
                 <br />
