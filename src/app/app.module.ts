@@ -8,6 +8,7 @@ import { MatDialogModule } from '@angular/material';
 import { ToastModule } from 'ng2-toastr/ng2-toastr';
 import { ToastOptions } from 'ng2-toastr';
 import { ToastrCustomOption } from '../utils/toastr-custom-option';
+import { MatFormFieldModule } from '@angular/material/form-field';
 
 import { AppComponent } from './app.component';
 import { HomePageComponent } from './home-page/home-page.component';
@@ -35,7 +36,7 @@ import { ProductsListComponent } from './products-page/products-list.component';
 const appRoutes: Routes = [
     { path: 'home', component: HomePageComponent },
     { path: 'event', component: EventPageComponent },
-    { path: 'products', component: ProductsListComponent },    
+    { path: 'products', component: ProductsListComponent },
     { path: 'event/edit/:id', component: AppEditEventComponent },
     { path: 'gallery', component: GalleryPageComponent },
     { path: 'about', component: AboutPageComponent },
@@ -78,10 +79,11 @@ const appRoutes: Routes = [
         RouterModule.forRoot(appRoutes),
         BrowserAnimationsModule,
         MatDialogModule,
+        MatFormFieldModule,
         ToastModule.forRoot(),
     ],
     providers: [{
-        provide: ToastOptions, 
+        provide: ToastOptions,
         useClass: ToastrCustomOption
     }],
     bootstrap: [AppComponent],

@@ -1,6 +1,10 @@
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 @import "../node_modules/font-awesome/css/font-awesome.css";
 
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300|Nunito+Sans');
+
 @font-face {
     src: url('assets/fonts/SourceSansPro-Semibold.otf');
     font-family: 'Source Sans Pro Semibold'
@@ -27,7 +31,7 @@
 }
 
 body {
-    font-family: 'Istok Regular' !important;
+    font-family: 'Montserrat', sans-serif !important;
 }
 
 .jumbotron {
@@ -43,9 +47,7 @@ body {
 }
 
 .bold-text {
-    font-weight: bold;
+    font-weight: 200;
 }
 
-/*.btn {
-    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif !important;
-}*/
+
