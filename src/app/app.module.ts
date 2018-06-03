@@ -30,10 +30,12 @@ import { AppLoginDialogComponent } from './shared/app-login-dialog/app-login-dia
 import { AppSignupDialogComponent } from './shared/app-signup-dialog/app-signup-dialog.component';
 import { AppConfirmDialogComponent } from './shared/app-confirm-dialog/app-confirm-dialog.component';
 import { AppBreadcrumbComponent } from './shared/app-breadcrumb/app-breadcrumb.component';
+import { ProductsListComponent } from './products-page/products-list.component';
 
 const appRoutes: Routes = [
     { path: 'home', component: HomePageComponent },
     { path: 'event', component: EventPageComponent },
+    { path: 'products', component: ProductsListComponent },    
     { path: 'event/edit/:id', component: AppEditEventComponent },
     { path: 'gallery', component: GalleryPageComponent },
     { path: 'about', component: AboutPageComponent },
@@ -66,7 +68,8 @@ const appRoutes: Routes = [
         AppLoginDialogComponent,
         AppSignupDialogComponent,
         AppConfirmDialogComponent,
-        AppBreadcrumbComponent
+        AppBreadcrumbComponent,
+        ProductsListComponent
     ],
     imports: [
         BrowserModule,
