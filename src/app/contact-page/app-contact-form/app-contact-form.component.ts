@@ -2,6 +2,8 @@ import { Component, OnInit, AfterViewInit, ViewChild, ElementRef } from '@angula
 import { ActivatedRoute } from '@angular/router';
 import { ValidationHelpers } from '../../../utils/ValidationHelpers';
 import { ToastsManager } from 'ng2-toastr/ng2-toastr';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import {FormControl, Validators} from '@angular/forms';
 
 @Component({
     selector: 'app-contact-form',
@@ -19,6 +21,8 @@ export class AppContactFormComponent implements OnInit {
     constructor(private route: ActivatedRoute, public toastr: ToastsManager) {
         this.model = {};
     }
+
+    email = new FormControl('', [Validators.required, Validators.email]);
 
     ngOnInit() {
 
@@ -39,50 +43,9 @@ export class AppContactFormComponent implements OnInit {
     }
 
     onClickSend() {
-
-        if (!this.model.Name) {
-            this.toastr.error('Name is required', 'Error!');
-            return;
-        }
-
-        if (this.model.Name.length < 5) {
-            this.toastr.error('Name is too short', 'Error!');
-            return;
-        }
-
-        if (!this.model.Email) {
-            this.toastr.error('Email is required', 'Error!');
-            return;
-        }
-
-        let isValidEmail = ValidationHelpers.validateEmail(this.model.Email);
-
-        if (!isValidEmail) {
-            this.toastr.error('Invalid email', 'Error!');
-            return;
-        }
-
-        if (this.model.Phone) {
-            let isValidPhone = ValidationHelpers.validatePhone(this.model.Phone);
-
-            if (!isValidPhone || this.model.Phone.length < 8) {
-                this.toastr.error('Invalid phone number', 'Error!');
-                return;
-            }
-        }
-
-        if (!this.model.Message) {
-            this.toastr.error('Message is required', 'Error!');
-            return;
-        }
-
-        if (this.model.Message.length < 10) {
-            this.toastr.error('Message is too short', 'Error!');
-            return;
-        }
-        
-        this.toastr.info('It\'s not working yet, sorry :)');
-        this.model = {};
-        //this.toastr.success('An email was sent to your address', 'Success!');
     }
+
+    getErrorMessage(){
+        return "invalid email";
+    }    
 }

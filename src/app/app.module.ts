@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule, Routes } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -8,8 +8,9 @@ import { MatDialogModule } from '@angular/material';
 import { ToastModule } from 'ng2-toastr/ng2-toastr';
 import { ToastOptions } from 'ng2-toastr';
 import { ToastrCustomOption } from '../utils/toastr-custom-option';
-// import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatFormFieldModule, MatInputModule } from '@angular/material';
+import { MatButtonModule } from '@angular/material/button';
+import { FormControl, Validators } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { HomePageComponent } from './home-page/home-page.component';
@@ -82,6 +83,8 @@ const appRoutes: Routes = [
         MatDialogModule,
         MatFormFieldModule,
         MatInputModule,
+        MatButtonModule,
+        ReactiveFormsModule,
         ToastModule.forRoot(),
     ],
     providers: [{
