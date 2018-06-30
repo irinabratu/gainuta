@@ -23,7 +23,7 @@ export class AppContactFormComponent implements OnInit {
     }
 
     email = new FormControl('', [Validators.required, Validators.email]);
-
+    
     ngOnInit() {
 
         this.subscribe = this.route.params.subscribe(params => {
@@ -47,5 +47,6 @@ export class AppContactFormComponent implements OnInit {
 
     getErrorMessage(){
         return "invalid email";
-    }    
+    }
+
 }

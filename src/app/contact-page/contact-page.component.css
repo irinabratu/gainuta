@@ -1,4 +1,10 @@
 .contact-map {
-    padding-top: 25px;
+    padding-top: 100px;
     padding-bottom: 25px;
+}
+
+.contact-form{
+    padding-top: 100px;
+    padding-bottom: 25px;
+    padding-right: 25px;
 }

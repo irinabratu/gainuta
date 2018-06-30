@@ -1,10 +1,14 @@
-<div class="container">
+<!-- <div class="container"> -->
     <form>
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-12">
                 <div class="form-group">
+                    <div class="form-title">
+                        <span class="glyphicon glyphicon-send"></span>
+                        Leave a message
+                    </div>
                     <mat-form-field>
-                        <input matInput placeholder="Nume" [(ngModel)]="model.Name" name="Nume">
+                        <input matInput placeholder="Name" [(ngModel)]="model.Name" name="Nume">
                     </mat-form-field>
                 </div>
                 <div class="form-group">
@@ -17,60 +21,20 @@
                 </div>
                 <div class="form-group">
                     <mat-form-field>
-                        <input matInput placeholder="Telefon" [(ngModel)]="model.Phone" name="Phone">
+                        <input matInput placeholder="Phone" [(ngModel)]="model.Phone" name="Phone">
                     </mat-form-field>
                 </div>
                 <div class="form-group">
                     <mat-form-field>
-                        <textarea matInput placeholder="Mesaj" [(ngModel)]="model.Message" name="Message"></textarea>
+                        <textarea matTextareaAutosize matAutosizeMinRows=7 matAutosizeMaxRows=100 matInput placeholder="Say your thing" required [(ngModel)]="model.Message" name="Message"></textarea>
                     </mat-form-field>                
                 </div>
                 <div class="form-group">
-                    <button mat-raised-button type="submit" (click)="onClickSend()">Trimite</button>
+                    <button mat-raised-button type="submit" (click)="onClickSend()">Send</button>
                 </div>
                 <br />
                 <br />
-            </div>
-
-            <div class="col-md-4 col-md-offset-1 contact-address">
-                <div class="row">
-                    <i class="glyphicon glyphicon-map-marker"></i>
-                    <br />
-                    <span>Bulevardul Ion C. Bratianu 12</span>
-                    <br />
-                    <span>Bucharest, Romania</span>
-                    <br />
-                    <br />
-                    <i class="glyphicon glyphicon-earphone"></i>
-                    <br />
-                    <span>(+40) 748 087 002</span>
-                    <br />
-                    <br />
-                    <i class="glyphicon glyphicon-envelope"></i>
-                    <br />
-                    <span>letsplantatreeNGO@gmail.com</span>
-                    <br />
-                    <br />
-                    <i class="glyphicon glyphicon-calendar"></i>
-                    <br />
-                    <div class="row">
-                        <div class="col-md-2 col-md-offset-3">Mon</div>
-                        <div class="col-md-5">9:00 am - 5:00 pm</div>
-                        <div class="col-md-2 col-md-offset-3">Tue</div>
-                        <div class="col-md-5">9:00 am - 5:00 pm</div>
-                        <div class="col-md-2 col-md-offset-3">Wed</div>
-                        <div class="col-md-5">9:00 am - 5:00 pm</div>
-                        <div class="col-md-2 col-md-offset-3">Thu</div>
-                        <div class="col-md-5">9:00 am - 5:00 pm</div>
-                        <div class="col-md-2 col-md-offset-3">Fri</div>
-                        <div class="col-md-5">9:00 am - 5:00 pm</div>
-                        <div class="col-md-2 col-md-offset-3">Sat</div>
-                        <div class="col-md-5">9:00 am - 1:00 pm</div>
-                        <div class="col-md-2 col-md-offset-3">Sun</div>
-                        <div class="col-md-5">Closed</div>
-                    </div>
-                </div>
             </div>
         </div>
     </form>
-</div>
+<!-- </div> -->
