@@ -10,6 +10,7 @@ import { ToastOptions } from 'ng2-toastr';
 import { ToastrCustomOption } from '../utils/toastr-custom-option';
 import { MatFormFieldModule, MatInputModule } from '@angular/material';
 import { MatButtonModule } from '@angular/material/button';
+import {MatCardModule} from '@angular/material/card';
 import { FormControl, Validators } from '@angular/forms';
 
 import { AppComponent } from './app.component';
@@ -85,6 +86,7 @@ const appRoutes: Routes = [
         MatInputModule,
         MatButtonModule,
         ReactiveFormsModule,
+        MatCardModule,
         ToastModule.forRoot(),
     ],
     providers: [{
