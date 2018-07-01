@@ -1,7 +1,5 @@
- .app-navbar {
-    min-height: 40px;
+.app-navbar {
     font-family: 'Nunito Sans', sans-serif;
-    height: 40px;
     font-size: 16px;
     background-color: white;
     margin-bottom: 0;
@@ -21,24 +19,19 @@
 
 .navbar-default .navbar-nav > .active > a {
     background-color: white;
-    height: 40px;
 }
 
-.container {
-    height:inherit;
-}
 
-.app-navbar-links {
-    height: 40px;
-    text-align: center;
-    vertical-align:middle;
+.app-navbar-container {
+    min-height: 100px;
+    padding-top: 60px;
 }
 
 .app-navbar-list {
     padding-top: 8.5px;
-    width: 100%;
-    height: 40px;
     margin: auto;
+    text-align: right;
+    vertical-align: bottom;
 }
 
 .navbar-item {
