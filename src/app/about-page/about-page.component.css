@@ -1,41 +1,40 @@
 .about-box-group {
-    color: white; 
-    padding-top: 30px;
-    padding-left: 15px; 
-    padding-right: 15px;
+
+    padding-top: 80px;
+    font-family: Nunito Sans, sans-serif;
 }
 
-.about-box {
+
+.about-box-text {
     min-height:400px;
-    background-position: center;
 }
+
+
+.about-box-photo {
+    height:400px;
+}
+
 
 .about-box-content {
-    background-color: rgba(17, 17, 17, 0.5);
-    position: absolute;
-    text-align: center;
-    left: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    display: block;
-    padding-left: 5px;
-    padding-right: 5px;
+    padding-left: 15px;
+    padding-right: 10px;
 }
 
-.about-box-title {
-    position: relative;
-    top: 20%;
-    font-size: 28px;
+
+.about-name {
+    padding-top: 30px;
+    font-weight: bold;
 }
 
-.about-box-description {
-    position: relative;
-    top: 35%;
-    font-size: 16px;
-    float: left;
+
+.about-job {
+    padding-top:10px;
+    font-weight: 200;
 }
 
-.donate-box {
-    padding-top: 50px; padding-bottom: 10px;
+
+.about-description {
+    padding-top: 20px;
+    padding-bottom: 30px;
+    text-align: justify;
 }
