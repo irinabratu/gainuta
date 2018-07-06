@@ -3,32 +3,8 @@
 
 
 @import url('https://fonts.googleapis.com/css?family=Montserrat:300');
-@import url('https://fonts.googleapis.com/css?family=Montserrat:300|Nunito+Sans');
+@import url('https://fonts.googleapis.com/css?family=Nunito+Sans:200i,300,400,700,800');
 
-@font-face {
-    src: url('assets/fonts/SourceSansPro-Semibold.otf');
-    font-family: 'Source Sans Pro Semibold'
-}
-
-@font-face {
-    src: url('assets/fonts/Istok-Regular.ttf');
-    font-family: 'Istok Regular'
-}
-
-@font-face {
-    src: url('assets/fonts/Istok-Bold.ttf');
-    font-family: 'Istok Bold'
-}
-
-@font-face {
-    src: url('assets/fonts/Istok-Italic.ttf');
-    font-family: 'Istok Italic'
-}
-
-@font-face {
-    src: url('assets/fonts/Istok-BoldItalic.ttf');
-    font-family: 'Istok BoldItalic'
-}
 
 body {
     font-family: 'Montserrat', sans-serif !important;
