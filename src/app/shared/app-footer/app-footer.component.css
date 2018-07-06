@@ -1,7 +1,27 @@
-.footer {
-    background-color: #5f5f5f;
-    margin-top: -21px;
+.footer-bar {
+    background-color: #23282D;
     border: 1px solid transparent;
-    line-height: 46px;
-    color: white;
+    line-height: 100px;
+}
+
+.footer-copyright {
+    color: beige;
+}
+
+.footer-social {
+    color: beige;
+    float: right;
+}
+
+.footer-social > a {
+    padding-right: 20px;
+    float: right;
+    text-decoration: none;
+    color: beige;
+    -webkit-transition: color 0.2s, font-size 0.2s;
+    transition: color 0.2s, font-size 0.2s ease-out;
+}
+
+.footer-social > a:hover {
+    font-size: 16px;
 }
