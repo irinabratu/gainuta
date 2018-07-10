@@ -21,7 +21,7 @@
     text-decoration: none;
     color: beige;
     -webkit-transition: color 0.2s, font-size 0.2s;
-    transition: color 0.2s, font-size 0.2s ease-out;
+    transition: color 0.2s, font-size 0.2s ease-in;
 }
 
 .footer-social > a:hover {
