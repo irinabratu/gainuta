@@ -3,6 +3,8 @@ import { Router } from '@angular/router';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 import { AppSignupDialogComponent } from '../app-signup-dialog/app-signup-dialog.component';
 import { AppLoginDialogComponent } from '../app-login-dialog/app-login-dialog.component';
+import { HostListener} from "@angular/core";
+
 
 @Component({
     selector: 'app-nav-bar',
@@ -64,5 +66,17 @@ export class AppNavBarComponent implements OnInit {
         });
         
         this.router.navigateByUrl('/home');
+    }
+
+    @HostListener("window:scroll", [])
+    onWindowScroll() {
+        debugger;
+        var navbar = document.getElementById("navbar");
+        var sticky = navbar.offsetTop;
+        if (window.pageYOffset >= sticky) {
+            navbar.classList.add("sticky")
+          } else {
+            navbar.classList.remove("sticky");
+          }
     }
 }

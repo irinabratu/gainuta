@@ -12,6 +12,7 @@ import { MatFormFieldModule, MatInputModule } from '@angular/material';
 import { MatButtonModule } from '@angular/material/button';
 import {MatCardModule} from '@angular/material/card';
 import { FormControl, Validators } from '@angular/forms';
+import { HostListener } from "@angular/core";
 
 import { AppComponent } from './app.component';
 import { HomePageComponent } from './home-page/home-page.component';
