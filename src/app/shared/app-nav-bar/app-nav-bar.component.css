@@ -6,32 +6,33 @@
     position: fixed; /* Set the navbar to fixed position */
     top: 0; /* Position the navbar at the top of the page */
     width: 100%; /* Full width */
+    min-height: 80px;
 }
 
 .navbar-item {
     cursor: pointer;
 }
 
-.navbar-nav > span > a {
+.navbar-collapse > span > a {
     margin-top: 1px;
     color: #23282D;
     text-decoration: none;
 }
 
-.navbar-default .navbar-nav > .active > a {
-    background-color: white;
+.navbar-default .navbar-collapse > .active > a {
+    background-color: beige;
 }
-
 
 .app-navbar-container {
     min-height: 80px;
 }
 
 .app-navbar-list {
+    display: block;
     padding-top: 53px;
     padding-bottom: 5px;
     margin: auto;
-    text-align: right;
+    display: flex; justify-content: flex-end;
 }
 
 .navbar-item {
