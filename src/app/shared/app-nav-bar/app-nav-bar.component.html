@@ -1,13 +1,13 @@
 <nav class="navbar navbar-default navbar-static-top app-navbar">
     <div class="container">
         <div id="navbar" class="row app-navbar-container">
-            <div class="col-xs-3 app-navbar-logo">
+            <div class="col-xs-3 navbar-brand app-navbar-logo">
                 <a target="" href="">
                     <img src="../../../assets/images/logo.png" alt="GAINARIE" width="80" height="60">
                 </a>
             </div>
             <div class="col-xs-9 nav navbar-nav app-navbar-list">
-                <div class="col-xs-11 navbar-collapse collapse">
+                <div class="col-xs-11 navbar-collapse collapse" id="navbarToggleExternalContent">
                     <span class="{{ getNavItemClass('home') }} navbar-item">
                         <a routerLink="home">Home</a>
                     </span>
@@ -30,7 +30,7 @@
                     </span>
                 </div>
                 <div class="col-xs-1">
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
                         <i class="fa fa-bars"></i>
                     </button>
                 </div>
