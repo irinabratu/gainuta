@@ -7,33 +7,30 @@
     top: 0; /* Position the navbar at the top of the page */
     width: 100%; /* Full width */
     min-height: 80px;
+    border-color: rgb(187, 187, 187);
 }
 
 .navbar-item {
     cursor: pointer;
 }
 
-.navbar-collapse > span > a {
+.navbar-collapse > ul > li > span > a {
     margin-top: 1px;
     color: #23282D;
     text-decoration: none;
 }
 
-.navbar-default .navbar-collapse > .active > a {
-    background-color: beige;
+.navbar-header {
+    min-height: 70px;
 }
-
-.app-navbar-container {
-    min-height: 80px;
-}
-
+/* 
 .app-navbar-list {
     display: block;
     padding-top: 53px;
     padding-bottom: 5px;
     margin: auto;
     display: flex; justify-content: flex-end;
-}
+} */
 
 .navbar-item {
     padding-left: 8px;
@@ -41,16 +38,31 @@
 }
 
 .app-navbar-logo {
-    padding-top: 15px;
+    padding-top: 10px;
     padding-bottom: 5px;
 }
 
-button {
+.nav-button {
     border: none;
-    background: none;
     text-decoration: none;
-    text-align: center;
-    align-items:flex-start;
 }
 
-button:focus {outline:0;}
+.nav-button:hover {
+    border: none;
+    text-decoration: none;
+    background: transparent;
+}
+
+.nav-button:active {
+    border: none;
+    text-decoration: none;
+    background: transparent;
+}
+
+.nav-button:focus {
+    outline: 0;
+}
+
+.navbar-inverse .navbar-toggle:focus, .navbar-inverse .navbar-toggle:hover {
+    background-color: transparent;
+}

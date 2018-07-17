@@ -1,40 +1,48 @@
-<nav class="navbar navbar-default navbar-static-top app-navbar">
+<nav class="navbar navbar-inverse navbar-static-top app-navbar">
     <div class="container">
-        <div id="navbar" class="row app-navbar-container">
-            <div class="col-xs-3 navbar-brand app-navbar-logo">
-                <a target="" href="">
-                    <img src="../../../assets/images/logo.png" alt="GAINARIE" width="80" height="60">
-                </a>
-            </div>
-            <div class="col-xs-9 nav navbar-nav app-navbar-list">
-                <div class="col-xs-11 navbar-collapse collapse" id="navbarToggleExternalContent">
+        <div class="navbar-header app-navbar-logo">
+            <button type="button" class="navbar-toggle collapsed nav-button" data-toggle="collapse" 
+                data-target="#navbar-item-list" aria-expanded="false">
+                <i class="fa fa-bars"></i>
+            </button>
+            <a routerLink="home">
+                <img src="../../../assets/images/logo.png" alt="GAINARIE" width="80" height="60">
+            </a>
+        </div>
+        <div class="collapse navbar-collapse" id="navbar-item-list">
+            <ul class="nav navbar-nav navbar-right app-navbar-list">
+                <li>
                     <span class="{{ getNavItemClass('home') }} navbar-item">
                         <a routerLink="home">Home</a>
                     </span>
+                </li>
+                <li>
                     <span class="{{ getNavItemClass('shop') }} navbar-item">
                         <a routerLink="shop">Shop</a>
                     </span>
+                </li>
+                <li>
                     <span class="{{ getNavItemClass('event') }} navbar-item">
-                        <!-- <a routerLink="event">Events</a> -->
                         Events
                     </span>
+                </li>
+                <li>
                     <span class="{{ getNavItemClass('gallery') }} navbar-item">
-                        <!-- <a routerLink="gallery">Portfolio</a> -->
                         Portfolio
                     </span>
+                </li>
+                <li>
                     <span class="{{ getNavItemClass('about') }} navbar-item">
                         <a routerLink="about">About</a>
                     </span>
+                </li>
+            
+                <li>
                     <span class="{{ getNavItemClass('contact') }} navbar-item">
                         <a routerLink="contact">Contact</a>
                     </span>
-                </div>
-                <div class="col-xs-1">
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <i class="fa fa-bars"></i>
-                    </button>
-                </div>
-            </div>
+                </li>
+            </ul>
         </div>
     </div>
 </nav>
