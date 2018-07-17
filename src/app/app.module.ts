@@ -36,9 +36,11 @@ import { AppSignupDialogComponent } from './shared/app-signup-dialog/app-signup-
 import { AppConfirmDialogComponent } from './shared/app-confirm-dialog/app-confirm-dialog.component';
 import { AppBreadcrumbComponent } from './shared/app-breadcrumb/app-breadcrumb.component';
 import { ProductsListComponent } from './products-page/products-list.component';
+import { ShopPageComponent } from './shop-page/shop-page.component';
 
 const appRoutes: Routes = [
     { path: 'home', component: HomePageComponent },
+    { path: 'shop', component: ShopPageComponent },
     { path: 'event', component: EventPageComponent },
     { path: 'products', component: ProductsListComponent },
     { path: 'event/edit/:id', component: AppEditEventComponent },
@@ -74,7 +76,8 @@ const appRoutes: Routes = [
         AppSignupDialogComponent,
         AppConfirmDialogComponent,
         AppBreadcrumbComponent,
-        ProductsListComponent
+        ProductsListComponent,
+        ShopPageComponent
     ],
     imports: [
         BrowserModule,
