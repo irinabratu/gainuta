@@ -1,4 +1,6 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Product } from '../../model/Product';
+import { ProductsMockup } from '../../utils/ProductsMockup';
 
 @Component({
   selector: 'shop-page',
@@ -9,7 +11,13 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 
 export class ShopPageComponent implements OnInit {
 
-  constructor() { }
+  Products: Product[];
+
+  constructor() { 
+    let productsMockup = new ProductsMockup();
+    this.Products = productsMockup.getProducts();
+    console.log(this.Products);
+  }
 
   ngOnInit() {
   }

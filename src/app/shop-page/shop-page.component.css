@@ -1,0 +1,31 @@
+.product-box {
+    min-height: 270px;
+    border: 1px solid grey;
+    padding-left: 25px;
+    padding-right: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-top: 10px;
+}
+
+.product-image {
+    height: 160px;
+}
+
+.product-title {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.product-description {
+    font-size: 13px;
+}
+
+.product-new {
+    color: red;
+}
+
+.product-price{
+    float: right;
+    font-weight: bold;
+}

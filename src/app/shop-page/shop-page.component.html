@@ -1,7 +1,35 @@
 <div class="container">
     <div class="row first-row">
         <div class="col-md-12">
-            Shop page!
+            Our products:
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-4" *ngFor="let product of Products">
+            <div class="product-box">
+                <div class="row product-image">
+                    {{ product.ImgUrl }}
+                </div>
+                <div class="row product-title">
+                    {{ product.Nume }}
+                </div>
+                <div class="row product-description">
+                    {{ product.Descriere }}
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <span class="product-new">
+                            {{ product.Nou ? '(new)' : ''}}
+                        </span>
+                    </div>
+                    <div class="col-md-6">
+                        <span class="product-price">
+                            {{ product.Pret + ' RON' }}
+                        </span>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
