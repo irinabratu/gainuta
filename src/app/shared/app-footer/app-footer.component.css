@@ -13,6 +13,8 @@
 
 .footer-social {
     color: beige;
+    display: flex;
+    justify-content: space-evenly;
 }
 
 .footer-social > a {
