@@ -6,7 +6,7 @@
     position: fixed; 
     top: 0; 
     width: 100%; 
-    min-height: 80px;
+    min-height: 75px;
     border-color: rgb(187, 187, 187);
     padding-right: 10px;
 }
@@ -71,4 +71,8 @@
 .shopping-cart {
     margin-left: 10px;
     cursor: pointer;
+}
+
+.navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
+    border-color:rgb(187, 187, 187);
 }
