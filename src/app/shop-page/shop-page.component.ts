@@ -13,12 +13,16 @@ export class ShopPageComponent implements OnInit {
 
   Products: Product[];
 
-  constructor() { 
-    let productsMockup = new ProductsMockup();
+  constructor() {
+    const productsMockup = new ProductsMockup();
     this.Products = productsMockup.getProducts();
     console.log(this.Products);
   }
 
   ngOnInit() {
+  }
+
+  onClickAddToCart(product: Product) {
+    console.log(product);
   }
 }

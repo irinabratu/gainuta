@@ -29,3 +29,20 @@
     float: right;
     font-weight: bold;
 }
+
+.add-to-cart-btn {
+    background-color: #005eb8;
+    height: 30px;
+    line-height: 30px !important;
+    color: white !important;
+}
+
+.shopping-cart-icon {
+    float: left; 
+    line-height: 26px;
+}
+
+.add-to-cart-btn-text {
+    float: right; 
+    padding-right: 5px;
+}
