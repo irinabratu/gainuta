@@ -8,6 +8,7 @@
     width: 100%; 
     min-height: 80px;
     border-color: rgb(187, 187, 187);
+    padding-right: 10px;
 }
 
 .navbar-item {
@@ -24,8 +25,12 @@
     min-height: 70px;
 }
 
-.app-navbar-list > li {
-    padding-top: 40px;
+.app-navbar-list {
+    margin-top: 25px;
+}
+
+.item {
+    padding-top: 15px;
 }
 
 .navbar-item {
