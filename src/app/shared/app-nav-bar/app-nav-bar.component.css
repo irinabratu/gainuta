@@ -23,14 +23,10 @@
 .navbar-header {
     min-height: 70px;
 }
-/* 
-.app-navbar-list {
-    display: block;
-    padding-top: 53px;
-    padding-bottom: 5px;
-    margin: auto;
-    display: flex; justify-content: flex-end;
-} */
+
+.app-navbar-list{
+    line-height: 80px;
+}
 
 .navbar-item {
     padding-left: 8px;

@@ -1,19 +1,19 @@
 <nav class="navbar navbar-inverse navbar-static-top app-navbar">
     <div class="container">
         <div class="navbar-header app-navbar-logo">
+            <a routerLink="home">
+                <img src="../../../assets/images/logo.png" alt="GAINARIE" width="80" height="60">
+            </a>
             <button type="button" class="navbar-toggle collapsed nav-button" data-toggle="collapse" 
                 data-target="#navbar-item-list" aria-expanded="false">
                 <i class="fa fa-bars"></i>
             </button>
-            <a routerLink="home">
-                <img src="../../../assets/images/logo.png" alt="GAINARIE" width="80" height="60">
-            </a>
         </div>
         <div class="collapse navbar-collapse" id="navbar-item-list">
             <ul class="nav navbar-nav navbar-right app-navbar-list">
                 <li>
                     <span class="{{ getNavItemClass('home') }} navbar-item">
-                        <a routerLink="home">Home</a>
+                        <a routerLink="home">Home<span class="sr-only">(current)</span></a>
                     </span>
                 </li>
                 <li>
