@@ -1,23 +1,22 @@
 .footer-bar {
     background-color: #23282D;
     border: 1px solid transparent;
-    line-height: 100px;
+    line-height: 80px;
     font-family: Nunito Sans, sans-serif;
     font-weight: 200;
 }
 
 .footer-copyright {
     color: beige;
+    text-align: center;
 }
 
 .footer-social {
     color: beige;
-    float: right;
 }
 
 .footer-social > a {
-    padding-right: 20px;
-    float: right;
+    padding-right: 10px;
     text-decoration: none;
     color: beige;
     -webkit-transition: color 0.2s, font-size 0.2s;

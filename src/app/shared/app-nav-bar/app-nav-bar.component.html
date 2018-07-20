@@ -13,12 +13,12 @@
             <ul class="nav navbar-nav navbar-right app-navbar-list">
                 <li>
                     <span class="{{ getNavItemClass('home') }} navbar-item">
-                        <a routerLink="home">Home<span class="sr-only">(current)</span></a>
+                        <a routerLink="home" >Home<span class="sr-only">(current)</span></a>
                     </span>
                 </li>
                 <li>
                     <span class="{{ getNavItemClass('shop') }} navbar-item">
-                        <a routerLink="shop">Shop</a>
+                        <a routerLink="shop" ng-click='onClickHideNav()'>Shop</a>
                     </span>
                 </li>
                 <li>
