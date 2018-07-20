@@ -67,4 +67,22 @@ export class AppNavBarComponent implements OnInit {
         
         this.router.navigateByUrl('/home');
     }
+
+    onClickMenu() {
+        let menuElement = document.getElementById('menu-button') as HTMLElement;
+        let classes = Array.from(menuElement.classList);
+        
+        let isCollapsed = classes.indexOf('collapsed') >= 0;
+        if(!isCollapsed){
+            menuElement.click();
+        }
+
+        let ulElement = document.getElementById('nav-bar-ul') as HTMLElement;
+        if(isCollapsed){
+            ulElement.classList.add('app-navbar-list');
+        }
+        else{
+            ulElement.classList.remove('app-navbar-list');
+        }
+    }
 }

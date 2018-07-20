@@ -13,12 +13,12 @@
             <ul class="nav navbar-nav navbar-right app-navbar-list">
                 <li>
                     <span class="{{ getNavItemClass('home') }} navbar-item">
-                        <a routerLink="home" >Home<span class="sr-only">(current)</span></a>
+                        <a routerLink="home" (click)="onClickMenu()">Home<span class="sr-only">(current)</span></a>
                     </span>
                 </li>
                 <li>
                     <span class="{{ getNavItemClass('shop') }} navbar-item">
-                        <a routerLink="shop" ng-click='onClickHideNav()'>Shop</a>
+                        <a routerLink="shop" (click)="onClickMenu()">Shop</a>
                     </span>
                 </li>
                 <li>
@@ -33,13 +33,13 @@
                 </li>
                 <li>
                     <span class="{{ getNavItemClass('about') }} navbar-item">
-                        <a routerLink="about">About</a>
+                        <a routerLink="about" (click)="onClickMenu()">About</a>
                     </span>
                 </li>
             
                 <li>
                     <span class="{{ getNavItemClass('contact') }} navbar-item">
-                        <a routerLink="contact">Contact</a>
+                        <a routerLink="contact" (click)="onClickMenu()">Contact</a>
                     </span>
                 </li>
                 <li>

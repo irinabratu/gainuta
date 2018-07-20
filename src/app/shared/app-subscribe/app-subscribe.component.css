@@ -8,13 +8,13 @@
     border-style: solid;
     min-width: 280px;
     background-color: transparent;
-    color:#fcf3db;
+    color:white;
     height: 38px;
     font-size: 18px;
 }
 
 .text-center-title{
-    padding-top: 30px;
+    padding-top: 15px;
     font-size: 30px;
 }
 
@@ -23,29 +23,25 @@
     font-size: 18px;
 }
 
-.text-center-email{
-    padding-top: 20px;
-}
-
 /* placeholder color */
 *::-webkit-input-placeholder {
-    color:#fcf3db;
-    opacity: 0.5;
+    color:white;
+    opacity: 0.7;
 }
 
 *:-moz-placeholder {
     /* FF 4-18 */
-    color: #fcf3db;
-    opacity: 0.5;
+    color: white;
+    opacity: 0.2;
 }
 *::-moz-placeholder {
     /* FF 19+ */
-    color: #fcf3db;
+    color: white;
     opacity: 0.5;
 }
 *:-ms-input-placeholder {
     /* IE 10+ */
-    color: #fcf3db;
+    color: white;
     opacity: 0.5;
 }
 
@@ -56,5 +52,5 @@
     color: white;
     font-size: 18px;
     margin-bottom: 6px;
-    margin-top: 3px;
+    margin-top: 2px;
 }

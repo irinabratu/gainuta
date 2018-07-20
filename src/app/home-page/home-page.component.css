@@ -36,10 +36,11 @@
 }
 
 .home-subscribe {
-    background-image: url(../../assets/images/subscribe-row.jpg);
+    /* background-image: url(../../assets/images/subscribe-row.jpg); */
+    background-color: #f0dfdd;
     background-position: center;
     width: 1920px;
-    height: 228px;
+    height: 200px;
 }
 
 .home-aboutus {
