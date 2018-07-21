@@ -16,7 +16,6 @@ export class ShopPageComponent implements OnInit {
   constructor() {
     const productsMockup = new ProductsMockup();
     this.Products = productsMockup.getProducts();
-    console.log(this.Products);
   }
 
   ngOnInit() {

@@ -16,7 +16,7 @@ export class ProductsMockup {
 			"felis",
 			true,
             true,
-            "scelerisque sed, sapien. Nunc pulvinar"));
+            "../../assets/images/shop/gaina1.jpg"));
             
         this.mockup.push(new Product(
             2,
@@ -26,7 +26,7 @@ export class ProductsMockup {
 			"tincidunt",
 			true,
 			false,
-			"est. Nunc laoreet lectus quis massa."
+			"../../assets/images/shop/gaina2.jpg"
         ));
 
         this.mockup.push(new Product(
@@ -37,7 +37,7 @@ export class ProductsMockup {
 			"Suspendisse",
 			false,
 			false,
-			"Quisque"
+			"../../assets/images/shop/gaina3.jpg"
         ));
 
         this.mockup.push(new Product(
@@ -48,7 +48,7 @@ export class ProductsMockup {
 			"ut, nulla.",
 			true,
 			true,
-			"Fusce mollis. Duis sit amet diam"
+			"../../assets/images/shop/gaina4.jpg"
         ));
 
     }

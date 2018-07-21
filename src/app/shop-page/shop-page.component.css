@@ -1,5 +1,5 @@
 .product-box {
-    min-height: 270px;
+    min-height: 300px;
     border: 1px solid grey;
     padding-left: 25px;
     padding-right: 20px;
@@ -9,7 +9,12 @@
 }
 
 .product-image {
-    height: 160px;
+    padding-top: 3px;
+}
+
+.image-style {
+    max-width: 100%;
+    height: auto;
 }
 
 .product-title {
@@ -26,8 +31,11 @@
 }
 
 .product-price{
-    float: right;
     font-weight: bold;
+}
+
+.product-footer {
+    padding-top: 10px;
 }
 
 .add-to-cart-btn {
@@ -35,6 +43,7 @@
     height: 30px;
     line-height: 30px !important;
     color: white !important;
+    /* float: right; */
 }
 
 .shopping-cart-icon {
