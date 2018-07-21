@@ -7,9 +7,10 @@ export class Product {
     Activ: boolean;
     Nou: boolean;
     ImgUrl: string;
+    Cantitate: number;
 
     constructor(Id: number, Nume: string, Descriere: string, Pret: number,
-        Categorie: string, Activ: boolean, Nou: boolean, ImgUrl: string, ) {
+        Categorie: string, Activ: boolean, Nou: boolean, ImgUrl: string, Cantitate: number) {
 
         this.Id = Id;
         this.Nume = Nume;
@@ -19,6 +20,6 @@ export class Product {
         this.Activ = Activ;
         this.Nou = Nou;
         this.ImgUrl = ImgUrl;
+        this.Cantitate = Cantitate;
     }
 }
- 

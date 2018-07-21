@@ -4,10 +4,36 @@
             Checkout
         </div>
     </div>
-    Works!
-    <div class="row">
-        <div class="col-md-4" *ngFor="let product of Products">
-            
+    
+    <div class="row first-row" *ngFor="let product of Products">
+        <div class="col-md-3">
+            <img src="{{product.ImgUrl}}" alt="{{product.Id}}" class="product-img"/>
+        </div>
+        <div class="col-md-3">
+            <span class="product-title">
+                {{product.Nume}}
+            </span>
+        </div>
+        <div class="col-md-4">
+            {{product.Descriere}}
+        </div>
+        <div class="col-md-2">
+            {{product.Cantitate}} x {{product.Pret}} RON
+        </div>
+    </div>
+
+    <div class="row first-row">
+        <div class="col-md-3">
+            <button mat-raised-button type="submit" (click)="clearCart()">
+                <span class="add-to-cart-btn-text">Anulare</span>
+            </button>
+        </div>
+        <div class="col-md-3">
+        </div>
+        <div class="col-md-4">
+        </div>
+        <div class="col-md-2">
+            <span class="total-text">Total:</span> 100 RON
         </div>
     </div>
 </div>

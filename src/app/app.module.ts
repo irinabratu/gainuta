@@ -38,6 +38,7 @@ import { AppBreadcrumbComponent } from './shared/app-breadcrumb/app-breadcrumb.c
 import { ProductsListComponent } from './products-page/products-list.component';
 import { ShopPageComponent } from './shop-page/shop-page.component';
 import { CheckoutPageComponent } from './checkout-page/checkout-page.component';
+import { MessageService } from './services/message.service';
 
 const appRoutes: Routes = [
     { path: 'home', component: HomePageComponent },
@@ -97,9 +98,11 @@ const appRoutes: Routes = [
         ToastModule.forRoot(),
     ],
     providers: [{
-        provide: ToastOptions,
-        useClass: ToastrCustomOption
-    }],
+            provide: ToastOptions,
+            useClass: ToastrCustomOption
+        },
+        MessageService
+    ],
     bootstrap: [AppComponent],
     entryComponents: [
         AppSignupDialogComponent,
