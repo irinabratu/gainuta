@@ -37,6 +37,7 @@ import { AppConfirmDialogComponent } from './shared/app-confirm-dialog/app-confi
 import { AppBreadcrumbComponent } from './shared/app-breadcrumb/app-breadcrumb.component';
 import { ProductsListComponent } from './products-page/products-list.component';
 import { ShopPageComponent } from './shop-page/shop-page.component';
+import { CheckoutPageComponent } from './checkout-page/checkout-page.component';
 
 const appRoutes: Routes = [
     { path: 'home', component: HomePageComponent },
@@ -49,6 +50,7 @@ const appRoutes: Routes = [
     { path: 'contact', component: ContactPageComponent },
     { path: 'contact/:isInvolve', component: ContactPageComponent },
     { path: 'myprofile', component: ProfilePageComponent },
+    { path: 'checkout', component: CheckoutPageComponent },
     { path: '', redirectTo: '/home', pathMatch: 'full' },
     { path: '**', component: HomePageComponent }
 ];
@@ -77,7 +79,8 @@ const appRoutes: Routes = [
         AppConfirmDialogComponent,
         AppBreadcrumbComponent,
         ProductsListComponent,
-        ShopPageComponent
+        ShopPageComponent,
+        CheckoutPageComponent
     ],
     imports: [
         BrowserModule,
