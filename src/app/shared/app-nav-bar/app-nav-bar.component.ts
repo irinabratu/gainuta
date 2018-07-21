@@ -70,6 +70,10 @@ export class AppNavBarComponent implements OnInit {
 
     onClickMenu() {
         let menuElement = document.getElementById('menu-button') as HTMLElement;
+        if (!menuElement){
+            return;
+        }
+
         let classes = Array.from(menuElement.classList);
         
         let isCollapsed = classes.indexOf('collapsed') >= 0;
@@ -78,6 +82,10 @@ export class AppNavBarComponent implements OnInit {
         }
 
         let ulElement = document.getElementById('nav-bar-ul') as HTMLElement;
+        if (!ulElement){
+            return;
+        }
+
         if(isCollapsed){
             ulElement.classList.add('app-navbar-list');
         }
