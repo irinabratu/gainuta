@@ -1,21 +1,11 @@
-<div class="full-width text-center">
-    <div class="container-fluid img-responsive home-header">
-        <div class="row home-header-top">
-            <div class="col-md-12">
-                <span class="home-header-title">Let's plant a tree,</span>
-                <br />
-                <span class="home-header-title">it will make a difference!</span>
-            </div>
-        </div>
-        <div class="row home-header-text">
-            <div class="col-md-12">
-                <span>46-58 thousand square miles of forest are lost every year.</span>
-                <br />
-                <span>That's equivalent to 36 football fields every minute.</span>
-            </div>
-        </div>
+<div class="container-fluid hompeage-slider-container">
+    <div class="row homepage-slider">
+        <slideshow [imageUrls]="imageUrlArray" [height]="height" [minHeight]="'525px'" 
+            [autoPlay]="true" [showArrows]="true">
+        </slideshow>
     </div>
 </div>
+
 <div class="container">
     <div class="jumbotron home-body">
         <span style="font-size: 50px;">Volunteer to Help</span>

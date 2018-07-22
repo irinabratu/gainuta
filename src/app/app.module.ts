@@ -10,9 +10,11 @@ import { ToastOptions } from 'ng2-toastr';
 import { ToastrCustomOption } from '../utils/toastr-custom-option';
 import { MatFormFieldModule, MatInputModule } from '@angular/material';
 import { MatButtonModule } from '@angular/material/button';
-import {MatCardModule} from '@angular/material/card';
+import { MatCardModule } from '@angular/material/card';
 import { FormControl, Validators } from '@angular/forms';
 import { HostListener } from "@angular/core";
+import { SlideshowModule } from "ng-simple-slideshow";
+
 
 import { AppComponent } from './app.component';
 import { HomePageComponent } from './home-page/home-page.component';
@@ -95,6 +97,7 @@ const appRoutes: Routes = [
         MatButtonModule,
         ReactiveFormsModule,
         MatCardModule,
+        SlideshowModule,
         ToastModule.forRoot(),
     ],
     providers: [{
