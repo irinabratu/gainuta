@@ -1,7 +1,7 @@
 .full-width {
     width: 100vw;
     position: relative;
-    left: 49.298%;
+    left: 50%;
     right: 50%;
     margin-left: -50vw;
     margin-right: -50vw;
@@ -17,7 +17,7 @@
     background-color: #ecdfd4;
     background-position: center;
     width: 1920px;
-    height: 200px;
+    height: 220px;
 }
 
 .home-aboutus {
