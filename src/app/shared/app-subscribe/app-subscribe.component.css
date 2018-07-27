@@ -21,52 +21,29 @@
 
 .text-center-email{
     padding-top: 10px;
+    display: inline-flex;
 }
 
-/* placeholder color */
-*::-webkit-input-placeholder {
-    color:dimgray;
-    padding-left: 5px;
+.mat-form-field-underline{
+    color: darkslategray;
 }
 
-*:-moz-placeholder {
-    /* FF 4-18 */
-    color: dimgray;
-    padding-left: 5px;
-}
-*::-moz-placeholder {
-    /* FF 19+ */
-    color: dimgray;
-    padding-left: 5px;
-}
-*:-ms-input-placeholder {
-    /* IE 10+ */
-    color: dimgray;
-    padding-left: 5px;
+.mat-form-field-invalid .mat-form-field-placeholder {
+    color: darkslategray;
 }
 
-.subscribe-signup-btn {
-    height: 38px;
-    border: 1px solid #847d73;
+.mat-button, .mat-fab, .mat-icon-button, .mat-mini-fab, .mat-raised-button{
     background-color: transparent;
-    color: #847d73;
-    font-size: 18px;
-    margin-bottom: 6px;
-    margin-top: 2px;
+}
+
+.mat-raised-button{
     border-radius: 4px;
 }
 
-.btn-default:hover {
-    border: 1px solid #847d73;
-    background-color: #847d7354;
-    color: #333333;
-    border-radius: 4px;
+.mat-error{
+    color: darkslategray;
 }
 
-.btn-default:active {
-    background-color: #847d7354;
-}
-
-.btn-default:focus {
-    background-color: #847d7354;
+.mat-form-field-invalid .mat-form-field-ripple {
+    background-color: #333;
 }

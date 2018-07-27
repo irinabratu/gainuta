@@ -3,7 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { ValidationHelpers } from '../../../utils/ValidationHelpers';
 import { ToastsManager } from 'ng2-toastr/ng2-toastr';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import {FormControl, Validators} from '@angular/forms';
+import { FormControl, Validators } from '@angular/forms';
 
 @Component({
     selector: 'app-contact-form',

@@ -17,7 +17,16 @@
     </div>
 
     <div class="row text-center-email">
-            <input type="email" [(ngModel)]="model.Email" name="Email" class="subscribe-email" placeholder="Email Address ..." maxlength="128" required/>
-            <button type="button" class="btn btn-default btn-sm subscribe-signup-btn" (click)="onClickSubscribe()">Sign Up</button>
+        <div class="col-xs-6 form-group">
+            <mat-form-field>
+                <input matInput placeholder="Email" [(ngModel)]="model.Email" name="Email" [formControl]="email" >
+                <mat-error *ngIf="email.invalid">
+                    {{getErrorMessage()}} 
+                </mat-error>
+            </mat-form-field>
+        </div>
+        <div class="col-xs-6 form-group">
+            <button mat-raised-button type="submit" (click)="onClickSend()">Send</button>
+        </div>
     </div>
 </div>
