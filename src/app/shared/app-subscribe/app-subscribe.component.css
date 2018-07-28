@@ -9,41 +9,52 @@
     font-size: 18px;
 }
 
-.text-center-title{
+.text-center-title {
     padding-top: 15px;
     font-size: 30px;
 }
 
-.text-center-text{
+.text-center-text {
     padding-top: 10px;
     font-size: 18px;
 }
 
-.text-center-email{
+.text-center-email {
     padding-top: 10px;
     display: inline-flex;
+    font-family: Montserrat, sans-serif;
 }
 
-.mat-form-field-underline{
+.mat-form-field-underline {
     color: darkslategray;
+}
+
+.mat-form-field {
+    font-family: Nunito Sans, sans-serif;
 }
 
 .mat-form-field-invalid .mat-form-field-placeholder {
     color: darkslategray;
+    font-family: Montserrat, sans-serif;
 }
 
-.mat-button, .mat-fab, .mat-icon-button, .mat-mini-fab, .mat-raised-button{
+.mat-button, .mat-fab, .mat-icon-button, .mat-mini-fab, .mat-raised-button {
     background-color: transparent;
+    font-family: Nunito Sans, sans-serif;
+    font-weight: 200;
 }
 
-.mat-raised-button{
+.mat-raised-button {
     border-radius: 4px;
+    font-family: Nunito Sans, sans-serif;
 }
 
-.mat-error{
+.mat-error {
     color: darkslategray;
+    font-family: Nunito Sans, sans-serif;
 }
 
 .mat-form-field-invalid .mat-form-field-ripple {
     background-color: #333;
+    font-family: Nunito Sans, sans-serif;
 }

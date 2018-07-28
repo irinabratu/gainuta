@@ -1,7 +1,6 @@
 .content {
   min-height: calc(100vh - 75px);
   padding-top: 75px;
-  width: stretch;
 }
 
 .content-inside{
