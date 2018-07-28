@@ -8,8 +8,29 @@
 }
 
 .home-body {
-    margin-top: 20px;
-    background-color: inherit !important;
+    padding-bottom: 10px;
+}
+
+.home-body-text {
+    padding: 40px;
+}
+
+.home-body-title {
+    font-size: 50px;
+}
+
+.home-body-text1 {
+    padding-top: 10px;
+    text-align: justify;
+}
+
+.home-body-text2 {
+    padding-top: 10px;
+    text-align: justify;
+}
+
+.home-body-button{
+    padding-bottom: 10px;
 }
 
 .home-subscribe {
