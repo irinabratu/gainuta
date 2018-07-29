@@ -31,6 +31,12 @@
 
 .home-body-button{
     padding-bottom: 10px;
+    padding-right: 10px;
+}
+
+.home-body-button  >a  {
+    text-decoration: none;
+    color: #333333;
 }
 
 .home-subscribe {
