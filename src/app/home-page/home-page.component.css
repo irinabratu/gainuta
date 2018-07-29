@@ -12,7 +12,10 @@
 }
 
 .home-body-text {
-    padding: 40px;
+    padding-top: 60px;
+    padding-bottom: 40px;
+    padding-left: 40px;
+    padding-right: 40px;
 }
 
 .home-body-title {
@@ -22,11 +25,13 @@
 .home-body-text1 {
     padding-top: 10px;
     text-align: justify;
+    font-size: 18px;
 }
 
 .home-body-text2 {
     padding-top: 10px;
     text-align: justify;
+    font-size: 18px;
 }
 
 .home-body-button{
@@ -45,6 +50,7 @@
     background-position: center;
     width: 1920px;
     height: 200px;
+    padding-top: 20px;
 }
 
 .home-aboutus {

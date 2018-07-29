@@ -1,7 +1,7 @@
 <div class="container-fluid hompeage-slider-container">
     <div class="row homepage-slider">
         <slideshow [imageUrls]="imageUrlArray" [height]="height" [minHeight]="'525px'" 
-            [autoPlay]="true" [showArrows]="true">
+            [autoPlay]="true" [showArrows]="true" [showDots]="true" [autoPlayInterval]="2300">
         </slideshow>
     </div>
 </div>
@@ -18,7 +18,7 @@
             </div>
         </div>
         <div class="button-row pull-right home-body-button">
-            <a mat-raised-button routerLink="/contact">More Here</a>
+            <a mat-raised-button routerLink="/contact">More...</a>
         </div>
     </div>
 </div>
