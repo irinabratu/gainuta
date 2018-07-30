@@ -1,8 +1,9 @@
 .product-box {
-    min-height: 300px;
+    height: 350px;
+    width: 350px;
     border: 1px solid grey;
-    padding-left: 25px;
-    padding-right: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
     padding-top: 5px;
     padding-bottom: 5px;
     margin-top: 10px;
@@ -54,4 +55,13 @@
 .add-to-cart-btn-text {
     float: right; 
     padding-right: 5px;
+}
+
+.example-card {
+    max-width: 400px;
+}
+  
+.example-header-image {
+    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+    background-size: cover;
 }

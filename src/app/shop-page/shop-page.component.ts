@@ -2,6 +2,8 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { Product } from '../../model/Product';
 import { ProductsMockup } from '../../utils/ProductsMockup';
 import { MessageService } from '../services/message.service';
+import { MatCardModule } from '@angular/material/card';
+
 
 @Component({
   selector: 'shop-page',

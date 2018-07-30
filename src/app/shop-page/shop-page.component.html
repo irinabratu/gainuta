@@ -7,10 +7,10 @@
 
     <div class="row">
         <div class="col-md-4" *ngFor="let product of Products">
-            <div class="product-box">
-                <div class="row product-image">
+            <div class="product-box" [ngStyle]="{'background-image': 'url(' + product.ImgUrl + ')  no-repeat;'}">
+                <!-- <div class="row product-image">
                     <img src="{{product.ImgUrl}}" alt="{{product.Id}}" class="image-style" />
-                </div>
+                </div> -->
                 <div class="row product-title">
                     {{ product.Nume }}
                 </div>
