@@ -5,9 +5,6 @@ import { HttpModule } from '@angular/http';
 import { RouterModule, Routes } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatDialogModule } from '@angular/material';
-import { ToastModule } from 'ng2-toastr/ng2-toastr';
-import { ToastOptions } from 'ng2-toastr';
-import { ToastrCustomOption } from '../utils/toastr-custom-option';
 import { MatFormFieldModule, MatInputModule } from '@angular/material';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
@@ -40,7 +37,6 @@ import { AppBreadcrumbComponent } from './shared/app-breadcrumb/app-breadcrumb.c
 import { ProductsListComponent } from './products-page/products-list.component';
 import { ShopPageComponent } from './shop-page/shop-page.component';
 import { CheckoutPageComponent } from './checkout-page/checkout-page.component';
-import { MessageService } from './services/message.service';
 
 const appRoutes: Routes = [
     { path: 'home', component: HomePageComponent },
@@ -97,15 +93,9 @@ const appRoutes: Routes = [
         MatButtonModule,
         ReactiveFormsModule,
         MatCardModule,
-        SlideshowModule,
-        ToastModule.forRoot(),
+        SlideshowModule
     ],
-    providers: [{
-            provide: ToastOptions,
-            useClass: ToastrCustomOption
-        },
-        MessageService
-    ],
+    providers: [],
     bootstrap: [AppComponent],
     entryComponents: [
         AppSignupDialogComponent,

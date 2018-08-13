@@ -1,5 +1,4 @@
 import { Component, ViewContainerRef  } from '@angular/core';
-import { ToastsManager } from 'ng2-toastr/ng2-toastr';
 import {MatButtonModule} from '@angular/material/button';
 
 @Component({
@@ -10,7 +9,6 @@ import {MatButtonModule} from '@angular/material/button';
 
 export class AppComponent {
 
-    constructor(public toastr: ToastsManager, vcr: ViewContainerRef) {
-        this.toastr.setRootViewContainerRef(vcr);
+    constructor(vcr: ViewContainerRef) {
     }
 }

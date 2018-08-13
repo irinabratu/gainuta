@@ -1,7 +1,6 @@
 import { Component, OnInit, AfterViewInit, ViewChild, ElementRef } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ValidationHelpers } from '../../../utils/ValidationHelpers';
-import { ToastsManager } from 'ng2-toastr/ng2-toastr';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FormControl, Validators } from '@angular/forms';
 
@@ -18,7 +17,7 @@ export class AppContactFormComponent implements OnInit {
     private subscribe: any;
     @ViewChild('Name') nameElement: ElementRef;
 
-    constructor(private route: ActivatedRoute, public toastr: ToastsManager) {
+    constructor(private route: ActivatedRoute) {
         this.model = {};
     }
 

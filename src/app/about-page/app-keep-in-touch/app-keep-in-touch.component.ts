@@ -1,5 +1,4 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
-import { ToastsManager } from 'ng2-toastr/ng2-toastr';
 import { ValidationHelpers } from '../../../utils/ValidationHelpers';
 
 @Component({
@@ -13,7 +12,7 @@ export class AppKeepInTouchComponent implements OnInit {
 
     model: any;
 
-    constructor(public toastr: ToastsManager) {
+    constructor() {
 
         this.model = {};
     }
@@ -22,17 +21,17 @@ export class AppKeepInTouchComponent implements OnInit {
 
     onClickSubscribe() {
         if (!this.model.Email) {
-            this.toastr.error('Email is required', 'Error!');
+            console.log('Email is required', 'Error!');
             return;
         }
 
         let isValidEmail = ValidationHelpers.validateEmail(this.model.Email);
 
         if (!isValidEmail) {
-            this.toastr.error('Invalid email', 'Error!');
+            console.log('Invalid email', 'Error!');
             return;
         }
 
-        this.toastr.info('It\'s not working yet, sorry :)');
+        console.log('It\'s not working yet, sorry :)');
     }
 }

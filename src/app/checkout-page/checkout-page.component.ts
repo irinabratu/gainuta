@@ -1,6 +1,5 @@
 import { Component, OnInit, OnDestroy, ViewEncapsulation } from '@angular/core';
 import { Product } from '../../model/Product';
-import { MessageService } from '../services/message.service';
 
 @Component({
   selector: 'checkout-page',
@@ -13,7 +12,7 @@ export class CheckoutPageComponent implements OnInit {
   
   Products: Product[];
 
-  constructor(private messageService: MessageService) {
+  constructor() {
     
     this.Products = new Array<Product>();
     this.calculateProductQuantities();
@@ -61,6 +60,5 @@ export class CheckoutPageComponent implements OnInit {
   clearCart(): void {
 
     this.Products = new Array<Product>();
-    this.messageService.clearCart();
   }
 }

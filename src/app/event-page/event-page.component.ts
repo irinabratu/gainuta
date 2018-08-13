@@ -5,7 +5,6 @@ import { EventsMockup } from '../../utils/events';
 import { List } from 'linqts';
 import { AppConfirmDialogComponent } from '../shared/app-confirm-dialog/app-confirm-dialog.component';
 import { MatDialog} from '@angular/material';
-import { ToastsManager } from 'ng2-toastr/ng2-toastr';
 
 @Component({
     selector: 'event-page',
@@ -17,8 +16,7 @@ export class EventPageComponent implements OnInit {
 
     Events: Event[];
 
-    constructor(public dialog: MatDialog, public toastr: ToastsManager,
-            private router: Router) {
+    constructor(public dialog: MatDialog, private router: Router) {
 
         let eventsMockup = new EventsMockup();
         this.Events = eventsMockup.getEvents();
@@ -48,7 +46,7 @@ export class EventPageComponent implements OnInit {
                 let items = new List<Event>(this.Events).Where(x => x.Id !== id);
                 this.Events = items.ToArray();
 
-                this.toastr.success('Event was deleted!', 'Success!');
+                console.log('Event was deleted!', 'Success!');
             }
         });
     }

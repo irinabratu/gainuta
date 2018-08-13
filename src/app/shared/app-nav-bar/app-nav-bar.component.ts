@@ -4,8 +4,6 @@ import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 import { AppSignupDialogComponent } from '../app-signup-dialog/app-signup-dialog.component';
 import { AppLoginDialogComponent } from '../app-login-dialog/app-login-dialog.component';
 import { HostListener} from "@angular/core";
-import { Subscription } from 'rxjs/Subscription'; 
-import { MessageService } from '../../services/message.service';
 import { Product } from '../../../model/Product';
 
 @Component({
@@ -18,12 +16,9 @@ export class AppNavBarComponent implements OnInit {
 
     isSignedIn: boolean;
     message: any;
-    subscription: Subscription;
-    clearSubscription: Subscription;
     Products: Product[];
 
-    constructor(private router: Router, public dialog: MatDialog, 
-        private messageService: MessageService) {
+    constructor(private router: Router, public dialog: MatDialog) {
 
         this.isSignedIn = false;
         this.Products = new Array<Product>();
@@ -35,27 +30,12 @@ export class AppNavBarComponent implements OnInit {
         else {
             this.Products = new Array<Product>();
         }
-
-        this.subscription = this.messageService.getProduct()
-            .subscribe(x => { 
-                if(x){
-                    this.Products.push(x);
-                    localStorage.setItem('checkout', JSON.stringify(this.Products));
-                }
-                else{
-                    this.Products = new Array<Product>();
-                    localStorage.removeItem('checkout'); 
-                }
-            });
     }
     
     ngOnInit() {
     }
 
-    ngOnDestroy() {
-        this.subscription.unsubscribe();
-        this.clearSubscription.unsubscribe();
-    }
+    ngOnDestroy() { }
 
     getNavItemClass(navItem: string) {
 

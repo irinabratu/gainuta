@@ -1,5 +1,4 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
-import { ToastsManager } from 'ng2-toastr/ng2-toastr';
 
 @Component({
     selector: 'app-donate-now',
@@ -10,12 +9,12 @@ import { ToastsManager } from 'ng2-toastr/ng2-toastr';
 
 export class AppDonateNowComponent implements OnInit {
 
-    constructor(public toastr: ToastsManager) { }
+    constructor() { }
 
     ngOnInit() { }
 
     onClickDonate() {
 
-        this.toastr.info('It\'s not working yet, sorry :)');
+      console.log('It\'s not working yet, sorry');
     }
 }

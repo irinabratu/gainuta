@@ -1,5 +1,4 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
-import { ToastsManager } from 'ng2-toastr/ng2-toastr';
 import { ValidationHelpers } from '../../../utils/ValidationHelpers';
 import { FormControl, Validators } from '@angular/forms';
 
@@ -14,7 +13,7 @@ export class AppSubscribeComponent implements OnInit {
 
     model: any;
 
-    constructor(public toastr: ToastsManager) {
+    constructor() {
         this.model = {};
     }
 
@@ -22,22 +21,22 @@ export class AppSubscribeComponent implements OnInit {
     
     ngOnInit() { }
 
-    // onClickSubscribe() {
+     onClickSubscribe() {
 
-    //     if (!this.model.Email) {
-    //         this.toastr.error('Email is required', 'Error!');
-    //         return;
-    //     }
+         if (!this.model.Email) {
+             console.log('Email is required', 'Error!');
+             return;
+         }
 
-    //     let isValidEmail = ValidationHelpers.validateEmail(this.model.Email);
-    //     if (!isValidEmail) {
-    //         this.toastr.error('Invalid email', 'Error!');
-    //         return;
-    //     }
+         let isValidEmail = ValidationHelpers.validateEmail(this.model.Email);
+         if (!isValidEmail) {
+           console.log('Invalid email', 'Error!');
+             return;
+         }
 
-    //     this.toastr.info('It\'s not working yet, sorry :)');
+          console.log('It\'s not working yet, sorry :)');
         
-    // }
+     }
 
     onClickSend() {
     }
