@@ -42,6 +42,7 @@ import { ShopPageComponent } from './shop-page/shop-page.component';
 import { CheckoutPageComponent } from './checkout-page/checkout-page.component';
 import { AdminPageComponent } from './admin-page/admin-page.component';
 import { MessagesPageComponent } from './messages-page/messages-page.component';
+import { MessagePopupComponent } from './messages-page/message-popup/message-popup.component';
 
 const appRoutes: Routes = [
     { path: 'home', component: HomePageComponent },
@@ -89,7 +90,8 @@ const appRoutes: Routes = [
         CheckoutPageComponent,
         AdminPageComponent,
         MessagesPageComponent,
-        DateTimeFormatPipe
+        DateTimeFormatPipe,
+        MessagePopupComponent
     ],
     imports: [
         BrowserModule,
