@@ -3,7 +3,7 @@ import { Router } from '@angular/router';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 import { AppSignupDialogComponent } from '../app-signup-dialog/app-signup-dialog.component';
 import { AppLoginDialogComponent } from '../app-login-dialog/app-login-dialog.component';
-import { HostListener} from "@angular/core";
+import { HostListener } from "@angular/core";
 import { Product } from '../../../model/Product';
 
 @Component({

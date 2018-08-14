@@ -4,7 +4,7 @@ import { MessageEntity } from '../../model/MessageEntity';
 import { baseUrl } from '../../utils/constants';
 import { DataSource } from '@angular/cdk/table';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
-import { MessagePopupComponent } from './message-popup/message-popup.component';
+import { MessageDialogComponent } from './message-dialog/message-dialog.component';
 
 @Component({
   selector: 'messages-page',
@@ -21,19 +21,25 @@ export class MessagesPageComponent implements OnInit {
 
   ngOnInit() {
     
-    this.http.get(baseUrl + 'Messages/GetAll').subscribe(data => {
-      this.messages = data as MessageEntity[];
-    });
+    this.refreshMessagesGrid();
   }
 
   onClickReply(id: number) {
-    console.log(id);
-    let dialogRef = this.dialog.open(MessagePopupComponent, {
-      width: '800px'
+    
+    let dialogRef = this.dialog.open(MessageDialogComponent, {
+      width: '800px',
+      data: id
     });
 
     dialogRef.afterClosed().subscribe(result => {
-      console.log('The dialog was closed');
+      this.refreshMessagesGrid();
+    });
+  }
+
+  refreshMessagesGrid() {
+
+    this.http.get(baseUrl + 'Messages/GetAll').subscribe(data => {
+      this.messages = data as MessageEntity[];
     });
   }
 }
