@@ -14,6 +14,7 @@ import { HostListener } from "@angular/core";
 import { SlideshowModule } from "ng-simple-slideshow";
 import { MatTableModule, MatSortModule, MatPaginatorModule, MatProgressSpinnerModule } from "@angular/material";
 
+import { DateTimeFormatPipe } from './pipes/date-time-format.pipe';
 
 import { AppComponent } from './app.component';
 import { HomePageComponent } from './home-page/home-page.component';
@@ -87,7 +88,8 @@ const appRoutes: Routes = [
         ShopPageComponent,
         CheckoutPageComponent,
         AdminPageComponent,
-        MessagesPageComponent
+        MessagesPageComponent,
+        DateTimeFormatPipe
     ],
     imports: [
         BrowserModule,
