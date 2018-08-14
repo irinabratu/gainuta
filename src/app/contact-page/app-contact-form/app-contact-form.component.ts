@@ -3,6 +3,8 @@ import { ActivatedRoute } from '@angular/router';
 import { ValidationHelpers } from '../../../utils/ValidationHelpers';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FormControl, Validators } from '@angular/forms';
+import { HttpClient } from '@angular/common/http';
+import { baseUrl } from '../../../utils/constants';
 
 @Component({
     selector: 'app-contact-form',
@@ -17,7 +19,7 @@ export class AppContactFormComponent implements OnInit {
     private subscribe: any;
     @ViewChild('Name') nameElement: ElementRef;
 
-    constructor(private route: ActivatedRoute) {
+    constructor(private route: ActivatedRoute, private http: HttpClient) {
         this.model = {};
     }
 
@@ -42,6 +44,10 @@ export class AppContactFormComponent implements OnInit {
     }
 
     onClickSend() {
+      
+      this.http.post(baseUrl + 'Messages/Add', this.model).subscribe(response => {
+        console.log('Message with Id: ' + response + ' was sent');
+      });
     }
 
     getErrorMessage(){
