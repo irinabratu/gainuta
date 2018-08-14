@@ -29,7 +29,7 @@ export class MessagesPageComponent implements OnInit {
   onClickReply(id: number) {
     console.log(id);
     let dialogRef = this.dialog.open(MessagePopupComponent, {
-      width: '400px'
+      width: '800px'
     });
 
     dialogRef.afterClosed().subscribe(result => {
