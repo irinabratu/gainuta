@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
 import { RouterModule, Routes } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatDialogModule } from '@angular/material';
@@ -11,6 +12,8 @@ import { MatCardModule } from '@angular/material/card';
 import { FormControl, Validators } from '@angular/forms';
 import { HostListener } from "@angular/core";
 import { SlideshowModule } from "ng-simple-slideshow";
+import { MatTableModule, MatSortModule, MatPaginatorModule, MatProgressSpinnerModule } from "@angular/material";
+
 
 import { AppComponent } from './app.component';
 import { HomePageComponent } from './home-page/home-page.component';
@@ -90,6 +93,7 @@ const appRoutes: Routes = [
         BrowserModule,
         FormsModule,
         HttpModule,
+        HttpClientModule,
         RouterModule.forRoot(appRoutes),
         BrowserAnimationsModule,
         MatDialogModule,
@@ -98,7 +102,8 @@ const appRoutes: Routes = [
         MatButtonModule,
         ReactiveFormsModule,
         MatCardModule,
-        SlideshowModule
+        SlideshowModule,
+        MatTableModule, MatSortModule, MatPaginatorModule, MatProgressSpinnerModule
     ],
     providers: [],
     bootstrap: [AppComponent],
