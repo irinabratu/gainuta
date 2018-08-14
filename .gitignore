@@ -3,6 +3,7 @@
 # compiled output
 /dist
 /tmp
+/out-tsc
 
 # dependencies
 /node_modules
@@ -14,6 +15,7 @@
 .c9/
 *.launch
 .settings/
+*.sublime-workspace
 
 # IDE - VSCode
 .vscode/*
@@ -22,12 +24,19 @@
 !.vscode/launch.json
 !.vscode/extensions.json
 
+# Visual Studio Code
+.vscode
+
+# Visual Studio 2015
+.vs/
+
 # misc
 /.sass-cache
 /connect.lock
-/coverage/*
+/coverage
 /libpeerconnection.log
 npm-debug.log
+yarn-error.log
 testem.log
 /typings
 

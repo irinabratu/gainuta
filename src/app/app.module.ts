@@ -12,7 +12,6 @@ import { FormControl, Validators } from '@angular/forms';
 import { HostListener } from "@angular/core";
 import { SlideshowModule } from "ng-simple-slideshow";
 
-
 import { AppComponent } from './app.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { ContactPageComponent } from './contact-page/contact-page.component';
@@ -37,6 +36,7 @@ import { AppBreadcrumbComponent } from './shared/app-breadcrumb/app-breadcrumb.c
 import { ProductsListComponent } from './products-page/products-list.component';
 import { ShopPageComponent } from './shop-page/shop-page.component';
 import { CheckoutPageComponent } from './checkout-page/checkout-page.component';
+import { AdminPageComponent } from './admin-page/admin-page.component';
 
 const appRoutes: Routes = [
     { path: 'home', component: HomePageComponent },
@@ -49,6 +49,7 @@ const appRoutes: Routes = [
     { path: 'contact', component: ContactPageComponent },
     { path: 'contact/:isInvolve', component: ContactPageComponent },
     { path: 'myprofile', component: ProfilePageComponent },
+    { path: 'admin', component: AdminPageComponent },
     { path: 'checkout', component: CheckoutPageComponent },
     { path: '', redirectTo: '/home', pathMatch: 'full' },
     { path: '**', component: HomePageComponent }
@@ -79,7 +80,8 @@ const appRoutes: Routes = [
         AppBreadcrumbComponent,
         ProductsListComponent,
         ShopPageComponent,
-        CheckoutPageComponent
+        CheckoutPageComponent,
+        AdminPageComponent
     ],
     imports: [
         BrowserModule,

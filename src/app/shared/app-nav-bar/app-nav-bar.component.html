@@ -10,43 +10,50 @@
             </button>
         </div>
         <div class="collapse navbar-collapse" id="navbar-item-list">
-            <ul class="nav navbar-nav navbar-right app-navbar-list">
-                <li class="item">
-                    <span class="{{ getNavItemClass('home') }} navbar-item">
-                        <a routerLink="home" (click)="onClickMenu()">Home<span class="sr-only">(current)</span></a>
-                    </span>
-                </li>
-                <li class="item">
-                    <span class="{{ getNavItemClass('shop') }} navbar-item">
-                        <a routerLink="shop" (click)="onClickMenu()">Shop</a>
-                    </span>
-                </li>
-                <li class="item">
-                    <span class="{{ getNavItemClass('event') }} navbar-item">
-                        Events
-                    </span>
-                </li>
-                <li class="item">
-                    <span class="{{ getNavItemClass('gallery') }} navbar-item">
-                        Portfolio
-                    </span>
-                </li>
-                <li class="item">
-                    <span class="{{ getNavItemClass('about') }} navbar-item">
-                        <a routerLink="about" (click)="onClickMenu()">About</a>
-                    </span>
-                </li>
-        
-                <li class="item">
-                    <span class="{{ getNavItemClass('contact') }} navbar-item">
-                        <a routerLink="contact" (click)="onClickMenu()">Contact</a>
-                    </span>
-                </li>
-                <li class="item">
-                    <span class="glyphicon glyphicon-shopping-cart shopping-cart" routerLink="checkout" (click)="onClickMenu()"></span>                    
-                    <span>({{Products.length}})</span>
-                </li>
-            </ul>
+          <ul class="nav navbar-nav navbar-right app-navbar-list">
+            <li class="item">
+              <span class="{{ getNavItemClass('home') }} navbar-item">
+                <a routerLink="/home" (click)="onClickMenu()">Home<span class="sr-only">(current)</span></a>
+              </span>
+            </li>
+            <li class="item">
+              <span class="{{ getNavItemClass('shop') }} navbar-item">
+                <a routerLink="/shop" (click)="onClickMenu()">Shop</a>
+              </span>
+            </li>
+            <li class="item">
+              <span class="{{ getNavItemClass('event') }} navbar-item">
+                Events
+              </span>
+            </li>
+            <li class="item">
+              <span class="{{ getNavItemClass('gallery') }} navbar-item">
+                Portfolio
+              </span>
+            </li>
+            <li class="item">
+              <span class="{{ getNavItemClass('about') }} navbar-item">
+                <a routerLink="/about" (click)="onClickMenu()">About</a>
+              </span>
+            </li>
+
+            <li class="item">
+              <span class="{{ getNavItemClass('contact') }} navbar-item">
+                <a routerLink="/contact" (click)="onClickMenu()">Contact</a>
+              </span>
+            </li>
+
+            <li class="item">
+              <span class="{{ getNavItemClass('admin') }} navbar-item">
+                <a routerLink="/admin" (click)="onClickMenu()">Admin</a>
+              </span>
+            </li>
+
+            <li class="item">
+              <span class="glyphicon glyphicon-shopping-cart shopping-cart" routerLink="/checkout" (click)="onClickMenu()"></span>
+              <span>({{Products.length}})</span>
+            </li>
+          </ul>
         </div>
     </div>
 </nav>

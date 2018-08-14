@@ -1,0 +1,11 @@
+.category-text {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.category-box {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: aliceblue;
+  text-align: center;
+}
