@@ -13,6 +13,37 @@ import { FormControl, Validators } from '@angular/forms';
 import { HostListener } from "@angular/core";
 import { SlideshowModule } from "ng-simple-slideshow";
 import { MatTableModule, MatSortModule, MatPaginatorModule, MatProgressSpinnerModule } from "@angular/material";
+//import {
+//  MatAutocompleteModule,
+//  MatButtonModule,
+//  MatButtonToggleModule,
+//  MatCardModule,
+//  MatCheckboxModule,
+//  MatChipsModule,
+//  MatDatepickerModule,
+//  MatDialogModule,
+//  MatExpansionModule,
+//  MatGridListModule,
+//  MatIconModule,
+//  MatInputModule,
+//  MatListModule,
+//  MatMenuModule,
+//  MatNativeDateModule,
+//  MatProgressBarModule,
+//  MatProgressSpinnerModule,
+//  MatRadioModule,
+//  MatRippleModule,
+//  MatSelectModule,
+//  MatSidenavModule,
+//  MatSliderModule,
+//  MatSlideToggleModule,
+//  MatSnackBarModule,
+//  MatStepperModule,
+//  MatTableModule,
+//  MatTabsModule,
+//  MatToolbarModule,
+//  MatTooltipModule,
+//} from '@angular/material';
 
 import { DateTimeFormatPipe } from './pipes/date-time-format.pipe';
 
@@ -43,6 +74,7 @@ import { CheckoutPageComponent } from './checkout-page/checkout-page.component';
 import { AdminPageComponent } from './admin-page/admin-page.component';
 import { MessagesPageComponent } from './messages-page/messages-page.component';
 import { MessageDialogComponent } from './messages-page/message-dialog/message-dialog.component';
+import { ProgressSpinnerComponent } from './shared/progress-spinner/progress-spinner.component';
 
 const appRoutes: Routes = [
     { path: 'home', component: HomePageComponent },
@@ -91,7 +123,8 @@ const appRoutes: Routes = [
         AdminPageComponent,
         MessagesPageComponent,
         DateTimeFormatPipe,
-        MessageDialogComponent
+        MessageDialogComponent,
+        ProgressSpinnerComponent
     ],
     imports: [
         BrowserModule,

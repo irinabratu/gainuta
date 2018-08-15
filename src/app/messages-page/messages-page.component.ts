@@ -14,6 +14,7 @@ import { MessageDialogComponent } from './message-dialog/message-dialog.componen
 
 export class MessagesPageComponent implements OnInit {
 
+  showSpinner: boolean;
   messages: MessageEntity[];
   displayedColumns: string[] = ['Name', 'Email', 'Phone', 'CreateDate', 'Message', 'Answer', 'Actions'];
 
@@ -27,6 +28,7 @@ export class MessagesPageComponent implements OnInit {
   onClickReply(id: number) {
     
     let dialogRef = this.dialog.open(MessageDialogComponent, {
+      disableClose: true,
       width: '800px',
       data: id
     });
@@ -38,8 +40,12 @@ export class MessagesPageComponent implements OnInit {
 
   refreshMessagesGrid() {
 
+    this.showSpinner = true;
+
     this.http.get(baseUrl + 'Messages/GetAll').subscribe(data => {
+
       this.messages = data as MessageEntity[];
+      this.showSpinner = false;
     });
   }
 }

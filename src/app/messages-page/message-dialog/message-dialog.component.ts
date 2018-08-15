@@ -12,6 +12,7 @@ import { baseUrl } from '../../../utils/constants';
 
 export class MessageDialogComponent implements OnInit {
 
+  showSpinner: boolean;
   model: MessageEntity = new MessageEntity();
 
   constructor(public dialogRef: MatDialogRef<MessageDialogComponent>,
@@ -35,8 +36,11 @@ export class MessageDialogComponent implements OnInit {
 
   onClickReply(): void {
 
+    this.showSpinner = true;
+
     this.http.put(baseUrl + 'Messages/Update', this.model).subscribe(data => {
-      
+
+      this.showSpinner = false;
       this.dialogRef.close();
     });
   }

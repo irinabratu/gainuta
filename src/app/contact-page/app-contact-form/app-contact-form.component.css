@@ -1,24 +1,24 @@
 .message-input {
-    resize: none;
+  resize: none;
 }
 
 .contact-address {
-    text-align: center;
-    font-size: 15px;
+  text-align: center;
+  font-size: 15px;
 }
 
 .form-group, .mat-form-field {
-    font-family: Nunito Sans, sans-serif;
-    width: 100%;
-  }
-
-.form-title{
-    font-size: 20px;
-    font-family: Nunito Sans, sans-serif;
-    padding-bottom: 20px;
+  font-family: Nunito Sans, sans-serif;
+  width: 100%;
 }
 
-.mat-form-field placeholder, .mat-raised-button{
-    font-size: 14px;
-    font-family: Nunito Sans, sans-serif;
+.form-title {
+  font-size: 20px;
+  font-family: Nunito Sans, sans-serif;
+  padding-bottom: 20px;
+}
+
+.mat-form-field placeholder, .mat-raised-button {
+  font-size: 14px;
+  font-family: Nunito Sans, sans-serif;
 }
