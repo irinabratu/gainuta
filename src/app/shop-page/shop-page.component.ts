@@ -47,4 +47,19 @@ export class ShopPageComponent implements OnInit {
       this.showSpinner = false;
     });
   }
+
+  onClickAdd(product: ProductEntity) {
+
+    this.showSpinner = true;
+    let model = {
+      ProductId: product.Id,
+      UserId: 1
+    };
+
+    this.http.post(baseUrl + 'ShoppingCart/AddProduct', model).subscribe(data => {
+
+      console.log(data);
+      this.showSpinner = false;
+    });
+  }
 }
