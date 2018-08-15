@@ -47,6 +47,7 @@ export class AppContactFormComponent implements OnInit {
       
       this.http.post(baseUrl + 'Messages/Add', this.model).subscribe(response => {
         console.log('Message with Id: ' + response + ' was sent');
+        this.model = {};
       });
     }
 
