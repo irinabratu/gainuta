@@ -1,7 +1,6 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { Product } from '../../model/Product';
 import { ProductsMockup } from '../../utils/ProductsMockup';
-//import { MatCardModule } from '@angular/material/card'; // todo remove
 import { HttpClient } from '@angular/common/http';
 import { ProductEntity } from '../../model/ProductEntity';
 import { baseUrl } from '../../utils/constants';
@@ -33,14 +32,6 @@ export class ShopPageComponent implements OnInit {
   ngOnInit() {
   }
 
-  onClickAddToCart(product: Product) {
-    this.sendProduct(product);
-  }
-
-  sendProduct(product: Product): void {
-
-  }
-
   fetchProducts() {
 
     this.showSpinner = true;
@@ -55,7 +46,8 @@ export class ShopPageComponent implements OnInit {
   onClickAdd(product: ProductEntity) {
 
     this.showSpinner = true;
-    let model = {
+    
+    const model = {
       UserId: 1,
       ProductId: product.Id,
       ProductTitle: product.Title,

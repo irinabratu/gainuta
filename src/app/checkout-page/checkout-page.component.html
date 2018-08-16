@@ -19,15 +19,12 @@
       {{item.Quantity}} x {{item.Price}} RON
     </div>
     <div class="col-md-2">
-      <input type="button" value="Delete" />
+      <span class="glyphicon glyphicon-remove-circle remove-item" (click)="removeItem(item)"></span>
     </div>
   </div>
 
   <div class="row first-row">
     <div class="col-md-3">
-      <button mat-raised-button type="submit" (click)="clearCart()">
-        <span class="add-to-cart-btn-text">Anulare</span>
-      </button>
     </div>
     <div class="col-md-2">
     </div>
@@ -35,6 +32,11 @@
     </div>
     <div class="col-md-2">
       <span class="total-text">Total: {{totalAmount}} RON</span>
+    </div>
+    <div class="col-md-2">
+      <button mat-raised-button color="primary" type="submit" (click)="placeOrder()">
+        <span class="add-to-cart-btn-text">Order</span>
+      </button>
     </div>
   </div>
 </div>

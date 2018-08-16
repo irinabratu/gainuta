@@ -30,10 +30,6 @@ export class CheckoutPageComponent implements OnInit {
 
     this.fetchShoppingCartItems();
   }
-  
-  removeItem(): void {
-    
-  }
 
   fetchShoppingCartItems() {
     
@@ -52,5 +48,22 @@ export class CheckoutPageComponent implements OnInit {
 
       this.totalAmount = amount;
     });
+  }
+
+  removeItem(item: ShoppingCartItemEntity) {
+
+    this.showSpinner = true;
+
+    this.http.delete(baseUrl + 'ShoppingCart/RemoveItem/' + item.Id)
+      .subscribe(data => {
+
+        this.showSpinner = false;
+        this.messageService.sendCartRefresh(true);
+        this.fetchShoppingCartItems();
+      });
+  }
+
+  placeOrder() {
+
   }
 }
