@@ -56,8 +56,11 @@ export class ShopPageComponent implements OnInit {
 
     this.showSpinner = true;
     let model = {
+      UserId: 1,
       ProductId: product.Id,
-      UserId: 1
+      ProductTitle: product.Title,
+      ProductDescription: product.Description,
+      Price: product.Price
     };
 
     this.http.post(baseUrl + 'ShoppingCart/AddProduct', model).subscribe(data => {

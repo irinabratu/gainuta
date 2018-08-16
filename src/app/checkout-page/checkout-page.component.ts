@@ -1,6 +1,9 @@
 import { Component, OnInit, OnDestroy, ViewEncapsulation } from '@angular/core';
-import { Product } from '../../model/Product';
+import { ShoppingCartItemEntity } from '../../model/ShoppingCartItemEntity';
 import { MessageService } from '../services/message.service';
+import { HttpClient } from '@angular/common/http';
+import { baseUrl } from '../../utils/constants';
+import { forEach } from '@angular/router/src/utils/collection';
 
 @Component({
   selector: 'checkout-page',
@@ -11,54 +14,43 @@ import { MessageService } from '../services/message.service';
 
 export class CheckoutPageComponent implements OnInit {
   
-  Products: Product[];
+  userId: number;
+  items: ShoppingCartItemEntity[];
+  showSpinner: boolean;
+  totalAmount: number;
 
-  constructor(private messageService: MessageService) {
-    
-    this.Products = new Array<Product>();
-    this.calculateProductQuantities();
+  constructor(private messageService: MessageService, private http: HttpClient) {
+
+    this.userId = 1;
+    this.items = [];
+    this.totalAmount = 0;
   }
 
   ngOnInit() {
-  }
 
-  ngOnDestroy() {
+    this.fetchShoppingCartItems();
   }
-
-  indexOfProduct(product: Product) {
+  
+  removeItem(): void {
     
-    for(let i = 0; i < this.Products.length; i++){
-      var item = this.Products[i];
-      if(item.Id == product.Id)
-        return i;
-    }
-
-    return -1;
   }
 
-  calculateProductQuantities() : void { // todo remove
+  fetchShoppingCartItems() {
     
-    let products = localStorage.getItem('checkout');
-    if(!products)
-      return;
+    this.showSpinner = true;
 
-    let allProducts = JSON.parse(products);
-    
-    for(var i = 0; i < allProducts.length; i++) {
+    this.http.get(baseUrl + 'ShoppingCart/GetItems/' + this.userId).subscribe(data => {
 
-      let index = this.indexOfProduct(allProducts[i]);
-      
-      if(index >= 0) {
-        this.Products[index].Cantitate++;
-      }
-      else{
-        this.Products.push(allProducts[i]);
-        this.Products[this.Products.length - 1].Cantitate++;
-      }
-    }
-  }
+      this.items = data as ShoppingCartItemEntity[];
+      this.showSpinner = false;
 
-  clearCart(): void {
-    this.messageService.clearCart();
+      let amount = 0;
+
+      this.items.forEach(function (item) {
+        amount += item.Quantity * item.Price;
+      });
+
+      this.totalAmount = amount;
+    });
   }
 }
