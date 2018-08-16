@@ -35,15 +35,17 @@
         {{ model.Message }}
       </div>
 
-      <div class="form-group">
-        <label>Answer:</label>
-        <textarea name="Answer" [(ngModel)]="model.Answer" #Answer="ngModel" class="form-control" maxlength="512" required ></textarea>
-      </div>
+      <form class="example-form">
+        <mat-form-field class="example-full-width">
+          <textarea matInput placeholder="Answer"></textarea>
+        </mat-form-field>
+      </form>
+
     </div>
 
     <div class="modal-footer">
-      <button type="submit" class="btn btn-success" (click)="onClickReply()">Reply</button>
-      <button type="button" class="btn btn-default" (click)="onClickCancel()">Cancel</button>
+        <button mat-button (click)="onClickReply()">Reply</button>
+        <button mat-button (click)="onClickCancel()">Cancel</button>
     </div>
   </form>
 </div>
