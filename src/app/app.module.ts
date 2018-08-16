@@ -46,6 +46,7 @@ import { MatTableModule, MatSortModule, MatPaginatorModule, MatProgressSpinnerMo
 //} from '@angular/material';
 
 import { DateTimeFormatPipe } from './pipes/date-time-format.pipe';
+import { MessageService } from './services/message.service';
 
 import { AppComponent } from './app.component';
 import { HomePageComponent } from './home-page/home-page.component';
@@ -77,79 +78,81 @@ import { MessageDialogComponent } from './messages-page/message-dialog/message-d
 import { ProgressSpinnerComponent } from './shared/progress-spinner/progress-spinner.component';
 
 const appRoutes: Routes = [
-    { path: 'home', component: HomePageComponent },
-    { path: 'shop', component: ShopPageComponent },
-    { path: 'event', component: EventPageComponent },
-    { path: 'products', component: ProductsListComponent },
-    { path: 'event/edit/:id', component: AppEditEventComponent },
-    { path: 'gallery', component: GalleryPageComponent },
-    { path: 'about', component: AboutPageComponent },
-    { path: 'contact', component: ContactPageComponent },
-    { path: 'contact/:isInvolve', component: ContactPageComponent },
-    { path: 'myprofile', component: ProfilePageComponent },
-    { path: 'admin', component: AdminPageComponent },
-    { path: 'checkout', component: CheckoutPageComponent },
-    { path: 'messages', component: MessagesPageComponent },
-    { path: '', redirectTo: '/home', pathMatch: 'full' },
-    { path: '**', component: HomePageComponent }
+  { path: 'home', component: HomePageComponent },
+  { path: 'shop', component: ShopPageComponent },
+  { path: 'event', component: EventPageComponent },
+  { path: 'products', component: ProductsListComponent },
+  { path: 'event/edit/:id', component: AppEditEventComponent },
+  { path: 'gallery', component: GalleryPageComponent },
+  { path: 'about', component: AboutPageComponent },
+  { path: 'contact', component: ContactPageComponent },
+  { path: 'contact/:isInvolve', component: ContactPageComponent },
+  { path: 'myprofile', component: ProfilePageComponent },
+  { path: 'admin', component: AdminPageComponent },
+  { path: 'checkout', component: CheckoutPageComponent },
+  { path: 'messages', component: MessagesPageComponent },
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
+  { path: '**', component: HomePageComponent }
 ];
 
 @NgModule({
-    declarations: [
-        AppComponent,
-        HomePageComponent,
-        ContactPageComponent,
-        AppNavBarComponent,
-        ProfilePageComponent,
-        AppContactHeaderComponent,
-        AppContactMapComponent,
-        AppContactFormComponent,
-        AppFooterComponent,
-        EventPageComponent,
-        GalleryPageComponent,
-        AppEditEventComponent,
-        AboutPageComponent,
-        AppDonateNowComponent,
-        AppKeepInTouchComponent,
-        AppSubscribeComponent,
-        AppAboutUsComponent,
-        AppLoginDialogComponent,
-        AppSignupDialogComponent,
-        AppConfirmDialogComponent,
-        AppBreadcrumbComponent,
-        ProductsListComponent,
-        ShopPageComponent,
-        CheckoutPageComponent,
-        AdminPageComponent,
-        MessagesPageComponent,
-        DateTimeFormatPipe,
-        MessageDialogComponent,
-        ProgressSpinnerComponent
-    ],
-    imports: [
-        BrowserModule,
-        FormsModule,
-        HttpModule,
-        HttpClientModule,
-        RouterModule.forRoot(appRoutes),
-        BrowserAnimationsModule,
-        MatDialogModule,
-        MatFormFieldModule,
-        MatInputModule,
-        MatButtonModule,
-        ReactiveFormsModule,
-        MatCardModule,
-        SlideshowModule,
-        MatTableModule, MatSortModule, MatPaginatorModule, MatProgressSpinnerModule
-    ],
-    providers: [],
-    bootstrap: [AppComponent],
-    entryComponents: [
-        AppSignupDialogComponent,
-        AppLoginDialogComponent,
-        AppConfirmDialogComponent,
-        MessageDialogComponent
-    ]
+  declarations: [
+    AppComponent,
+    HomePageComponent,
+    ContactPageComponent,
+    AppNavBarComponent,
+    ProfilePageComponent,
+    AppContactHeaderComponent,
+    AppContactMapComponent,
+    AppContactFormComponent,
+    AppFooterComponent,
+    EventPageComponent,
+    GalleryPageComponent,
+    AppEditEventComponent,
+    AboutPageComponent,
+    AppDonateNowComponent,
+    AppKeepInTouchComponent,
+    AppSubscribeComponent,
+    AppAboutUsComponent,
+    AppLoginDialogComponent,
+    AppSignupDialogComponent,
+    AppConfirmDialogComponent,
+    AppBreadcrumbComponent,
+    ProductsListComponent,
+    ShopPageComponent,
+    CheckoutPageComponent,
+    AdminPageComponent,
+    MessagesPageComponent,
+    DateTimeFormatPipe,
+    MessageDialogComponent,
+    ProgressSpinnerComponent
+  ],
+  imports: [
+    BrowserModule,
+    FormsModule,
+    HttpModule,
+    HttpClientModule,
+    RouterModule.forRoot(appRoutes),
+    BrowserAnimationsModule,
+    MatDialogModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatButtonModule,
+    ReactiveFormsModule,
+    MatCardModule,
+    SlideshowModule,
+    MatTableModule, MatSortModule, MatPaginatorModule, MatProgressSpinnerModule
+  ],
+  providers: [
+    MessageService
+  ],
+  bootstrap: [AppComponent],
+  entryComponents: [
+    AppSignupDialogComponent,
+    AppLoginDialogComponent,
+    AppConfirmDialogComponent,
+    MessageDialogComponent
+  ]
 })
 
 export class AppModule {

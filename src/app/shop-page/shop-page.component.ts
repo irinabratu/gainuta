@@ -5,6 +5,7 @@ import { ProductsMockup } from '../../utils/ProductsMockup';
 import { HttpClient } from '@angular/common/http';
 import { ProductEntity } from '../../model/ProductEntity';
 import { baseUrl } from '../../utils/constants';
+import { MessageService } from '../services/message.service';
 
 @Component({
   selector: 'shop-page',
@@ -19,7 +20,7 @@ export class ShopPageComponent implements OnInit {
   Products: Product[];
   products: ProductEntity[];
 
-  constructor(private http: HttpClient) {
+  constructor(private http: HttpClient, private messageService: MessageService) {
     const productsMockup = new ProductsMockup();
     this.Products = productsMockup.getProducts();
 
@@ -34,7 +35,7 @@ export class ShopPageComponent implements OnInit {
   }
 
   sendProduct(product: Product): void {
-      
+
   }
 
   fetchProducts() {
@@ -58,7 +59,7 @@ export class ShopPageComponent implements OnInit {
 
     this.http.post(baseUrl + 'ShoppingCart/AddProduct', model).subscribe(data => {
 
-      console.log(data);
+      this.messageService.sendCartRefresh(true);
       this.showSpinner = false;
     });
   }
