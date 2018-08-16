@@ -41,7 +41,7 @@ https://ainutagainuta.firebaseapp.com
 - npm install -g firebase-tools
 - npm install linqts --save
 - npm install handlebars@latest
-
+- npm i rxjs-compat
 
 
 
