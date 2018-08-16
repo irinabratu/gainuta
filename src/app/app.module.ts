@@ -76,6 +76,8 @@ import { AdminPageComponent } from './admin-page/admin-page.component';
 import { MessagesPageComponent } from './messages-page/messages-page.component';
 import { MessageDialogComponent } from './messages-page/message-dialog/message-dialog.component';
 import { ProgressSpinnerComponent } from './shared/progress-spinner/progress-spinner.component';
+import { AlertMessageService } from './shared/alert-message/alert-message.service';
+import { AlertMessageComponent } from './shared/alert-message/alert-message.component';
 
 const appRoutes: Routes = [
   { path: 'home', component: HomePageComponent },
@@ -125,7 +127,8 @@ const appRoutes: Routes = [
     MessagesPageComponent,
     DateTimeFormatPipe,
     MessageDialogComponent,
-    ProgressSpinnerComponent
+    ProgressSpinnerComponent,
+    AlertMessageComponent
   ],
   imports: [
     BrowserModule,
@@ -144,7 +147,8 @@ const appRoutes: Routes = [
     MatTableModule, MatSortModule, MatPaginatorModule, MatProgressSpinnerModule
   ],
   providers: [
-    MessageService
+    MessageService,
+    AlertMessageService
   ],
   bootstrap: [AppComponent],
   entryComponents: [

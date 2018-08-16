@@ -6,6 +6,7 @@ import { HttpClient } from '@angular/common/http';
 import { ProductEntity } from '../../model/ProductEntity';
 import { baseUrl } from '../../utils/constants';
 import { MessageService } from '../services/message.service';
+import { AlertMessageService } from '../shared/alert-message/alert-message.service';
 
 @Component({
   selector: 'shop-page',
@@ -20,7 +21,9 @@ export class ShopPageComponent implements OnInit {
   Products: Product[];
   products: ProductEntity[];
 
-  constructor(private http: HttpClient, private messageService: MessageService) {
+  constructor(private http: HttpClient, private messageService: MessageService,
+    private alertMessageService: AlertMessageService) {
+
     const productsMockup = new ProductsMockup();
     this.Products = productsMockup.getProducts();
 
@@ -61,6 +64,10 @@ export class ShopPageComponent implements OnInit {
 
       this.messageService.sendCartRefresh(true);
       this.showSpinner = false;
+
+      this.alertMessageService.success('Product was added to your shopping cart.');
+      const element = document.querySelector('#preFooter');
+      element.scrollIntoView();
     });
   }
 }

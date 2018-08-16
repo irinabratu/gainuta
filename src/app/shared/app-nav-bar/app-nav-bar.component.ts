@@ -51,9 +51,10 @@ export class AppNavBarComponent implements OnInit {
   }
 
   fetchCartCount() {
+
     this.http.get(baseUrl + 'ShoppingCart/GetCount/' + this.userId)
       .subscribe(data => {
-        this.cartCount = data;
+        this.cartCount = data as number;
       });
   }
 
