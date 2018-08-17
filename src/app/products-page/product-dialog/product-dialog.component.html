@@ -1,0 +1,76 @@
+
+<form name="productDialog" #productDialogForm="ngForm">
+  <div class="modal-header">
+    <h4 class="modal-title">Product detail</h4>
+  </div>
+
+  <div class="modal-body">
+    <div class="form-group">
+      <mat-form-field class="long-field">
+        <input matInput placeholder="Title" [(ngModel)]="model.Title" name="Title">
+      </mat-form-field>
+    </div>
+
+    <div class="form-group">
+      <mat-form-field class="long-field">
+        <textarea matTextareaAutosize matAutosizeMinRows=7 matAutosizeMaxRows=100 matInput
+                  [(ngModel)]="model.Description" name="Description" placeholder="Description" required></textarea>
+      </mat-form-field>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-group">
+          {{model.CreateDate | dateTimeFormat}}
+        </div>        
+      </div>
+
+      <div class="col-md-6">
+        <div class="form-group">
+          {{model.UpdateDate | dateTimeFormat}}
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-4">
+        <div class="form-group">
+          <mat-checkbox [(ngModel)]="model.IsActive" name="IsActive">
+            <label>Is Active</label>
+          </mat-checkbox>
+        </div>
+
+        <div class="form-group">
+          <mat-checkbox [(ngModel)]="model.IsNew" name="IsNew">
+            <label>Is New</label>
+          </mat-checkbox>
+        </div>
+
+        <div class="form-group">
+          <mat-form-field>
+            <input matInput placeholder="Price" [(ngModel)]="model.Price" name="Price">
+          </mat-form-field>
+        </div>
+
+        <div class="form-group">
+          <mat-form-field>
+            <input matInput placeholder="Image URL" [(ngModel)]="model.ImageUrl" name="ImageUrl">
+          </mat-form-field>
+        </div>
+      </div>
+
+      <div class="col-md-8">
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-footer">
+    <button mat-button (click)="onClickSave()">Save</button>
+    <button mat-button (click)="onClickCance()">Cancel</button>
+  </div>
+</form>
+
+
+<progress-spinner [show]="showSpinner"></progress-spinner>
+

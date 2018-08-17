@@ -5,14 +5,13 @@ import { HttpModule } from '@angular/http';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule, Routes } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatDialogModule } from '@angular/material';
-import { MatFormFieldModule, MatInputModule } from '@angular/material';
-import { MatButtonModule } from '@angular/material/button';
-import { MatCardModule } from '@angular/material/card';
 import { FormControl, Validators } from '@angular/forms';
 import { HostListener } from "@angular/core";
 import { SlideshowModule } from "ng-simple-slideshow";
+import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
 import { MatTableModule, MatSortModule, MatPaginatorModule, MatProgressSpinnerModule } from "@angular/material";
+import { MatFormFieldModule, MatInputModule, MatDialogModule, MatCheckboxModule } from '@angular/material';
 //import {
 //  MatAutocompleteModule,
 //  MatButtonModule,
@@ -80,6 +79,7 @@ import { AlertMessageService } from './shared/alert-message/alert-message.servic
 import { AlertMessageComponent } from './shared/alert-message/alert-message.component';
 import { OrdersPageComponent } from './orders-page/orders-page.component';
 import { OrderDialogComponent } from './orders-page/oder-dialog/order-dialog.component';
+import { ProductDialogComponent } from './products-page/product-dialog/product-dialog.component';
 
 const appRoutes: Routes = [
   { path: 'home', component: HomePageComponent },
@@ -133,7 +133,8 @@ const appRoutes: Routes = [
     ProgressSpinnerComponent,
     AlertMessageComponent,
     OrdersPageComponent,
-    OrderDialogComponent
+    OrderDialogComponent,
+    ProductDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -142,14 +143,10 @@ const appRoutes: Routes = [
     HttpClientModule,
     RouterModule.forRoot(appRoutes),
     BrowserAnimationsModule,
-    MatDialogModule,
-    MatFormFieldModule,
-    MatInputModule,
-    MatButtonModule,
     ReactiveFormsModule,
-    MatCardModule,
     SlideshowModule,
-    MatTableModule, MatSortModule, MatPaginatorModule, MatProgressSpinnerModule
+    MatDialogModule, MatFormFieldModule, MatInputModule, MatCheckboxModule, MatButtonModule,
+    MatCardModule, MatTableModule, MatSortModule, MatPaginatorModule, MatProgressSpinnerModule
   ],
   providers: [
     MessageService,
@@ -161,7 +158,8 @@ const appRoutes: Routes = [
     AppLoginDialogComponent,
     AppConfirmDialogComponent,
     MessageDialogComponent,
-    OrderDialogComponent
+    OrderDialogComponent,
+    ProductDialogComponent
   ]
 })
 

@@ -5,10 +5,10 @@
 
   <div class="row">
     <div class="pull-right">
-      <span class="mat-button">
+      <button mat-button (click)="onClickAdd()">
         <span class="glyphicon glyphicon-plus"></span>
-        <span>Add product</span>
-      </span>
+        <span class="add-btn"> New product</span>
+      </button>
     </div>
   </div>
 
@@ -17,7 +17,7 @@
       <ng-container matColumnDef="Actions">
         <th mat-header-cell class="actions-column default-column" *matHeaderCellDef> Actions </th>
         <td mat-cell class="actions-column default-column" *matCellDef="let element">
-          <span class="glyphicon glyphicon-eye-open view-order-btn" (click)="onClickEdit(element.Id)"></span>
+          <span class="glyphicon glyphicon-pencil edit-product-btn" (click)="onClickEdit(element.Id)"></span>
       </ng-container>
 
       <ng-container matColumnDef="Title">

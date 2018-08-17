@@ -1,10 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductEntity } from '../../model/ProductEntity';
 import { HttpClient } from '@angular/common/http';
-import { ProductEntity } from '../../model/ProductEntity';
 import { baseUrl } from '../../utils/constants';
 import { MessageService } from '../services/message.service';
 import { AlertMessageService } from '../shared/alert-message/alert-message.service';
+import { ProductDialogComponent } from './product-dialog/product-dialog.component';
+import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 
 @Component({
   selector: 'products-list',
@@ -19,7 +20,7 @@ export class ProductsListComponent implements OnInit {
   displayedColumns: string[] = ['Actions', 'Title', 'Description', 'CreateDate', 'Price', 'IsNew', 'IsActive'];
 
   constructor(private http: HttpClient, private messageService: MessageService,
-    private alertMessageService: AlertMessageService) {
+    private alertMessageService: AlertMessageService, private dialog: MatDialog) {
 
     this.showSpinner = false;
   }
@@ -40,5 +41,29 @@ export class ProductsListComponent implements OnInit {
     });
   }
 
-  onClickAdd() { }
+  onClickEdit(id: number) {
+    
+    let dialogRef = this.dialog.open(ProductDialogComponent, {
+      disableClose: true,
+      width: '800px',
+      data: id
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      this.fetchProducts();
+    });
+  }
+
+  onClickAdd() {
+    
+    let dialogRef = this.dialog.open(ProductDialogComponent, {
+      disableClose: true,
+      width: '800px',
+      data: 0
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      this.fetchProducts();
+    });
+  }
 }

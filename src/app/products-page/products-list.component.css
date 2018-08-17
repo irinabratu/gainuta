@@ -2,10 +2,16 @@
   padding-top: 20px;
 }
 
-.mat-raised-button {
-  font-family: Montserrat, sans-serif;
-}
-
 .grid-layout {
   width: 100%;
+}
+
+.edit-product-btn {
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.add-btn {
+  font-family: Montserrat, sans-serif;
+  font-size: 22px;
 }
