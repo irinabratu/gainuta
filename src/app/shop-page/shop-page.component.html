@@ -4,6 +4,52 @@
   </div>
 
   <div class="row">
+    <div class="col-md-4" *ngFor="let item of products">
+      <div class="new-product-box">
+        <div class="new-image-box">
+          <div class="row product-image">
+            <div class="col-md-12">
+              <img src="{{item.ImageUrl}}" alt="{{item.Id}}" class="image-style" />
+            </div>
+          </div>
+        </div>
+        <div class="new-product-info">
+          <div class="new-product-des-title">
+            <div class="row new-product-title">
+              <div class="col-md-12">
+                {{ item.Title }}
+              </div>
+            </div>
+            <div class="row new-product-description">
+              <div class="col-md-12">
+                {{ item.Description }}
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4 new-product-footer">
+              <span class="new-product-price">
+                <span>{{item.Price + ' RON'}}</span>
+              </span>
+            </div>
+            <div class="col-md-4 new-product-footer">
+              <span class="new-product-new">
+                {{ item.IsNew ? '(new)' : ''}}
+              </span>
+            </div>
+            <div class="col-md-4 new-product-footer">
+              <button mat-raised-button type="submit" (click)="onClickAdd(item)" class="add-to-cart-btn">
+                <span class="glyphicon glyphicon-shopping-cart shopping-cart-icon"></span>
+                <span class="add-to-cart-btn-text">Add</span>
+              </button>
+            </div>
+          </div>
+        </div>        
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
     <div class="col-md-4" *ngFor="let product of Products">
       <div class="product-box" [ngStyle]="{'background-image': 'url(' + product.ImgUrl + ')', '-webkit-background-size': 'cover', 'background-position':'center center', 'background-repeat': 'no-repeat'}">
         <!-- <div class="row product-image">
@@ -28,40 +74,6 @@
           </div>
           <div class="col-md-4 product-footer">
             <button mat-raised-button type="submit" (click)="onClickAddToCart(product)" class="add-to-cart-btn">
-              <span class="glyphicon glyphicon-shopping-cart shopping-cart-icon"></span>
-              <span class="add-to-cart-btn-text">Add</span>
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col-md-4" *ngFor="let item of products">
-      <div class="product-box">
-        <div class="row product-image">
-          <img src="../../assets/images/shop/gaina3.jpg" alt="{{item.Id}}" class="image-style" />
-        </div>
-        <div class="row product-title">
-          {{ item.Title }}
-        </div>
-        <div class="row product-description">
-          {{ item.Description }}
-        </div>
-        <div class="row">
-          <div class="col-md-4 product-footer">
-            <span class="product-price">
-              <span>{{item.Price + ' RON'}}</span>
-            </span>
-          </div>
-          <div class="col-md-4 product-footer">
-            <span class="product-new">
-              {{ item.IsNew ? '(new)' : ''}}
-            </span>
-          </div>
-          <div class="col-md-4 product-footer">
-            <button mat-raised-button type="submit" (click)="onClickAdd(item)" class="add-to-cart-btn">
               <span class="glyphicon glyphicon-shopping-cart shopping-cart-icon"></span>
               <span class="add-to-cart-btn-text">Add</span>
             </button>

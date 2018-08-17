@@ -7,4 +7,5 @@ export class ProductEntity {
   Price: number;
   CreateDate: Date;
   UpdateDate: Date;
+  ImageUrl: string;
 }

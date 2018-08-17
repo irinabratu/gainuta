@@ -21,19 +21,15 @@
     <div class="row">
       <div class="col-md-6">
         <div class="form-group">
+          <label>Create Date:</label>
           {{model.CreateDate | dateTimeFormat}}
-        </div>        
-      </div>
+        </div>
 
-      <div class="col-md-6">
         <div class="form-group">
+          <label>Update Date:</label>
           {{model.UpdateDate | dateTimeFormat}}
         </div>
-      </div>
-    </div>
 
-    <div class="row">
-      <div class="col-md-4">
         <div class="form-group">
           <mat-checkbox [(ngModel)]="model.IsActive" name="IsActive">
             <label>Is Active</label>
@@ -59,8 +55,8 @@
         </div>
       </div>
 
-      <div class="col-md-8">
-        
+      <div class="col-md-6">
+        <img src="{{model.ImageUrl}}" style="width: 80%;" />
       </div>
     </div>
   </div>

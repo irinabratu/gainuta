@@ -36,12 +36,17 @@ export class ProductDialogComponent implements OnInit {
       });
   }
 
-  onClickCance() {
+  onClickSave() {
 
-    this.dialogRef.close();
+    this.http.put(baseUrl + 'Products/Update/' + this.model.Id, this.model)
+      .subscribe(data => {
+
+        this.showSpinner = false;
+        this.dialogRef.close();
+      });
   }
 
-  onClickSave() {
+  onClickCance() {
 
     this.dialogRef.close();
   }
