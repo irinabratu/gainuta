@@ -44,6 +44,7 @@ export class OrdersPageComponent implements OnInit {
     let dialogRef = this.dialog.open(OrderDialogComponent, {
       disableClose: true,
       width: '800px',
+      maxHeight: '600px',
       data: id
     });
 
