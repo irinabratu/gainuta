@@ -52,7 +52,8 @@ export class ShopPageComponent implements OnInit {
       ProductId: product.Id,
       ProductTitle: product.Title,
       ProductDescription: product.Description,
-      Price: product.Price
+      Price: product.Price,
+      ImageUrl: product.ImageUrl
     };
 
     this.http.post(baseUrl + 'ShoppingCart/AddProduct', model).subscribe(data => {

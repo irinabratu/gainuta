@@ -43,7 +43,7 @@ export class CheckoutPageComponent implements OnInit {
       this.showSpinner = false;
 
       let amount = 0;
-
+      
       this.items.forEach(function (item) {
         amount += item.Quantity * item.Price;
       });
