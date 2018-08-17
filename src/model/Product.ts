@@ -23,3 +23,4 @@ export class Product {
         this.Cantitate = Cantitate;
     }
 }
+// todo remove

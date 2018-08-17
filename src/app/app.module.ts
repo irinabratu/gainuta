@@ -78,6 +78,7 @@ import { MessageDialogComponent } from './messages-page/message-dialog/message-d
 import { ProgressSpinnerComponent } from './shared/progress-spinner/progress-spinner.component';
 import { AlertMessageService } from './shared/alert-message/alert-message.service';
 import { AlertMessageComponent } from './shared/alert-message/alert-message.component';
+import { OrdersPageComponent } from './orders-page/orders-page.component';
 
 const appRoutes: Routes = [
   { path: 'home', component: HomePageComponent },
@@ -93,6 +94,7 @@ const appRoutes: Routes = [
   { path: 'admin', component: AdminPageComponent },
   { path: 'checkout', component: CheckoutPageComponent },
   { path: 'messages', component: MessagesPageComponent },
+  { path: 'orders', component: OrdersPageComponent },
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: '**', component: HomePageComponent }
 ];
@@ -128,7 +130,8 @@ const appRoutes: Routes = [
     DateTimeFormatPipe,
     MessageDialogComponent,
     ProgressSpinnerComponent,
-    AlertMessageComponent
+    AlertMessageComponent,
+    OrdersPageComponent
   ],
   imports: [
     BrowserModule,

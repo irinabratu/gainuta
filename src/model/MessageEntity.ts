@@ -1,5 +1,4 @@
 export class MessageEntity {
-
     Id: number;
     Name: string;
     Email: string;

@@ -1,0 +1,41 @@
+<div class="container">
+  <div class="row first-row">
+    <span class="page-title">Orders</span>
+  </div>
+
+  <div class="row orders-grid">
+    <table mat-table [dataSource]="orders" class="mat-elevation-z8 orders-grid-layout">
+
+      <ng-container matColumnDef="Actions">
+        <th mat-header-cell class="actions-column default-column" *matHeaderCellDef> Actions </th>
+        <td mat-cell class="actions-column default-column" *matCellDef="let element">
+        <span class="glyphicon glyphicon-eye-open view-order-btn" (click)="onClickViewOrder(element.Id)"></span>
+      </ng-container>
+
+      <ng-container matColumnDef="Id">
+        <th mat-header-cell class="id-column default-column" *matHeaderCellDef> Order # </th>
+        <td mat-cell class="id-column default-column" *matCellDef="let element"> {{element.Id}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="UserId">
+        <th mat-header-cell class="name-column default-column" *matHeaderCellDef> User Id. </th>
+        <td mat-cell class="name-column default-column" *matCellDef="let element"> {{element.UserId}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="PlaceDate">
+        <th mat-header-cell class="date-column default-column" *matHeaderCellDef> Date </th>
+        <td mat-cell class="date-column default-column" *matCellDef="let element"> {{element.PlaceDate | dateTimeFormat}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="Amount">
+        <th mat-header-cell class="message-column default-column" *matHeaderCellDef> Amount </th>
+        <td mat-cell class="message-column default-column" *matCellDef="let element"> {{element.Amount.toFixed(2) + ' RON'}} </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+  </div>
+</div>
+
+<progress-spinner [show]="showSpinner"></progress-spinner>
