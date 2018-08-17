@@ -85,7 +85,6 @@ const appRoutes: Routes = [
   { path: 'home', component: HomePageComponent },
   { path: 'shop', component: ShopPageComponent },
   { path: 'event', component: EventPageComponent },
-  { path: 'products', component: ProductsListComponent },
   { path: 'event/edit/:id', component: AppEditEventComponent },
   { path: 'gallery', component: GalleryPageComponent },
   { path: 'about', component: AboutPageComponent },
@@ -94,8 +93,9 @@ const appRoutes: Routes = [
   { path: 'myprofile', component: ProfilePageComponent },
   { path: 'admin', component: AdminPageComponent },
   { path: 'checkout', component: CheckoutPageComponent },
-  { path: 'messages', component: MessagesPageComponent },
+  { path: 'products', component: ProductsListComponent },
   { path: 'orders', component: OrdersPageComponent },
+  { path: 'messages', component: MessagesPageComponent },
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: '**', component: HomePageComponent }
 ];

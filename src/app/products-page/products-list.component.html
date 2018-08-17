@@ -1,37 +1,60 @@
 <div class="container">
   <div class="row first-row">
-      <div class="col-md-12">
-          <a [routerLink]="['edit', 0]" class="btn btn-default btn-sm">
-              <span class="glyphicon glyphicon-plus"></span>
-              Add product
-          </a>
-      </div>
+    <span class="page-title">Products</span>
   </div>
 
-  <div class="row text-center" *ngFor="let product of Products">
-      <hr />
-      <div class="col-md-1 actions-column">
-        <button type="button" class="btn btn-default" (click)="onClickDeleteproduct(product.Id)" style="padding-top: 9px; float: left; margin-top: 1px; margin-left: 1px;">
-            <i class="glyphicon glyphicon-shopping-cart"></i>
-        </button>
-      </div>
-      <div class="col-md-2">
-          {{ product.Nume }}
-      </div>
-      <div class="col-md-3">
-          {{ product.Pret }}
-      </div>
-      <div class="col-md-2">
-        {{ product.ImgUrl }}
-      </div>
-  </div>
-  
   <div class="row">
-      <hr />
+    <div class="pull-right">
+      <span class="mat-button">
+        <span class="glyphicon glyphicon-plus"></span>
+        <span>Add product</span>
+      </span>
+    </div>
   </div>
 
-  <div class="row text-center" *ngIf="Products.length === 0">
-      0 products found.
+  <div class="row products-grid">
+    <table mat-table [dataSource]="products" class="mat-elevation-z8 grid-layout">
+      <ng-container matColumnDef="Actions">
+        <th mat-header-cell class="actions-column default-column" *matHeaderCellDef> Actions </th>
+        <td mat-cell class="actions-column default-column" *matCellDef="let element">
+          <span class="glyphicon glyphicon-eye-open view-order-btn" (click)="onClickEdit(element.Id)"></span>
+      </ng-container>
+
+      <ng-container matColumnDef="Title">
+        <th mat-header-cell class="id-column default-column" *matHeaderCellDef> Title </th>
+        <td mat-cell class="id-column default-column" *matCellDef="let element"> {{element.Title}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="Description">
+        <th mat-header-cell class="name-column default-column" *matHeaderCellDef> Description </th>
+        <td mat-cell class="name-column default-column" *matCellDef="let element"> {{element.Description}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="CreateDate">
+        <th mat-header-cell class="message-column default-column" *matHeaderCellDef> Date </th>
+        <td mat-cell class="message-column default-column" *matCellDef="let element"> {{element.CreateDate | dateTimeFormat}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="Price">
+        <th mat-header-cell class="email-column default-column" *matHeaderCellDef> Price </th>
+        <td mat-cell class="email-column default-column" *matCellDef="let element"> {{element.Price.toFixed(2) + ' RON'}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="IsNew">
+        <th mat-header-cell class="phone-column default-column" *matHeaderCellDef> Is New </th>
+        <td mat-cell class="phone-column default-column" *matCellDef="let element"> {{element.IsNew}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="IsActive">
+        <th mat-header-cell class="phone-column default-column" *matHeaderCellDef> Is Active </th>
+        <td mat-cell class="phone-column default-column" *matCellDef="let element"> {{element.IsActive}} </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
   </div>
 </div>
 
+<div id="preFooter"></div>
+<progress-spinner [show]="showSpinner"></progress-spinner>

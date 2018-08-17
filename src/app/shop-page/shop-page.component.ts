@@ -25,11 +25,11 @@ export class ShopPageComponent implements OnInit {
 
     const productsMockup = new ProductsMockup();
     this.Products = productsMockup.getProducts();
-
-    this.fetchProducts();
   }
 
   ngOnInit() {
+
+    this.fetchProducts();
   }
 
   fetchProducts() {
