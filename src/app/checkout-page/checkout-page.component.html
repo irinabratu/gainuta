@@ -31,7 +31,7 @@
     <div class="col-md-3">
     </div>
     <div class="col-md-2">
-      <span class="total-text">Total: {{totalAmount}} RON</span>
+      <span class="total-text">Total: {{totalAmount.toFixed(2)}} RON</span>
     </div>
     <div class="col-md-2">
       <button mat-raised-button color="primary" type="submit" (click)="placeOrder()">
@@ -41,4 +41,5 @@
   </div>
 </div>
 
+<div id="preFooter"></div>
 <progress-spinner [show]="showSpinner"></progress-spinner>
