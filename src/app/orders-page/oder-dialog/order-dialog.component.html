@@ -1,0 +1,58 @@
+<div class="row">
+  <form name="orderDialog" #orderDialogForm="ngForm">
+    <div class="modal-header">
+      <h4 class="modal-title">Order detail</h4>
+    </div>
+    <div class="modal-body">
+      <div class="form-group">
+        <label>Order #:</label>
+        {{ model.Id }}
+      </div>
+
+      <div class="form-group">
+        <label>User Id.:</label>
+        {{ model.UserId }}
+      </div>
+
+      <div class="form-group">
+        <label>Client name:</label>
+        {{ model.UserName }}
+      </div>
+
+      <div class="form-group">
+        <label>Phone:</label>
+        {{ model.UserPhone }}
+      </div>
+
+      <div class="form-group">
+        <label>Email:</label>
+        {{ model.UserEmail }}
+      </div>
+
+      <div class="form-group">
+        <label>Date:</label>
+        {{ model.PlaceDate | dateTimeFormat }}
+      </div>
+
+      <div class="form-group">
+        <label>Amount:</label>
+        {{ model.Amount.toFixed(2) + ' RON' }}
+      </div>
+
+      <div class="form-group">
+        <div class="row" *ngFor="let item of model.ShoppingCartItems">
+          <div class="col-md-3">{{item.ProductTitle}}</div>
+          <div class="col-md-5">{{item.ProductDescription}}</div>
+          <div class="col-md-2">{{item.Quantity}}</div>
+          <div class="col-md-2">{{item.Price.toFixed(2) + ' RON'}}</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-footer">
+      <button mat-button (click)="onClickClose()">Close</button>
+    </div>
+  </form>
+</div>
+
+<progress-spinner [show]="showSpinner"></progress-spinner>

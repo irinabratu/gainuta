@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { OrderEntity } from '../../model/OrderEntity';
 import { baseUrl } from '../../utils/constants';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
+import { OrderDialogComponent } from './oder-dialog/order-dialog.component';
 
 @Component({
   selector: 'orders-page',
@@ -40,14 +41,14 @@ export class OrdersPageComponent implements OnInit {
 
   onClickViewOrder(id: number) {
 
-    //let dialogRef = this.dialog.open(OrderDialogComponent, {
-    //  disableClose: true,
-    //  width: '800px',
-    //  data: id
-    //});
+    let dialogRef = this.dialog.open(OrderDialogComponent, {
+      disableClose: true,
+      width: '800px',
+      data: id
+    });
 
-    //dialogRef.afterClosed().subscribe(result => {
-    //  this.refreshMessagesGrid();
-    //});
+    dialogRef.afterClosed().subscribe(result => {
+      this.fetchOrders();
+    });
   }
 }

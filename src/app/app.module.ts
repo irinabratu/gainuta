@@ -79,6 +79,7 @@ import { ProgressSpinnerComponent } from './shared/progress-spinner/progress-spi
 import { AlertMessageService } from './shared/alert-message/alert-message.service';
 import { AlertMessageComponent } from './shared/alert-message/alert-message.component';
 import { OrdersPageComponent } from './orders-page/orders-page.component';
+import { OrderDialogComponent } from './orders-page/oder-dialog/order-dialog.component';
 
 const appRoutes: Routes = [
   { path: 'home', component: HomePageComponent },
@@ -131,7 +132,8 @@ const appRoutes: Routes = [
     MessageDialogComponent,
     ProgressSpinnerComponent,
     AlertMessageComponent,
-    OrdersPageComponent
+    OrdersPageComponent,
+    OrderDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -158,7 +160,8 @@ const appRoutes: Routes = [
     AppSignupDialogComponent,
     AppLoginDialogComponent,
     AppConfirmDialogComponent,
-    MessageDialogComponent
+    MessageDialogComponent,
+    OrderDialogComponent
   ]
 })
 
