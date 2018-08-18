@@ -46,6 +46,7 @@ import { MatFormFieldModule, MatInputModule, MatDialogModule, MatCheckboxModule 
 
 import { DateTimeFormatPipe } from './pipes/date-time-format.pipe';
 import { MessageService } from './services/message.service';
+import { LoginService } from './services/login.service';
 
 import { AppComponent } from './app.component';
 import { HomePageComponent } from './home-page/home-page.component';
@@ -81,6 +82,7 @@ import { ProductDialogComponent } from './products-page/product-dialog/product-d
 import { NotfoundPageComponent } from './notfound-page/notfound-page.component';
 import { LoginPageComponent } from './login-page/login-page.component';
 import { ForgotPasswordPageComponent } from './forgot-password-page/forgot-password-page.component';
+import { LogoutPageComponent } from './logout-page/logout-page.component';
 
 const appRoutes: Routes = [
   { path: 'home', component: HomePageComponent },
@@ -138,7 +140,8 @@ const appRoutes: Routes = [
     ProductDialogComponent,
     NotfoundPageComponent,
     LoginPageComponent,
-    ForgotPasswordPageComponent
+    ForgotPasswordPageComponent,
+    LogoutPageComponent
   ],
   imports: [
     BrowserModule,
@@ -154,6 +157,7 @@ const appRoutes: Routes = [
   ],
   providers: [
     MessageService,
+    LoginService,
     AlertMessageService
   ],
   bootstrap: [AppComponent],

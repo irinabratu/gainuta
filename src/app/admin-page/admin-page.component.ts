@@ -11,6 +11,11 @@ export class AdminPageComponent implements OnInit {
   constructor(public router: Router) { }
 
   ngOnInit() {
+    
+    var userToken = localStorage.getItem('userToken');
+    if (!userToken) {
+      this.router.navigateByUrl('/login');
+    }
   }
 
   onClickMessages() {

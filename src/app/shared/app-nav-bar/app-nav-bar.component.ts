@@ -4,6 +4,7 @@ import { HostListener } from "@angular/core";
 import { Product } from '../../../model/Product';
 import { Subscription } from 'rxjs/Subscription';
 import { MessageService } from '../../services/message.service';
+import { LoginService } from '../../services/login.service';
 import { HttpClient } from '@angular/common/http';
 import { baseUrl } from '../../../utils/constants';
 
@@ -19,10 +20,11 @@ export class AppNavBarComponent implements OnInit {
   userId = 1;
   cartCount: number;
   Products: Product[];
-  subscription: Subscription;
-  clearSubscription: Subscription;
+  cartSubscription: Subscription;
+  loginSubscription: Subscription;
 
-  constructor(private router: Router, private http: HttpClient,
+  constructor(private router: Router, private loginService: LoginService,
+    private http: HttpClient,
     private messageService: MessageService) {
 
     this.isSignedIn = false;
@@ -32,14 +34,32 @@ export class AppNavBarComponent implements OnInit {
   ngOnInit() {
 
     this.fetchCartCount();
+    this.setIsSignedIn();
 
-    this.subscription = this.messageService.getProduct()
+    this.cartSubscription = this.messageService.getProduct()
       .subscribe(data => {
-        if (data) {
-          
+        debugger;
+        if (data) {          
           this.fetchCartCount();
         }
       });
+
+    this.loginSubscription = this.loginService.getLoginAction()
+      .subscribe(data => {
+
+        this.setIsSignedIn();
+      });
+  }
+
+  setIsSignedIn() {
+    
+    var userToken = localStorage.getItem('userToken');
+    if (userToken != null) {
+      this.isSignedIn = true;
+    }
+    else {
+      this.isSignedIn = false;
+    }
   }
 
   fetchCartCount() {
@@ -51,8 +71,8 @@ export class AppNavBarComponent implements OnInit {
   }
 
   ngOnDestroy() {
-    this.subscription.unsubscribe();
-    this.clearSubscription.unsubscribe(); // todo remove
+    this.cartSubscription.unsubscribe();
+    this.loginSubscription.unsubscribe();
   }
 
   getNavItemClass(navItem: string) {
@@ -69,9 +89,11 @@ export class AppNavBarComponent implements OnInit {
 
     this.router.navigateByUrl('/login');
   }
+  
 
-  onClickLogOut() {
+  onClickLogout() {
 
+    localStorage.removeItem('userToken');
     this.isSignedIn = false;
     this.router.navigateByUrl('/home');
   }

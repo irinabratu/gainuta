@@ -43,7 +43,7 @@
               </span>
             </li>
 
-            <li class="item">
+            <li class="item" *ngIf="isSignedIn">
               <span class="{{ getNavItemClass('admin') }} navbar-item">
                 <a routerLink="/admin" (click)="onClickMenu()">Admin</a>
               </span>
@@ -54,9 +54,22 @@
               <span>({{cartCount}})</span>
             </li>
 
-            <li class="item">
-              <span class="{{ getNavItemClass('login') }} navbar-item">
-                <a routerLink="/login" (click)="onClickMenu()">Login</a>
+            <li class="item" *ngIf="!isSignedIn">
+              <span class="navbar-item">
+                <a routerLink="/login" (click)="onClickMenu()">
+                  <span class="login-logout">
+                    Login
+                  </span>
+                </a>
+              </span>
+            </li>
+            <li class="item" *ngIf="isSignedIn">
+              <span class="navbar-item">
+                <a href="#" (click)="onClickLogout()">
+                  <span class="login-logout">
+                    Logout
+                  </span>
+                </a>
               </span>
             </li>
           </ul>
