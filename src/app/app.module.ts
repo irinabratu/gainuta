@@ -80,6 +80,7 @@ import { OrderDialogComponent } from './orders-page/oder-dialog/order-dialog.com
 import { ProductDialogComponent } from './products-page/product-dialog/product-dialog.component';
 import { NotfoundPageComponent } from './notfound-page/notfound-page.component';
 import { LoginPageComponent } from './login-page/login-page.component';
+import { ForgotPasswordPageComponent } from './forgot-password-page/forgot-password-page.component';
 
 const appRoutes: Routes = [
   { path: 'home', component: HomePageComponent },
@@ -97,6 +98,7 @@ const appRoutes: Routes = [
   { path: 'orders', component: OrdersPageComponent },
   { path: 'messages', component: MessagesPageComponent },
   { path: 'login', component: LoginPageComponent },
+  { path: 'forgotpassword', component: ForgotPasswordPageComponent },
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: '**', component: NotfoundPageComponent }
 ];
@@ -135,7 +137,8 @@ const appRoutes: Routes = [
     OrderDialogComponent,
     ProductDialogComponent,
     NotfoundPageComponent,
-    LoginPageComponent
+    LoginPageComponent,
+    ForgotPasswordPageComponent
   ],
   imports: [
     BrowserModule,
