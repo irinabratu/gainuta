@@ -80,6 +80,7 @@ import { AlertMessageComponent } from './shared/alert-message/alert-message.comp
 import { OrdersPageComponent } from './orders-page/orders-page.component';
 import { OrderDialogComponent } from './orders-page/oder-dialog/order-dialog.component';
 import { ProductDialogComponent } from './products-page/product-dialog/product-dialog.component';
+import { NotfoundPageComponent } from './notfound-page/notfound-page.component';
 
 const appRoutes: Routes = [
   { path: 'home', component: HomePageComponent },
@@ -97,7 +98,7 @@ const appRoutes: Routes = [
   { path: 'orders', component: OrdersPageComponent },
   { path: 'messages', component: MessagesPageComponent },
   { path: '', redirectTo: '/home', pathMatch: 'full' },
-  { path: '**', component: HomePageComponent }
+  { path: '**', component: NotfoundPageComponent }
 ];
 
 @NgModule({
@@ -134,7 +135,8 @@ const appRoutes: Routes = [
     AlertMessageComponent,
     OrdersPageComponent,
     OrderDialogComponent,
-    ProductDialogComponent
+    ProductDialogComponent,
+    NotfoundPageComponent
   ],
   imports: [
     BrowserModule,

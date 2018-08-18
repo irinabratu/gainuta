@@ -1,0 +1,25 @@
+.align-content {
+  text-align: center;
+}
+
+.error-img {
+  padding-top: 80px;
+}
+
+.forofor {
+  padding-top: 40px;
+  font-size: 140px;
+  font-weight: bold;
+}
+
+.not-found-text {
+  font-size: 40px;
+}
+
+.back-home {
+  padding-top: 80px;
+}
+
+.home-btn {
+  border-radius: 1.25rem !important;
+}
