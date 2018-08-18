@@ -53,6 +53,12 @@
               <span class="glyphicon glyphicon-shopping-cart shopping-cart" routerLink="/checkout" (click)="onClickMenu()"></span>
               <span>({{cartCount}})</span>
             </li>
+
+            <li class="item">
+              <span class="{{ getNavItemClass('login') }} navbar-item">
+                <a routerLink="/login" (click)="onClickMenu()">Login</a>
+              </span>
+            </li>
           </ul>
         </div>
     </div>

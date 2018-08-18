@@ -46,6 +46,7 @@ export class ProductsListComponent implements OnInit {
     let dialogRef = this.dialog.open(ProductDialogComponent, {
       disableClose: true,
       width: '800px',
+      height: '600px',
       data: id
     });
 

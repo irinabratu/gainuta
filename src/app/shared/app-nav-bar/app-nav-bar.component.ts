@@ -1,8 +1,5 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Router } from '@angular/router';
-import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
-import { AppSignupDialogComponent } from '../app-signup-dialog/app-signup-dialog.component';
-import { AppLoginDialogComponent } from '../app-login-dialog/app-login-dialog.component';
 import { HostListener } from "@angular/core";
 import { Product } from '../../../model/Product';
 import { Subscription } from 'rxjs/Subscription';
@@ -25,8 +22,8 @@ export class AppNavBarComponent implements OnInit {
   subscription: Subscription;
   clearSubscription: Subscription;
 
-  constructor(private router: Router, public dialog: MatDialog,
-    private messageService: MessageService, private http: HttpClient) {
+  constructor(private router: Router, private http: HttpClient,
+    private messageService: MessageService) {
 
     this.isSignedIn = false;
     this.cartCount = 0;
@@ -39,13 +36,8 @@ export class AppNavBarComponent implements OnInit {
     this.subscription = this.messageService.getProduct()
       .subscribe(data => {
         if (data) {
-
-          localStorage.removeItem('checkout'); // todo remove
+          
           this.fetchCartCount();
-        }
-        else {
-          // todo clear cart
-          localStorage.removeItem('checkout');
         }
       });
   }
@@ -75,35 +67,12 @@ export class AppNavBarComponent implements OnInit {
 
   onClickLogIn() {
 
-    let dialogRef = this.dialog.open(AppLoginDialogComponent, {
-      width: '400px'
-    });
-
-    dialogRef.afterClosed().subscribe(result => {
-      console.log('The dialog was closed');
-    });
-
-    this.router.navigateByUrl('/home');
+    this.router.navigateByUrl('/login');
   }
 
   onClickLogOut() {
 
     this.isSignedIn = false;
-    this.router.navigateByUrl('/home');
-  }
-
-  onClickSignUp() {
-
-    console.log('onClickSignUp');
-
-    let dialogRef = this.dialog.open(AppSignupDialogComponent, {
-      width: '400px'
-    });
-
-    dialogRef.afterClosed().subscribe(result => {
-      console.log('The dialog was closed');
-    });
-
     this.router.navigateByUrl('/home');
   }
 

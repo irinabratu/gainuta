@@ -64,8 +64,6 @@ import { AppDonateNowComponent } from './about-page/app-donate-now/app-donate-no
 import { AppKeepInTouchComponent } from './about-page/app-keep-in-touch/app-keep-in-touch.component';
 import { AppSubscribeComponent } from './shared/app-subscribe/app-subscribe.component';
 import { AppAboutUsComponent } from './shared/app-about-us/app-about-us.component';
-import { AppLoginDialogComponent } from './shared/app-login-dialog/app-login-dialog.component';
-import { AppSignupDialogComponent } from './shared/app-signup-dialog/app-signup-dialog.component';
 import { AppConfirmDialogComponent } from './shared/app-confirm-dialog/app-confirm-dialog.component';
 import { AppBreadcrumbComponent } from './shared/app-breadcrumb/app-breadcrumb.component';
 import { ProductsListComponent } from './products-page/products-list.component';
@@ -81,6 +79,7 @@ import { OrdersPageComponent } from './orders-page/orders-page.component';
 import { OrderDialogComponent } from './orders-page/oder-dialog/order-dialog.component';
 import { ProductDialogComponent } from './products-page/product-dialog/product-dialog.component';
 import { NotfoundPageComponent } from './notfound-page/notfound-page.component';
+import { LoginPageComponent } from './login-page/login-page.component';
 
 const appRoutes: Routes = [
   { path: 'home', component: HomePageComponent },
@@ -97,6 +96,7 @@ const appRoutes: Routes = [
   { path: 'products', component: ProductsListComponent },
   { path: 'orders', component: OrdersPageComponent },
   { path: 'messages', component: MessagesPageComponent },
+  { path: 'login', component: LoginPageComponent },
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: '**', component: NotfoundPageComponent }
 ];
@@ -120,8 +120,6 @@ const appRoutes: Routes = [
     AppKeepInTouchComponent,
     AppSubscribeComponent,
     AppAboutUsComponent,
-    AppLoginDialogComponent,
-    AppSignupDialogComponent,
     AppConfirmDialogComponent,
     AppBreadcrumbComponent,
     ProductsListComponent,
@@ -136,7 +134,8 @@ const appRoutes: Routes = [
     OrdersPageComponent,
     OrderDialogComponent,
     ProductDialogComponent,
-    NotfoundPageComponent
+    NotfoundPageComponent,
+    LoginPageComponent
   ],
   imports: [
     BrowserModule,
@@ -156,8 +155,6 @@ const appRoutes: Routes = [
   ],
   bootstrap: [AppComponent],
   entryComponents: [
-    AppSignupDialogComponent,
-    AppLoginDialogComponent,
     AppConfirmDialogComponent,
     MessageDialogComponent,
     OrderDialogComponent,

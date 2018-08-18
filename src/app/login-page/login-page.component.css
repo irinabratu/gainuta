@@ -1,0 +1,12 @@
+.login-form {
+  padding-top: 20%;
+}
+
+.long-field {
+  width: 100%;
+}
+
+.forgot-password {
+  cursor: pointer;
+  line-height: 30px;
+}
