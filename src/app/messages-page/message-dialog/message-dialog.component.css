@@ -4,13 +4,17 @@
 
 .mat-form-field-placeholder {
     font-size: 16px;
-    font-family: Montserrat, sans-serif;
+    font-family: Roboto, sans-serif;
 }
 
 .mat-input-element {
-    font-family: Montserrat, sans-serif;
+    font-family: Roboto, sans-serif;
 }
 
 .mat-button {
-    font-family: Montserrat, sans-serif;
+    font-family: Roboto, sans-serif;
+}
+
+.form-group {
+    font-family: Roboto, sans-serif;
 }

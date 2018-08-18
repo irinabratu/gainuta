@@ -1,9 +1,11 @@
 <div class="row">
   <form name="loginForm" #signupForm="ngForm">
+    
     <div class="modal-header">
       <h4 class="modal-title">        
       </h4>
     </div>
+
     <div class="modal-body">
       <div class="form-group">
         <label>Name:</label>
@@ -35,17 +37,17 @@
         {{ model.Message }}
       </div>
 
-      <form class="example-form">
+      <div class="form-group">
         <mat-form-field class="example-full-width">
-          <textarea matInput placeholder="Answer"></textarea>
+          <textarea matTextareaAutosize matAutosizeMinRows=7 matAutosizeMaxRows=100 matInput placeholder="Answer" required [(ngModel)]="model.Answer" name="Answer"></textarea>
         </mat-form-field>
-      </form>
+      </div>
 
-    </div>
-
-    <div class="modal-footer">
-        <button mat-button (click)="onClickReply()">Reply</button>
-        <button mat-button (click)="onClickCancel()">Cancel</button>
+      <div class="modal-footer form-group">
+          <button mat-button (click)="onClickReply()">Reply</button>
+          <button mat-button (click)="onClickCancel()">Cancel</button>
+      </div>
+      
     </div>
   </form>
 </div>

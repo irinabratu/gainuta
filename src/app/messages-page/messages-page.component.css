@@ -3,11 +3,16 @@
 }
 
 .mat-raised-button {
-  font-family: Montserrat, sans-serif;
+  font-family: Roboto, sans-serif;
+}
+
+.page-title {
+  font-family: Roboto, sans-serif;
 }
 
 .default-column {
-  font-family: Montserrat, sans-serif;
+  font-family: Roboto, sans-serif;
+  font-size: 14px;
   word-wrap: break-word !important;
   white-space: unset !important;
   overflow-wrap: break-word;
@@ -56,5 +61,8 @@
 .message-column {
   flex: 0 0 300px !important;
   width: 300px !important;
-  padding-right: 5px;
+}
+
+.default-column {
+  padding-right: 10px;
 }
