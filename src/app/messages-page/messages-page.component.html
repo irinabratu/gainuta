@@ -43,7 +43,7 @@
       <ng-container matColumnDef="Actions">
         <th mat-header-cell class="actions-column default-column" *matHeaderCellDef> Actions </th>
         <td mat-cell class="actions-column default-column" *matCellDef="let element">
-          <button mat-raised-button type="submit" *ngIf="!element.HasAnswer" (click)="onClickReply(element.Id)">Reply</button>
+          <button mat-raised-button color="primary" type="submit" *ngIf="!element.HasAnswer" (click)="onClickReply(element.Id)">Reply</button>
         </td>
       </ng-container>
 

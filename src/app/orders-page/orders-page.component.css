@@ -10,3 +10,15 @@
   font-size: 24px;
   cursor: pointer;
 }
+
+.page-title {
+  font-family: Roboto, sans-serif;
+}
+
+.default-column {
+  font-family: Roboto, sans-serif;
+}
+
+.mat-header-cell {
+  font-size: 16px;
+}

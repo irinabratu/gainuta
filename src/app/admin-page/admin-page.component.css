@@ -1,7 +1,7 @@
 .category-box {
-  padding-top: 40px;
-  padding-bottom: 40px;
-  background-color: aliceblue;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background-color: #f0f6ea;
   text-align: center;
 }
 
@@ -9,4 +9,9 @@
   font-size: 20px;
   font-weight: bold;
   cursor: pointer;
+  font-family: Roboto, sans-serif;
+}
+
+.first-row {
+  padding-top: 40px;
 }

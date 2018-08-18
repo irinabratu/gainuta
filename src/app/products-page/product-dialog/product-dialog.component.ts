@@ -58,7 +58,7 @@ export class ProductDialogComponent implements OnInit {
     }    
   }
 
-  onClickCance() {
+  onClickCancel() {
 
     this.dialogRef.close();
   }

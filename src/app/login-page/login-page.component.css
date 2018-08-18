@@ -9,4 +9,17 @@
 .forgot-password {
   cursor: pointer;
   line-height: 30px;
+  font-family: Roboto, sans-serif;
+}
+
+.mat-input-element {
+  font-family: Roboto, sans-serif;
+}
+
+.mat-form-field-placeholder {
+  font-family: Roboto, sans-serif;
+}
+
+.login-button {
+  font-family: Roboto, sans-serif;
 }
