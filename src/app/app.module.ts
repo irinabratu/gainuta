@@ -82,7 +82,6 @@ import { ProductDialogComponent } from './products-page/product-dialog/product-d
 import { NotfoundPageComponent } from './notfound-page/notfound-page.component';
 import { LoginPageComponent } from './login-page/login-page.component';
 import { ForgotPasswordPageComponent } from './forgot-password-page/forgot-password-page.component';
-import { LogoutPageComponent } from './logout-page/logout-page.component';
 
 const appRoutes: Routes = [
   { path: 'home', component: HomePageComponent },
@@ -140,8 +139,7 @@ const appRoutes: Routes = [
     ProductDialogComponent,
     NotfoundPageComponent,
     LoginPageComponent,
-    ForgotPasswordPageComponent,
-    LogoutPageComponent
+    ForgotPasswordPageComponent
   ],
   imports: [
     BrowserModule,
