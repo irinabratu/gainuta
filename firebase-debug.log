@@ -1,0 +1,40 @@
+[debug] [2018-08-19T20:27:33.128Z] ----------------------------------------------------------------------
+[debug] [2018-08-19T20:27:33.130Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\gogosar\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase deploy
+[debug] [2018-08-19T20:27:33.130Z] CLI Version:   4.0.3
+[debug] [2018-08-19T20:27:33.130Z] Platform:      win32
+[debug] [2018-08-19T20:27:33.130Z] Node Version:  v10.5.0
+[debug] [2018-08-19T20:27:33.131Z] Time:          Sun Aug 19 2018 23:27:33 GMT+0300 (Eastern European Summer Time)
+[debug] [2018-08-19T20:27:33.132Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-08-19T20:27:33.141Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-08-19T20:27:33.142Z] > authorizing via signed-in user
+[debug] [2018-08-19T20:27:33.144Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/ainutagainuta  
+  
+ Sun Aug 19 2018 23:27:33 GMT+0300 (Eastern European Summer Time)
+[debug] [2018-08-19T20:27:33.966Z] <<< HTTP RESPONSE 200
+[debug] [2018-08-19T20:27:33.970Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/ainutagainuta/tokens  
+  
+ Sun Aug 19 2018 23:27:33 GMT+0300 (Eastern European Summer Time)
+[debug] [2018-08-19T20:27:34.609Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Deploying to 'ainutagainuta'...
+[info] 
+[info] i  deploying hosting
+[info] i  hosting: preparing dist directory for upload...
+[debug] [2018-08-19T20:27:36.653Z] >>> HTTP REQUEST PUT https://deploy.firebase.com/v1/hosting/ainutagainuta/uploads/-LKIrlw0oUWBy0dSIjLW?fileCount=69&message=  
+  
+ Sun Aug 19 2018 23:27:36 GMT+0300 (Eastern European Summer Time)
+[debug] [2018-08-19T20:27:41.964Z] <<< HTTP RESPONSE 200
+[debug] [2018-08-19T20:27:41.965Z] [hosting] .tgz uploaded successfully, waiting for extraction
+[info] +  hosting: 69 files uploaded successfully
+[debug] [2018-08-19T20:27:43.138Z] [hosting] deploy completed after 7679ms
+[debug] [2018-08-19T20:27:43.141Z] >>> HTTP REQUEST POST https://deploy.firebase.com/v1/projects/ainutagainuta/releases  
+ { hosting:
+   { public: 'dist',
+     ignore: [ 'firebase.json', '**/.*', '**/node_modules/**' ],
+     rewrites: [ [Object] ],
+     version: '-LKIrlw0oUWBy0dSIjLW',
+     prefix: '-LKIrlw0oUWBy0dSIjLW/',
+     manifest: [] } } 
+ Sun Aug 19 2018 23:27:43 GMT+0300 (Eastern European Summer Time)
+[debug] [2018-08-19T20:27:45.689Z] <<< HTTP RESPONSE 200
