@@ -42,12 +42,16 @@
 
       <ng-container matColumnDef="IsNew">
         <th mat-header-cell class="phone-column default-column" *matHeaderCellDef> Is New </th>
-        <td mat-cell class="phone-column default-column" *matCellDef="let element"> {{element.IsNew}} </td>
+        <td mat-cell class="phone-column default-column" *matCellDef="let element">
+          <mat-checkbox color="primary" [(ngModel)]="element.IsNew" [disabled]="true"></mat-checkbox>
+        </td>
       </ng-container>
 
       <ng-container matColumnDef="IsActive">
         <th mat-header-cell class="phone-column default-column" *matHeaderCellDef> Is Active </th>
-        <td mat-cell class="phone-column default-column" *matCellDef="let element"> {{element.IsActive}} </td>
+        <td mat-cell class="phone-column default-column" *matCellDef="let element">
+          <mat-checkbox color="primary" [(ngModel)]="element.IsActive" [disabled]="true"></mat-checkbox>
+        </td>
       </ng-container>
 
       <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
