@@ -30,7 +30,7 @@ export class MessagesPageComponent implements OnInit {
     let dialogRef = this.dialog.open(MessageDialogComponent, {
       disableClose: true,
       width: '800px',
-      height: '600px',
+      maxHeight: '600px',
       data: id
     });
 

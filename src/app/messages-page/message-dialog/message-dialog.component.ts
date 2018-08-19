@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 import { MessageEntity } from '../../../model/MessageEntity';
 import { baseUrl } from '../../../utils/constants';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'message-dialog',
@@ -34,7 +35,11 @@ export class MessageDialogComponent implements OnInit {
     this.dialogRef.close();
   }
 
-  onClickReply(): void {
+  onClickReply(form: NgForm): void {
+
+    if (form.invalid) {
+      return;
+    }
 
     this.showSpinner = true;
 

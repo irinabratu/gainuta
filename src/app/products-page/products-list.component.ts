@@ -46,7 +46,7 @@ export class ProductsListComponent implements OnInit {
     let dialogRef = this.dialog.open(ProductDialogComponent, {
       disableClose: true,
       width: '800px',
-      height: '600px',
+      maxHeight: '600px',
       data: id
     });
 
@@ -60,7 +60,7 @@ export class ProductsListComponent implements OnInit {
     let dialogRef = this.dialog.open(ProductDialogComponent, {
       disableClose: true,
       width: '800px',
-      height: '600px',
+      maxHeight: '600px',
       data: 0
     });
 

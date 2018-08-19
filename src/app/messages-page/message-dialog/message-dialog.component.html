@@ -39,12 +39,12 @@
 
       <div class="form-group">
         <mat-form-field class="example-full-width">
-          <textarea matTextareaAutosize matAutosizeMinRows=7 matAutosizeMaxRows=100 matInput placeholder="Answer" required [(ngModel)]="model.Answer" name="Answer"></textarea>
+          <textarea matTextareaAutosize matAutosizeMinRows=7 matAutosizeMaxRows=100 matInput placeholder="Answer" [(ngModel)]="model.Answer" name="Answer" required></textarea>
         </mat-form-field>
       </div>
 
       <div class="modal-footer form-group">
-          <button mat-raised-button color="primary" (click)="onClickReply()">Reply</button>
+          <button mat-raised-button color="primary" (click)="onClickReply(messagesForm)">Reply</button>
           <button mat-button (click)="onClickCancel()">Cancel</button>
       </div>
       
