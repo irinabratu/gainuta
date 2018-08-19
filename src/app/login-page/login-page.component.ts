@@ -6,12 +6,12 @@ import { LoginEntity } from '../../model/LoginEntity';
 import { AlertMessageService } from '../shared/alert-message/alert-message.service';
 import { LoginService } from '../services/login.service';
 
-
 @Component({
   selector: 'login-page',
   templateUrl: './login-page.component.html',
   styleUrls: ['./login-page.component.css']
 })
+
 export class LoginPageComponent implements OnInit {
 
   showSpinner: boolean;

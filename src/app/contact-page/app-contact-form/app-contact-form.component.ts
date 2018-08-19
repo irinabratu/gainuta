@@ -5,6 +5,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FormControl, Validators } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { baseUrl } from '../../../utils/constants';
+import { NgForm, NgControl, AbstractControl } from '@angular/forms';
+import { AlertMessageService } from '../../shared/alert-message/alert-message.service';
 
 @Component({
     selector: 'app-contact-form',
@@ -16,10 +18,12 @@ export class AppContactFormComponent implements OnInit {
 
     model: any;
     isInvolve: boolean;
+    showSpinner: boolean;
     private subscribe: any;
     @ViewChild('Name') nameElement: ElementRef;
 
-    constructor(private route: ActivatedRoute, private http: HttpClient) {
+    constructor(private route: ActivatedRoute, private http: HttpClient,
+      private alertMessageService: AlertMessageService) {
         this.model = {};
     }
 
@@ -43,16 +47,33 @@ export class AppContactFormComponent implements OnInit {
         this.subscribe.unsubscribe();
     }
 
-    onClickSend() {
+    onClickSend(form: NgForm) {
+
+      if (form.invalid) {
+        return;
+      }
+
+      this.showSpinner = true;
       
       this.http.post(baseUrl + 'Messages/Add', this.model).subscribe(response => {
-        console.log('Message with Id: ' + response + ' was sent');
+        
+        this.showSpinner = false;
+        this.alertMessageService.success('Message was sent successfully.');
+
         this.model = {};
+        form.resetForm();
       });
     }
 
-    getErrorMessage(){
-        return "invalid email";
+    getErrorMessage(formControl: AbstractControl) {
+      
+      formControl.markAsPristine();
+      formControl.markAsUntouched();
+
+      if (!this.model.Email)
+        return '';
+      
+      return "Invalid email";
     }
 
 }
