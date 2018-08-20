@@ -1,27 +1,30 @@
 <div class="container">
-    <div class="row text-center-title">
-        <span class="subscribe-title">
-            Subscribe
-        </span>
-    </div>
+  <div class="row text-center-title">
+    <span class="subscribe-title">
+      Subscribe
+    </span>
+  </div>
 
-    <div class="row text-center-text">
-        <span class="subscribe-text">
-            Sign up to stay in touch
-        </span>
-    </div>
+  <div class="row text-center-text">
+    <span class="subscribe-text">
+      Sign up to stay in touch
+    </span>
+  </div>
 
-    <div class="row text-center-email">
-        <div class="col-xs-8 form-group">
-            <mat-form-field>
-                <input matInput placeholder="Email" [(ngModel)]="model.Email" name="Email" [formControl]="email" required>
-                <mat-error *ngIf="email.invalid">
-                    {{getErrorMessage()}} 
-                </mat-error>
-            </mat-form-field>
-        </div>
-        <div class="col-xs-4 form-group">
-            <button mat-raised-button color="primary" type="submit" (click)="onClickSend()">Send</button>
-        </div>
+  <div class="row text-center-email">
+    <div class="col-xs-8 form-group">
+      <mat-form-field>
+        <input matInput placeholder="Email" [(ngModel)]="model.Email" name="Email" [formControl]="email" required>
+        <mat-error *ngIf="email.invalid">
+          {{getErrorMessage()}}
+        </mat-error>
+      </mat-form-field>
     </div>
+    <div class="col-xs-4 form-group">
+      <button mat-raised-button color="primary" type="submit" (click)="onClickSend()">Send</button>
+    </div>
+  </div>
 </div>
+
+<div id="preFooter"></div>
+<progress-spinner [show]="showSpinner"></progress-spinner>
