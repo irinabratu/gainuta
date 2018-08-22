@@ -1,15 +1,15 @@
 <div class="container">
   <div class="row first-row">
-    <span class="page-title">Our products</span>
+    <span class="page-title">Spend your pesos here</span>
   </div>
 
   <div class="row">
     <div class="col-md-4" *ngFor="let item of products">
       <div class="new-product-box">
         <div class="new-image-box">
-          <div class="row product-image">
+          <div class="row new-product-image">
             <div class="col-md-12">
-              <img src="{{item.ImageUrl}}" alt="{{item.Id}}" class="image-style" />
+              <img src="{{item.ImageUrl}}" alt="{{item.Id}}" class="new-image-style" />
             </div>
           </div>
         </div>
@@ -45,40 +45,6 @@
             </div>
           </div>
         </div>        
-      </div>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col-md-4" *ngFor="let product of Products">
-      <div class="product-box" [ngStyle]="{'background-image': 'url(' + product.ImgUrl + ')', '-webkit-background-size': 'cover', 'background-position':'center center', 'background-repeat': 'no-repeat'}">
-        <!-- <div class="row product-image">
-            <img src="{{product.ImgUrl}}" alt="{{product.Id}}" class="image-style" />
-        </div> -->
-        <div class="row product-title">
-          {{ product.Nume }}
-        </div>
-        <div class="row product-description">
-          {{ product.Descriere }}
-        </div>
-        <div class="row">
-          <div class="col-md-4 product-footer">
-            <span class="product-price">
-              <span>{{product.Pret + ' RON'}}</span>
-            </span>
-          </div>
-          <div class="col-md-4 product-footer">
-            <span class="product-new">
-              {{ product.Nou ? '(new)' : ''}}
-            </span>
-          </div>
-          <div class="col-md-4 product-footer">
-            <button mat-raised-button type="submit" (click)="onClickAddToCart(product)" class="add-to-cart-btn">
-              <span class="glyphicon glyphicon-shopping-cart shopping-cart-icon"></span>
-              <span class="add-to-cart-btn-text">Add</span>
-            </button>
-          </div>
-        </div>
       </div>
     </div>
   </div>

@@ -1,69 +1,10 @@
-.product-box {
-    height: 460px;
-    width: 360px;
-    border: 1px solid grey;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    margin-top: 10px;
-}
-
-.product-image {
+.new-product-image {
   padding-top: 3px;
 }
 
-.image-style {
+.new-image-style {
     max-width: 100%;
     height: auto;
-}
-
-.product-title {
-    font-size: 15px;
-    font-weight: bold;
-}
-
-.product-description {
-    font-size: 13px;
-}
-
-.product-new {
-    color: red;
-}
-
-.product-price{
-    font-weight: bold;
-}
-
-.product-footer {
-    padding-top: 10px;
-}
-
-.add-to-cart-btn {
-    background-color: #005eb8;
-    height: 30px;
-    line-height: 30px !important;
-    color: white !important;
-    /* float: right; */
-}
-
-.shopping-cart-icon {
-    float: left; 
-    line-height: 26px;
-}
-
-.add-to-cart-btn-text {
-    float: right; 
-    padding-right: 5px;
-}
-
-.example-card {
-    max-width: 400px;
-}
-  
-.example-header-image {
-    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
-    background-size: cover;
 }
 
 .new-product-box {

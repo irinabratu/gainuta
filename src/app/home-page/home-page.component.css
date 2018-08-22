@@ -37,6 +37,7 @@
 .home-body-button{
     padding-bottom: 10px;
     padding-right: 10px;
+    background-color: transparent;
 }
 
 .home-body-button  >a  {
