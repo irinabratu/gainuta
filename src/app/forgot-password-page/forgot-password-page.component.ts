@@ -14,7 +14,7 @@ export class ForgotPasswordPageComponent implements OnInit {
 
   showSpinner: boolean;
   showForm: boolean = true;
-  email: string;
+  model: LoginEntity = new LoginEntity();
 
   constructor(private http: HttpClient, private router: Router,
     private alertMessageService: AlertMessageService) { }
@@ -22,29 +22,21 @@ export class ForgotPasswordPageComponent implements OnInit {
   ngOnInit() { }
 
   onClickReset() {
-    if (!this.email) {
+    if (!this.model.Email) {
       return;
     }
 
     this.showSpinner = true;
-
-    this.http.post(baseUrl + 'Users/Reset', this.email)
+    debugger;
+    this.http.post(baseUrl + 'Users/Reset', this.model)
       .subscribe(data => {
 
         this.showSpinner = false;
-
-        if (data != null) {
-          this.showForm = false;
-        }
-        else {
-          this.alertMessageService.error("Email is not in our system");
-          const element = document.querySelector('#preFooter');
-          element.scrollIntoView();
-        }      
+        this.showForm = false;
       }, error => {
 
         this.showSpinner = false;
-        this.alertMessageService.error(error.message);
+        this.alertMessageService.error(error.error);
         const element = document.querySelector('#preFooter');
         element.scrollIntoView();
       });
