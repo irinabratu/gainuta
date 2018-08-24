@@ -60,7 +60,6 @@ import { AppContactFormComponent } from './contact-page/app-contact-form/app-con
 import { AppFooterComponent } from './shared/app-footer/app-footer.component';
 import { EventPageComponent } from './event-page/event-page.component';
 import { GalleryPageComponent } from './gallery-page/gallery-page.component';
-import { AppEditEventComponent } from './event-page/app-edit-event/app-edit-event.component';
 import { AboutPageComponent } from './about-page/about-page.component';
 import { AppDonateNowComponent } from './about-page/app-donate-now/app-donate-now.component';
 import { AppKeepInTouchComponent } from './about-page/app-keep-in-touch/app-keep-in-touch.component';
@@ -83,12 +82,13 @@ import { ProductDialogComponent } from './products-page/product-dialog/product-d
 import { NotfoundPageComponent } from './notfound-page/notfound-page.component';
 import { LoginPageComponent } from './login-page/login-page.component';
 import { ForgotPasswordPageComponent } from './forgot-password-page/forgot-password-page.component';
+import { EditEventComponent } from './edit-event/edit-event.component';
 
 const appRoutes: Routes = [
   { path: 'home', component: HomePageComponent },
   { path: 'shop', component: ShopPageComponent },
-  { path: 'event', component: EventPageComponent },
-  { path: 'event/edit/:id', component: AppEditEventComponent },
+  { path: 'events', component: EventPageComponent },
+  { path: 'edit-events', component: EditEventComponent },
   { path: 'gallery', component: GalleryPageComponent },
   { path: 'about', component: AboutPageComponent },
   { path: 'contact', component: ContactPageComponent },
@@ -118,7 +118,6 @@ const appRoutes: Routes = [
     AppFooterComponent,
     EventPageComponent,
     GalleryPageComponent,
-    AppEditEventComponent,
     AboutPageComponent,
     AppDonateNowComponent,
     AppKeepInTouchComponent,
@@ -140,7 +139,8 @@ const appRoutes: Routes = [
     ProductDialogComponent,
     NotfoundPageComponent,
     LoginPageComponent,
-    ForgotPasswordPageComponent
+    ForgotPasswordPageComponent,
+    EditEventComponent
   ],
   imports: [
     BrowserModule,
