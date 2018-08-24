@@ -1,3 +1,19 @@
-<p>
-  edit-event works!
-</p>
+<div class="container">
+  <div class="row first-row">
+    <span class="page-title">Events</span>
+  </div>
+
+  <div class="row" *ngFor="let event of events">
+      <!--<div class="col-md-1 actions-column">
+      <button type="button" class="btn btn-default" (click)="onClickEditEvent(event.Id)" style="padding-top: 9px; float: left; margin-top: 1px; margin-left: 1px;">
+          <i class="glyphicon glyphicon-pencil"></i>
+      </button>
+      <button type="button" class="btn btn-default" (click)="onClickDeleteEvent(event.Id)" style="padding-top: 9px; float: left; margin-top: 1px; margin-left: 1px;">
+          <i class="glyphicon glyphicon-trash"></i>
+      </button>
+  </div>-->
+      <div class="col-md-2">
+        {{ event.Title }}
+      </div>
+    </div>
+</div>
