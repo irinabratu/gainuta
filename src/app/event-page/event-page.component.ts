@@ -1,7 +1,7 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import { Router } from '@angular/router';
 import { Event } from '../../model/Event';
-import { EventsMockup } from '../../utils/events';
+import { EventsMockup } from '../../utils/EventsMockup';
 import { List } from 'linqts';
 import { AppConfirmDialogComponent } from '../shared/app-confirm-dialog/app-confirm-dialog.component';
 import { MatDialog} from '@angular/material';
