@@ -1,3 +1,8 @@
 .actions-column {
     min-height: 39px;
 }
+
+.events-header {
+  font-weight: bold;
+  
+}

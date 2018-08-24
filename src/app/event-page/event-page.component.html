@@ -1,65 +1,61 @@
 <div class="container">
-    <div class="row first-row">
-        <div class="col-md-12">
-            <a [routerLink]="['edit', 0]" class="btn btn-default btn-sm">
-                <span class="glyphicon glyphicon-plus"></span>
-                Add event
-            </a>
-        </div>
-    </div>
+  <div class="first-row page-title">
+    Our events
+  </div>
 
-    <div class="row first-row text-center bold-text">
-        <div class="col-md-1"></div>
-        <div class="col-md-2">
-            Start date/time
-        </div>
-        <div class="col-md-2">
-            Title
-        </div>
-        <div class="col-md-3">
-            Description
-        </div>
-        <div class="col-md-2">
-            Duration
-        </div>
-        <div class="col-md-2">
-            Address
-        </div>
+  <div class="row first-row events-header text-center">
+    <div class="col-md-2">
+      Start date/time
     </div>
+    <div class="col-md-2">
+      Title
+    </div>
+    <div class="col-md-5">
+      Description
+    </div>
+    <div class="col-md-1">
+      Duration
+    </div>
+    <div class="col-md-2">
+      Address
+    </div>
+  </div>
 
-    <div class="row text-center" *ngFor="let event of Events">
-        <hr />
-        <div class="col-md-1 actions-column">
-            <button type="button" class="btn btn-default" (click)="onClickEditEvent(event.Id)" style="padding-top: 9px; float: left; margin-top: 1px; margin-left: 1px;">
-                <i class="glyphicon glyphicon-pencil"></i>
-            </button>            
-            <button type="button" class="btn btn-default" (click)="onClickDeleteEvent(event.Id)" style="padding-top: 9px; float: left; margin-top: 1px; margin-left: 1px;">
-                <i class="glyphicon glyphicon-trash"></i>
-            </button>
-        </div>
-        <div class="col-md-2">
-            {{ event.StartDate | date : 'MMM d, y, HH:mm' }}
-        </div>
-        <div class="col-md-2 bold-text">
-            {{ event.Title }}
-        </div>
-        <div class="col-md-3">
-            {{ event.Description }}
-        </div>
-        <div class="col-md-2">
-            {{ event.EndDate.getHours() - event.StartDate.getHours() }}:{{ (event.EndDate.getMinutes() - event.StartDate.getMinutes()) < 10 ? 
-                '0' + (event.EndDate.getMinutes() - event.StartDate.getMinutes()) : (event.EndDate.getMinutes() - event.StartDate.getMinutes())}}
-        </div>
-        <div class="col-md-2">
-            {{ event.Address }}
-        </div>
+  <div class="row text-center" *ngFor="let event of Events">
+    <hr />
+    <!--<div class="col-md-1 actions-column">
+        <button type="button" class="btn btn-default" (click)="onClickEditEvent(event.Id)" style="padding-top: 9px; float: left; margin-top: 1px; margin-left: 1px;">
+            <i class="glyphicon glyphicon-pencil"></i>
+        </button>
+        <button type="button" class="btn btn-default" (click)="onClickDeleteEvent(event.Id)" style="padding-top: 9px; float: left; margin-top: 1px; margin-left: 1px;">
+            <i class="glyphicon glyphicon-trash"></i>
+        </button>
+    </div>-->
+    <div class="col-md-2">
+      {{ event.StartDate | date : 'MMM d, y, HH:mm' }}
     </div>
-    
-    <div class="row">
-        <hr />
+    <div class="col-md-2 bold-text">
+      {{ event.Title }}
     </div>
+    <div class="col-md-5">
+      {{ event.Description }}
+    </div>
+    <div class="col-md-1">
+      {{ event.EndDate.getHours() - event.StartDate.getHours() }}:{{
+ (event.EndDate.getMinutes() - event.StartDate.getMinutes()) < 10 ?
+                '0' + (event.EndDate.getMinutes() - event.StartDate.getMinutes()) : (event.EndDate.getMinutes() - event.StartDate.getMinutes())
+      }}
+    </div>
+    <div class="col-md-2">
+      {{ event.Address }}
+    </div>
+  </div>
 
-    <div class="row text-center" *ngIf="Events.length === 0">
-        0 events found.
-    </div>
+  <div class="row">
+    <hr />
+  </div>
+
+  <div class="row text-center" *ngIf="Events.length === 0">
+    0 events found.
+  </div>
 </div>
