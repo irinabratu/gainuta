@@ -21,7 +21,7 @@ export class EditEventComponent implements OnInit {
   }
 
   fetchEvents() {
-    
+
     this.http.get(baseUrl + 'Events/GetAll')
       .subscribe(data => {
 
@@ -32,3 +32,26 @@ export class EditEventComponent implements OnInit {
       });
   }
 }
+  //public dialog: MatDialog
+  //  import { MatDialog } from '@angular/material';
+  //import { AppConfirmDialogComponent } from '../shared/app-confirm-dialog/app-confirm-dialog.component';
+  //onClickDeleteEvent(id: number) {
+
+  //    let dialogRef = this.dialog.open(AppConfirmDialogComponent, {
+  //        width: '400px',
+  //        data: {
+  //            Message: 'Are you sure you want to delete this event ?'
+  //        }
+  //    });
+
+  //    dialogRef.afterClosed().subscribe(result => {
+
+  //        if (result) {
+
+  //            let items = new List<Event>(this.Events).Where(x => x.Id !== id);
+  //            this.Events = items.ToArray();
+
+  //            console.log('Event was deleted!', 'Success!');
+  //        }
+  //    });
+  //}
