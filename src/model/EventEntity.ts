@@ -8,4 +8,5 @@ export class EventEntity {
   CreateDate: Date;
   UpdateDate: Date;
   IsActive: boolean;
+  Duration: string;
 }

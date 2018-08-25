@@ -51,21 +51,21 @@
       <div class="col-md-4">
         <div class="form-group">
           <mat-form-field class="time-box">
-            <input matInput placeholder="Start Time" [(ngModel)]="startTime" name="StartTime" (change)="onChangeStartTime()" required />
+            <input matInput placeholder="Start Time" [(ngModel)]="startTime" name="StartTime" (change)="onChangeStartTime()" maxlength="5" required />
           </mat-form-field>
         </div>
       </div>
       <div class="col-md-4">
         <div class="form-group">
           <mat-form-field class="time-box">
-            <input matInput placeholder="End Time" [(ngModel)]="endTime" name="EndTime" (change)="onChangeEndTime()" required />
+            <input matInput placeholder="End Time" [(ngModel)]="endTime" name="EndTime" (change)="onChangeEndTime()" maxlength="5" required />
           </mat-form-field>
         </div>
       </div>
       <div class="col-md-4">
         <div class="form-group">
           <label>Duration:</label>
-          {{model.Duation}}
+          {{model.Duration}}
         </div>
       </div>
     </div>

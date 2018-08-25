@@ -47,3 +47,7 @@ body {
 .full-width {
   width: 100%;
 }
+
+.modal-title {
+  font-family: Roboto, sans-serif;
+}
