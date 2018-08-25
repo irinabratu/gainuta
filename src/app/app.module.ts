@@ -83,6 +83,7 @@ import { NotfoundPageComponent } from './notfound-page/notfound-page.component';
 import { LoginPageComponent } from './login-page/login-page.component';
 import { ForgotPasswordPageComponent } from './forgot-password-page/forgot-password-page.component';
 import { EditEventComponent } from './edit-event/edit-event.component';
+import { EventDialogComponent } from './edit-event/event-dialog/event-dialog.component';
 
 const appRoutes: Routes = [
   { path: 'home', component: HomePageComponent },
@@ -140,7 +141,8 @@ const appRoutes: Routes = [
     NotfoundPageComponent,
     LoginPageComponent,
     ForgotPasswordPageComponent,
-    EditEventComponent
+    EditEventComponent,
+    EventDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -164,7 +166,8 @@ const appRoutes: Routes = [
     AppConfirmDialogComponent,
     MessageDialogComponent,
     OrderDialogComponent,
-    ProductDialogComponent
+    ProductDialogComponent,
+    EventDialogComponent
   ]
 })
 

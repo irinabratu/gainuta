@@ -1,37 +1,33 @@
 import { Component, OnInit, Inject } from '@angular/core';
+import { EventEntity } from '../../../model/EventEntity';
 import { HttpClient } from '@angular/common/http';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
-import { ProductEntity } from '../../../model/ProductEntity';
 import { baseUrl } from '../../../utils/constants';
 
 @Component({
-  selector: 'product-dialog',
-  templateUrl: './product-dialog.component.html',
-  styleUrls: ['./product-dialog.component.css']
+  selector: 'app-event-dialog',
+  templateUrl: './event-dialog.component.html',
+  styleUrls: ['./event-dialog.component.css']
 })
-
-export class ProductDialogComponent implements OnInit {
+export class EventDialogComponent implements OnInit {
 
   showSpinner: boolean;
-  model: ProductEntity = new ProductEntity();
+  model: EventEntity = new EventEntity();
 
-  constructor(public dialogRef: MatDialogRef<ProductDialogComponent>,
-    @Inject(MAT_DIALOG_DATA) public data: number, private http: HttpClient) {
-    
-    this.showSpinner = false;
-  }
+  constructor(public dialogRef: MatDialogRef<EventDialogComponent>,
+    @Inject(MAT_DIALOG_DATA) public data: number, private http: HttpClient) { }
 
   ngOnInit() {
 
     if (this.data === 0)
       return;
-    
+
     this.showSpinner = true;
 
-    this.http.get(baseUrl + 'Products/Get/' + this.data)
+    this.http.get(baseUrl + 'Events/Get/' + this.data)
       .subscribe(data => {
 
-        this.model = data as ProductEntity;
+        this.model = data as EventEntity;
         this.showSpinner = false;
       });
   }
@@ -42,7 +38,7 @@ export class ProductDialogComponent implements OnInit {
 
     if (this.data === 0) {
 
-      this.http.post(baseUrl + 'Products/Add', this.model)
+      this.http.post(baseUrl + 'Events/Add', this.model)
         .subscribe(data => {
 
           this.showSpinner = false;
@@ -51,13 +47,13 @@ export class ProductDialogComponent implements OnInit {
     }
     else {
 
-      this.http.put(baseUrl + 'Products/Update/' + this.model.Id, this.model)
+      this.http.put(baseUrl + 'Events/Update/' + this.model.Id, this.model)
         .subscribe(data => {
 
           this.showSpinner = false;
           this.dialogRef.close();
         });
-    }    
+    }
   }
 
   onClickCancel() {

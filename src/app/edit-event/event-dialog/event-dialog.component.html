@@ -1,0 +1,79 @@
+
+<form name="eventDialog" #eventDialogForm="ngForm">
+  <div class="modal-header">
+    <h4 class="modal-title">Event detail</h4>
+  </div>
+
+  <div class="modal-body">
+    <div class="form-group">
+      <mat-form-field class="full-width">
+        <input matInput placeholder="Title" [(ngModel)]="model.Title" name="Title" required />
+      </mat-form-field>
+    </div>
+
+    <div class="form-group">
+      <mat-form-field class="full-width">
+        <textarea matTextareaAutosize matAutosizeMinRows=7 matAutosizeMaxRows=100 matInput
+                  [(ngModel)]="model.Description" name="Description" placeholder="Description" required></textarea>
+      </mat-form-field>
+    </div>
+
+    <div class="form-group">
+      <mat-form-field class="full-width">
+        <input matInput placeholder="Address" [(ngModel)]="model.Address" name="Address" required />
+      </mat-form-field>
+    </div>
+
+    <div class="row">
+      <div class="col-md-4">
+        <div class="form-group">
+          <label>Start Date:</label>
+          {{model.StartDate | dateTimeFormat}}
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="form-group">
+          <label>End Date:</label>
+          {{model.EndDate | dateTimeFormat}}
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="form-group">
+          <label>Duration:</label>
+          {{model.Duation}}
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-4">
+        <div class="form-group">
+          <label>Create Date:</label>
+          {{model.CreateDate | dateTimeFormat}}
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="form-group">
+          <label>Update Date:</label>
+          {{model.UpdateDate | dateTimeFormat}}
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="form-group">
+          <mat-checkbox color="primary" [(ngModel)]="model.IsActive" name="IsActive">
+            <label>Is Active</label>
+          </mat-checkbox>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-footer">
+    <button mat-raised-button color="primary" (click)="onClickSave()">Save</button>
+    <button mat-button (click)="onClickCancel()">Cancel</button>
+  </div>
+</form>
+
+<progress-spinner [show]="showSpinner"></progress-spinner>

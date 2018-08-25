@@ -3,6 +3,8 @@ import { EventEntity } from '../../model/EventEntity';
 import { baseUrl } from '../../utils/constants';
 import { HttpClient } from '@angular/common/http';
 import { AlertMessageService } from '../shared/alert-message/alert-message.service';
+import { MatDialog } from '@angular/material';
+import { EventDialogComponent } from './event-dialog/event-dialog.component';
 
 @Component({
   selector: 'edit-event',
@@ -16,7 +18,7 @@ export class EditEventComponent implements OnInit {
   events: EventEntity[];
   displayedColumns: string[] = ['Actions', 'Title', 'Description', 'Address', 'StartDate', 'Duration', 'IsActive'];
 
-  constructor(private http: HttpClient,
+  constructor(private http: HttpClient, private dialog: MatDialog,
     private alertMessageService: AlertMessageService) { }
 
   ngOnInit() {
@@ -34,7 +36,7 @@ export class EditEventComponent implements OnInit {
         this.events = data as EventEntity[];
         this.showSpinner = false;
       }, error => {
-        
+
         this.showSpinner = false;
         this.alertMessageService.error(error.message);
       });
@@ -50,36 +52,27 @@ export class EditEventComponent implements OnInit {
 
     this.http.put(baseUrl + 'Events/SetActive/' + event.Id, model)
       .subscribe(data => {
-        
+
         this.showSpinner = false;
         this.fetchEvents();
       }, error => {
-        
+
         this.showSpinner = false;
         this.alertMessageService.error(error.message);
       });
   }
+
+  onClickEdit(id) {
+
+    let dialogRef = this.dialog.open(EventDialogComponent, {
+      width: '800px',
+      maxHeight: '600px',
+      data: id
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+
+      this.fetchEvents();
+    });
+  }
 }
-  //public dialog: MatDialog
-  //  import { MatDialog } from '@angular/material';
-  //import { AppConfirmDialogComponent } from '../shared/app-confirm-dialog/app-confirm-dialog.component';
-  //onClickDeleteEvent(id: number) {
-
-  //    let dialogRef = this.dialog.open(AppConfirmDialogComponent, {
-  //        width: '400px',
-  //        data: {
-  //            Message: 'Are you sure you want to delete this event ?'
-  //        }
-  //    });
-
-  //    dialogRef.afterClosed().subscribe(result => {
-
-  //        if (result) {
-
-  //            let items = new List<Event>(this.Events).Where(x => x.Id !== id);
-  //            this.Events = items.ToArray();
-
-  //            console.log('Event was deleted!', 'Success!');
-  //        }
-  //    });
-  //}
