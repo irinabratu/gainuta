@@ -87,6 +87,7 @@ import { ForgotPasswordPageComponent } from './forgot-password-page/forgot-passw
 import { EditEventComponent } from './edit-event/edit-event.component';
 import { EventDialogComponent } from './edit-event/event-dialog/event-dialog.component';
 import { PortfoliPageComponent } from './portfoli-page/portfoli-page.component';
+import { EditPortfolioComponent } from './edit-portfolio/edit-portfolio.component';
 
 const appRoutes: Routes = [
   { path: 'home', component: HomePageComponent },
@@ -106,6 +107,7 @@ const appRoutes: Routes = [
   { path: 'login', component: LoginPageComponent },
   { path: 'forgotpassword', component: ForgotPasswordPageComponent },
   { path: 'portfolio', component: PortfoliPageComponent },
+  { path: 'edit-portfolio', component: EditPortfolioComponent },
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: '**', component: NotfoundPageComponent }
 ];
@@ -147,7 +149,8 @@ const appRoutes: Routes = [
     ForgotPasswordPageComponent,
     EditEventComponent,
     EventDialogComponent,
-    PortfoliPageComponent
+    PortfoliPageComponent,
+    EditPortfolioComponent
   ],
   imports: [
     BrowserModule,
