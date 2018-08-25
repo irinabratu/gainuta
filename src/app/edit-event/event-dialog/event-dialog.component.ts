@@ -5,6 +5,7 @@ import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 import { baseUrl } from '../../../utils/constants';
 import { MatDatepickerInputEvent } from '@angular/material/datepicker';
 import * as moment from "moment";
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-event-dialog',
@@ -41,7 +42,14 @@ export class EventDialogComponent implements OnInit {
       });
   }
 
-  onClickSave() {
+  onClickSave(form: NgForm) {
+
+    this.model.StartDate = this.startDate.toDate();
+    this.model.EndDate = this.endDate.toDate();
+
+    if (form.invalid) {
+      return;
+    }
 
     this.showSpinner = true;
 
@@ -139,7 +147,7 @@ export class EventDialogComponent implements OnInit {
 
     var totalMinutes = this.endDate.diff(this.startDate, 'minutes');
     var minutes = totalMinutes % 60;
-    var duration = (totalMinutes - minutes) / 60 + ':' + minutes;
+    var duration = (totalMinutes - minutes) / 60 + ':' + (minutes < 10 ? '0' + minutes : minutes);
     
     this.model.Duration = duration;
   }                    

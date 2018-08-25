@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 import { ProductEntity } from '../../../model/ProductEntity';
 import { baseUrl } from '../../../utils/constants';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'product-dialog',
@@ -36,7 +37,11 @@ export class ProductDialogComponent implements OnInit {
       });
   }
 
-  onClickSave() {
+  onClickSave(form: NgForm) {
+
+    if (form.invalid) {
+      return;
+    }
 
     this.showSpinner = true;
 

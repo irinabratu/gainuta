@@ -76,4 +76,18 @@ export class EditEventComponent implements OnInit {
       this.fetchEvents();
     });
   }
+
+  onClickAdd() {
+    let dialogRef = this.dialog.open(EventDialogComponent, {
+      width: '800px',
+      maxHeight: '600px',
+      data: 0,
+      disableClose: true
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+
+      this.fetchEvents();
+    });
+  }
 }

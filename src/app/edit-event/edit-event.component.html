@@ -3,6 +3,15 @@
     <span class="page-title">Events</span>
   </div>
 
+  <div class="row">
+    <div class="pull-right">
+      <button mat-button (click)="onClickAdd()">
+        <span class="glyphicon glyphicon-plus"></span>
+        <span class="add-btn">New event</span>
+      </button>
+    </div>
+  </div>
+
   <div class="row edit-events-grid">
     <table mat-table [dataSource]="events" class="mat-elevation-z8 grid-layout">
       <ng-container matColumnDef="Actions">
@@ -40,7 +49,7 @@
         <th mat-header-cell class="duration-column default-column" *matHeaderCellDef> Duration </th>
         <td mat-cell class="duration-column default-column" *matCellDef="let element"> {{element.Duration}} </td>
       </ng-container>
-      
+
       <ng-container matColumnDef="IsActive">
         <th mat-header-cell class="default-column" *matHeaderCellDef> Is Active </th>
         <td mat-cell class="default-column" *matCellDef="let element">

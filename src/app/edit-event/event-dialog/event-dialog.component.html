@@ -62,7 +62,7 @@
           </mat-form-field>
         </div>
       </div>
-      <div class="col-md-4">
+      <div class="col-md-3 col-md-offset-1">
         <div class="form-group">
           <label>Duration:</label>
           {{model.Duration}}
@@ -78,14 +78,14 @@
         </div>
       </div>
 
-      <div class="col-md-4">
+      <div class="col-md-5">
         <div class="form-group">
           <label>Update Date:</label>
           {{model.UpdateDate | dateTimeFormat}}
         </div>
       </div>
 
-      <div class="col-md-4">
+      <div class="col-md-3">
         <div class="form-group">
           <mat-checkbox color="primary" [(ngModel)]="model.IsActive" name="IsActive">
             <label>Is Active</label>
@@ -96,7 +96,7 @@
   </div>
 
   <div class="modal-footer">
-    <button mat-raised-button color="primary" (click)="onClickSave()">Save</button>
+    <button mat-raised-button color="primary" (click)="onClickSave(eventDialogForm)">Save</button>
     <button mat-button (click)="onClickCancel()">Cancel</button>
   </div>
 </form>
