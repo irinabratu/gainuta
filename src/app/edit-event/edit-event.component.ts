@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { EventEntity } from '../../model/EventEntity';
 import { baseUrl } from '../../utils/constants';
 import { HttpClient } from '@angular/common/http';
+import { AlertMessageService } from '../shared/alert-message/alert-message.service';
 
 @Component({
   selector: 'edit-event',
@@ -11,9 +12,12 @@ import { HttpClient } from '@angular/common/http';
 
 export class EditEventComponent implements OnInit {
 
+  showSpinner: boolean;
   events: EventEntity[];
+  displayedColumns: string[] = ['Actions', 'Title', 'Description', 'Address', 'StartDate', 'Duration', 'IsActive'];
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient,
+    private alertMessageService: AlertMessageService) { }
 
   ngOnInit() {
 
@@ -22,13 +26,18 @@ export class EditEventComponent implements OnInit {
 
   fetchEvents() {
 
+    this.showSpinner = true;
+
     this.http.get(baseUrl + 'Events/GetAll')
       .subscribe(data => {
 
         this.events = data as EventEntity[];
+        this.showSpinner = false;
       }, error => {
 
         console.log(error);
+        this.showSpinner = false;
+        this.alertMessageService.error(error.message);
       });
   }
 }

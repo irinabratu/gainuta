@@ -15,7 +15,8 @@ export class EventPageComponent implements OnInit {
   events: EventEntity[];
   showSpinner: boolean;
 
-  constructor(private http: HttpClient, private alertMessageService: AlertMessageService) {
+  constructor(private http: HttpClient,
+    private alertMessageService: AlertMessageService) {
 
     this.events = new Array<EventEntity>();
   }

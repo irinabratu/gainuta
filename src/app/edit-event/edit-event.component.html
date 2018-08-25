@@ -3,17 +3,56 @@
     <span class="page-title">Events</span>
   </div>
 
-  <div class="row" *ngFor="let event of events">
-      <!--<div class="col-md-1 actions-column">
-      <button type="button" class="btn btn-default" (click)="onClickEditEvent(event.Id)" style="padding-top: 9px; float: left; margin-top: 1px; margin-left: 1px;">
-          <i class="glyphicon glyphicon-pencil"></i>
-      </button>
-      <button type="button" class="btn btn-default" (click)="onClickDeleteEvent(event.Id)" style="padding-top: 9px; float: left; margin-top: 1px; margin-left: 1px;">
-          <i class="glyphicon glyphicon-trash"></i>
-      </button>
-  </div>-->
-      <div class="col-md-2">
-        {{ event.Title }}
-      </div>
-    </div>
+  <div class="row edit-events-grid">
+    <table mat-table [dataSource]="events" class="mat-elevation-z8 grid-layout">
+      <ng-container matColumnDef="Actions">
+        <th mat-header-cell class="actions-column default-column" *matHeaderCellDef> Actions </th>
+        <td mat-cell class="actions-column default-column" *matCellDef="let element">
+          <span class="glyphicon glyphicon-pencil edit-product-btn" (click)="onClickEdit(element.Id)"></span>
+      </ng-container>
+
+      <ng-container matColumnDef="Id">
+        <th mat-header-cell class="id-column default-column" *matHeaderCellDef> Id. </th>
+        <td mat-cell class="id-column default-column" *matCellDef="let element"> {{element.Id}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="Title">
+        <th mat-header-cell class="title-column default-column" *matHeaderCellDef> Title </th>
+        <td mat-cell class="title-column default-column" *matCellDef="let element"> {{element.Title}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="Description">
+        <th mat-header-cell class="description-column default-column" *matHeaderCellDef> Description </th>
+        <td mat-cell class="description-column default-column" *matCellDef="let element"> {{element.Description}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="Address">
+        <th mat-header-cell class="address-column default-column" *matHeaderCellDef> Address </th>
+        <td mat-cell class="address-column default-column" *matCellDef="let element"> {{element.Address}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="StartDate">
+        <th mat-header-cell class="date-column default-column" *matHeaderCellDef> Start Date </th>
+        <td mat-cell class="date-column default-column" *matCellDef="let element"> {{element.StartDate | dateTimeFormat}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="Duration">
+        <th mat-header-cell class="duration-column default-column" *matHeaderCellDef> Duration </th>
+        <td mat-cell class="duration-column default-column" *matCellDef="let element"> {{element.Duration}} </td>
+      </ng-container>
+      
+      <ng-container matColumnDef="IsActive">
+        <th mat-header-cell class="default-column" *matHeaderCellDef> Is Active </th>
+        <td mat-cell class="default-column" *matCellDef="let element">
+          <mat-checkbox color="primary" [(ngModel)]="element.IsActive"></mat-checkbox>
+        </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+  </div>
 </div>
+
+<div id="preFooter"></div>
+<progress-spinner [show]="showSpinner"></progress-spinner>

@@ -1,0 +1,28 @@
+.edit-events-grid {
+  padding-top: 20px;
+}
+
+.edit-product-btn {
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.add-btn {
+  font-size: 22px;
+  font-family: Roboto, sans-serif;
+  padding-left: 5px;
+}
+
+.default-column {
+  font-family: Roboto, sans-serif;
+  padding-right: 10px;
+}
+
+.mat-header-cell {
+  font-size: 16px;
+}
+
+.description-column {
+  flex: 0 0 400px !important;
+  width: 400px !important;
+}
