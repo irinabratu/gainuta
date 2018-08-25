@@ -67,7 +67,8 @@ export class EditEventComponent implements OnInit {
     let dialogRef = this.dialog.open(EventDialogComponent, {
       width: '800px',
       maxHeight: '600px',
-      data: id
+      data: id,
+      disableClose: true
     });
 
     dialogRef.afterClosed().subscribe(result => {

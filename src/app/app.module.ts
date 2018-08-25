@@ -12,6 +12,8 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatTableModule, MatSortModule, MatPaginatorModule, MatProgressSpinnerModule } from "@angular/material";
 import { MatFormFieldModule, MatInputModule, MatDialogModule, MatCheckboxModule } from '@angular/material';
+import { MatDatepickerModule, MatNativeDateModule } from '@angular/material';
+import { MatMomentDateModule } from '@angular/material-moment-adapter';
 
 //import {
 //  MatAutocompleteModule,
@@ -154,7 +156,8 @@ const appRoutes: Routes = [
     ReactiveFormsModule,
     SlideshowModule,
     MatDialogModule, MatFormFieldModule, MatInputModule, MatCheckboxModule, MatButtonModule,
-    MatCardModule, MatTableModule, MatSortModule, MatPaginatorModule, MatProgressSpinnerModule
+    MatCardModule, MatTableModule, MatSortModule, MatPaginatorModule, MatProgressSpinnerModule,
+    MatDatepickerModule, MatNativeDateModule, MatMomentDateModule
   ],
   providers: [
     MessageService,

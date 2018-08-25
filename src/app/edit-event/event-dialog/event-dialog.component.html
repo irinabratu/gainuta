@@ -26,15 +26,40 @@
 
     <div class="row">
       <div class="col-md-4">
+        <mat-form-field>
+          <input matInput [matDatepicker]="StartDate" name="StartDate" placeholder="Start Date" [(ngModel)]="startDate" 
+                 (dateInput)="onChangeStartDate('input', $event)" (dateChange)="onChangeStartDate('change', $event)" required />
+          <mat-datepicker-toggle matSuffix [for]="StartDate"></mat-datepicker-toggle>
+          <mat-datepicker #StartDate></mat-datepicker><!--touchUi="true"-->
+        </mat-form-field>
+      </div>
+
+      <div class="col-md-4">
+        <mat-form-field>
+          <input matInput [matDatepicker]="EndDate" name="EndDate" placeholder="End Date" [(ngModel)]="endDate"
+                 (dateInput)="onChangeEndDate($event)" (dateChange)="onChangeEndDate($event)" required />
+          <mat-datepicker-toggle matSuffix [for]="EndDate"></mat-datepicker-toggle>
+          <mat-datepicker #EndDate></mat-datepicker>
+        </mat-form-field>
+      </div>
+
+      <div class="col-md-4">        
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-4">
         <div class="form-group">
-          <label>Start Date:</label>
-          {{model.StartDate | dateTimeFormat}}
+          <mat-form-field class="time-box">
+            <input matInput placeholder="Start Time" [(ngModel)]="startTime" name="StartTime" (change)="onChangeStartTime()" required />
+          </mat-form-field>
         </div>
       </div>
       <div class="col-md-4">
         <div class="form-group">
-          <label>End Date:</label>
-          {{model.EndDate | dateTimeFormat}}
+          <mat-form-field class="time-box">
+            <input matInput placeholder="End Time" [(ngModel)]="endTime" name="EndTime" (change)="onChangeEndTime()" required />
+          </mat-form-field>
         </div>
       </div>
       <div class="col-md-4">

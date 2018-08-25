@@ -3,6 +3,8 @@ import { EventEntity } from '../../../model/EventEntity';
 import { HttpClient } from '@angular/common/http';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 import { baseUrl } from '../../../utils/constants';
+import { MatDatepickerInputEvent } from '@angular/material/datepicker';
+import { Moment } from "moment";
 
 @Component({
   selector: 'app-event-dialog',
@@ -13,6 +15,8 @@ export class EventDialogComponent implements OnInit {
 
   showSpinner: boolean;
   model: EventEntity = new EventEntity();
+  startDate: Moment;
+  endDate: Moment;
 
   constructor(public dialogRef: MatDialogRef<EventDialogComponent>,
     @Inject(MAT_DIALOG_DATA) public data: number, private http: HttpClient) { }
@@ -59,5 +63,32 @@ export class EventDialogComponent implements OnInit {
   onClickCancel() {
 
     this.dialogRef.close();
+  }
+
+  onChangeStartDate(event: MatDatepickerInputEvent<Date>) {
+
+    this.model.StartDate = this.startDate.toDate();
+    this.calculateDuration();
+  }
+
+  onChangeEndDate(event: MatDatepickerInputEvent<Date>) {
+    
+    this.model.EndDate = this.endDate.toDate();
+    this.calculateDuration();
+  }
+
+  onChangeStartTime() {
+
+    this.calculateDuration();
+  }
+
+  onChangeEndTime() {
+    
+    this.calculateDuration();
+  }
+
+  calculateDuration() {
+
+    console.log(1);
   }
 }
