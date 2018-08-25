@@ -44,7 +44,7 @@
       <ng-container matColumnDef="IsActive">
         <th mat-header-cell class="default-column" *matHeaderCellDef> Is Active </th>
         <td mat-cell class="default-column" *matCellDef="let element">
-          <mat-checkbox color="primary" [(ngModel)]="element.IsActive"></mat-checkbox>
+          <mat-checkbox color="primary" [(ngModel)]="element.IsActive" (click)="onClickIsActive(element)"></mat-checkbox>
         </td>
       </ng-container>
 
