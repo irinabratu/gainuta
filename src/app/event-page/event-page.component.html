@@ -33,10 +33,7 @@
       {{ event.Description }}
     </div>
     <div class="col-md-1">
-      <!--{{ event.EndDate.getHours() - event.StartDate.getHours() }}:{{
- (event.EndDate.getMinutes() - event.StartDate.getMinutes()) < 10 ?
-                '0' + (event.EndDate.getMinutes() - event.StartDate.getMinutes()) : (event.EndDate.getMinutes() - event.StartDate.getMinutes())
-      }}-->
+      {{ event.Duration }}
     </div>
     <div class="col-md-2">
       {{ event.Address }}
@@ -51,3 +48,6 @@
     0 events found.
   </div>
 </div>
+
+<div id="preFooter"></div>
+<progress-spinner [show]="showSpinner"></progress-spinner>

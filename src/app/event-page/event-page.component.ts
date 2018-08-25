@@ -2,6 +2,7 @@ import { Component, OnInit, Inject } from '@angular/core';
 import { baseUrl } from '../../utils/constants';
 import { EventEntity } from '../../model/EventEntity';
 import { HttpClient } from '@angular/common/http';
+import { AlertMessageService } from '../shared/alert-message/alert-message.service';
 
 @Component({
   selector: 'event-page',
@@ -12,8 +13,9 @@ import { HttpClient } from '@angular/common/http';
 export class EventPageComponent implements OnInit {
 
   events: EventEntity[];
+  showSpinner: boolean;
 
-  constructor(private http: HttpClient) {
+  constructor(private http: HttpClient, private alertMessageService: AlertMessageService) {
 
     this.events = new Array<EventEntity>();
   }
@@ -24,14 +26,18 @@ export class EventPageComponent implements OnInit {
   }
 
   fetchEvents() {
-    console.log(1);
+
+    this.showSpinner = true;
+    
     this.http.get(baseUrl + 'Events/GetActive')
       .subscribe(data => {
-
+        
         this.events = data as EventEntity[];
+        this.showSpinner = false;
       }, error => {
 
-        console.log(error);
+        this.showSpinner = false;
+        this.alertMessageService.error(error.message);
       });
   }
 }
