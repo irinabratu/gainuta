@@ -12,7 +12,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatTableModule, MatSortModule, MatPaginatorModule, MatProgressSpinnerModule } from "@angular/material";
 import { MatFormFieldModule, MatInputModule, MatDialogModule, MatCheckboxModule } from '@angular/material';
-import { MatDatepickerModule, MatNativeDateModule } from '@angular/material';
+import { MatDatepickerModule, MatNativeDateModule, MatExpansionModule } from '@angular/material';
 import { MatMomentDateModule } from '@angular/material-moment-adapter';
 
 //import {
@@ -86,7 +86,7 @@ import { LoginPageComponent } from './login-page/login-page.component';
 import { ForgotPasswordPageComponent } from './forgot-password-page/forgot-password-page.component';
 import { EditEventComponent } from './edit-event/edit-event.component';
 import { EventDialogComponent } from './edit-event/event-dialog/event-dialog.component';
-import { PortfoliPageComponent } from './portfoli-page/portfoli-page.component';
+import { PortfolioPageComponent } from './portfolio-page/portfolio-page.component';
 import { EditPortfolioComponent } from './edit-portfolio/edit-portfolio.component';
 
 const appRoutes: Routes = [
@@ -106,7 +106,7 @@ const appRoutes: Routes = [
   { path: 'messages', component: MessagesPageComponent },
   { path: 'login', component: LoginPageComponent },
   { path: 'forgotpassword', component: ForgotPasswordPageComponent },
-  { path: 'portfolio', component: PortfoliPageComponent },
+  { path: 'portfolio', component: PortfolioPageComponent },
   { path: 'edit-portfolio', component: EditPortfolioComponent },
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: '**', component: NotfoundPageComponent }
@@ -149,7 +149,7 @@ const appRoutes: Routes = [
     ForgotPasswordPageComponent,
     EditEventComponent,
     EventDialogComponent,
-    PortfoliPageComponent,
+    PortfolioPageComponent,
     EditPortfolioComponent
   ],
   imports: [
@@ -163,7 +163,7 @@ const appRoutes: Routes = [
     SlideshowModule,
     MatDialogModule, MatFormFieldModule, MatInputModule, MatCheckboxModule, MatButtonModule,
     MatCardModule, MatTableModule, MatSortModule, MatPaginatorModule, MatProgressSpinnerModule,
-    MatDatepickerModule, MatNativeDateModule, MatMomentDateModule
+    MatDatepickerModule, MatNativeDateModule, MatMomentDateModule, MatExpansionModule
   ],
   providers: [
     MessageService,

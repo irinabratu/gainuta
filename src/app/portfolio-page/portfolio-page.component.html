@@ -1,0 +1,59 @@
+<div class="container">
+  <div class="row first-row">
+    <span class="page-title">Portfolio</span>
+  </div>
+
+  <div class="row">
+      <mat-expansion-panel class="demo-expansion-width" #myPanel1 (afterExpand)="addEvent('afterExpand')" (afterCollapse)="addEvent('afterCollapse')">
+        <mat-expansion-panel-header [expandedHeight]="expandedHeight" [collapsedHeight]="collapsedHeight">
+          <mat-panel-description>This is a panel description.</mat-panel-description>
+          <mat-panel-title>Fisrt Panel Title</mat-panel-title>
+        </mat-expansion-panel-header>
+
+        <ng-template matExpansionPanelContent>
+          This is the content text that makes sense here.
+        </ng-template>
+
+        <mat-action-row>
+          <button mat-button (click)="myPanel1.expanded = false">Close</button>
+        </mat-action-row>
+      </mat-expansion-panel>
+  </div>
+  
+  <div class="row panel-padding">
+    <mat-expansion-panel class="demo-expansion-width" #myPanel2 (afterExpand)="addEvent('afterExpand')" (afterCollapse)="addEvent('afterCollapse')">
+      <mat-expansion-panel-header [expandedHeight]="expandedHeight" [collapsedHeight]="collapsedHeight">
+        <mat-panel-description>This is a panel description.</mat-panel-description>
+        <mat-panel-title>Second Panel Title</mat-panel-title>
+      </mat-expansion-panel-header>
+
+      <ng-template matExpansionPanelContent>
+        This is the content text that makes sense here.
+      </ng-template>
+
+      <mat-action-row>
+        <button mat-button (click)="myPanel2.expanded = false">Close</button>
+      </mat-action-row>
+    </mat-expansion-panel>
+  </div>
+
+  <div class="row panel-padding">
+    <mat-expansion-panel class="demo-expansion-width" #myPanel3 (afterExpand)="addEvent('afterExpand')" (afterCollapse)="addEvent('afterCollapse')">
+      <mat-expansion-panel-header [expandedHeight]="expandedHeight" [collapsedHeight]="collapsedHeight">
+        <mat-panel-description>This is a panel description.</mat-panel-description>
+        <mat-panel-title>Third Panel Title</mat-panel-title>
+      </mat-expansion-panel-header>
+
+      <ng-template matExpansionPanelContent>
+        This is the content text that makes sense here.
+      </ng-template>
+
+      <mat-action-row>
+        <button mat-button (click)="myPanel3.expanded = false">Close</button>
+      </mat-action-row>
+    </mat-expansion-panel>
+  </div>
+</div>
+
+<div id="preFooter"></div>
+<progress-spinner [show]="showSpinner"></progress-spinner>
