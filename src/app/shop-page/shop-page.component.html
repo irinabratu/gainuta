@@ -1,32 +1,24 @@
 <div class="container">
   <div class="row first-row">
-    <span class="page-title">Spend your pesos here</span>
+    <span class="page-title">Spend your pesos here !</span>
   </div>
 
   <div class="row">
-    <div class="col-md-4" *ngFor="let item of products">
-      <div class="new-product-box">
+    <div class="col-md-6 col-s-6 col-xs-12 col-lg-4 product-repeated" *ngFor="let item of products">
+      <div class="col-md-12 new-product-box">
         <div class="new-image-box">
-          <div class="row new-product-image">
-            <div class="col-md-12">
-              <img src="{{item.ImageUrl}}" alt="{{item.Id}}" class="new-image-style" />
-            </div>
-          </div>
+          <img src="{{item.ImageUrl}}" alt="{{item.Id}}" class="new-image-style" />
         </div>
         <div class="new-product-info">
           <div class="new-product-des-title">
-            <div class="row new-product-title">
-              <div class="col-md-12">
+            <div class="new-product-title">
                 {{ item.Title }}
-              </div>
             </div>
-            <div class="row new-product-description">
-              <div class="col-md-12">
+            <div class="new-product-description">
                 {{ item.Description }}
-              </div>
             </div>
           </div>
-          <div class="row">
+          <div class="new-product-footer-group">
             <div class="col-md-4 new-product-footer">
               <span class="new-product-price">
                 <span>{{item.Price + ' RON'}}</span>
