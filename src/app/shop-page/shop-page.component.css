@@ -77,8 +77,15 @@
 
 .new-product-price {
   font-weight: bold;
+  font-size: 15px;
 }
 
-.new-product-footer  {
+.new-product-promo-price {
+  font-size: 16px;
+  font-weight: bolder;
+  color: #aa4c3c;
+}
+
+.new-product-footer {
   padding-top: 10px;
 }
