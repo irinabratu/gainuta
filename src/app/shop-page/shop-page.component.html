@@ -8,6 +8,9 @@
       <div class="col-md-12 new-product-box">
         <div class="new-image-box">
           <img src="{{item.ImageUrl}}" alt="{{item.Id}}" class="new-image-style" />
+          <span class="new-product-new">
+            {{ item.IsNew ? 'NEW' : ''}}
+          </span>
         </div>
         <div class="new-product-info">
           <div class="new-product-des-title">
@@ -25,8 +28,8 @@
               </span>
             </div>
             <div class="col-md-4 new-product-footer">
-              <span class="new-product-new">
-                {{ item.IsNew ? '(new)' : ''}}
+              <span class="new-product-promo-price">
+                <span>{{item.Price + ' RON'}}</span>
               </span>
             </div>
             <div class="col-md-4 new-product-footer">

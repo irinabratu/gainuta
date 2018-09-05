@@ -30,8 +30,15 @@
 }
 
 .new-product-des-title {
-  min-height: 65px;
+  height: 65px;
 }
+
+
+.new-product-new{
+  position: absolute;
+  margin: 18px 0px 0px -56px;
+}
+
 
 .new-product-title {
   font-size: 15px;
@@ -40,6 +47,8 @@
 
 .new-product-description {
   font-size: 13px;
+  max-height: 36px; 
+  overflow: hidden;
 }
 
 .new-product-footer {
@@ -47,7 +56,18 @@
 }
 
 .new-product-new {
-  color: red;
+  background-color: bisque;
+  -moz-border-radius: 70px; 
+  -webkit-border-radius: 70px; 
+  border-radius: 70px;
+  height: 50px;
+  width: 50px;
+  padding-left: 3px;
+  padding-top: 15px;
+  opacity: 0.9;
+  font-weight: bolder;
+  color: orangered;
+  letter-spacing: 2px;
 }
 
 .new-product-price {
