@@ -1,5 +1,5 @@
 .product-repeated {
-  padding-bottom: 20px;
+
 }
 
 .new-image-style {
@@ -10,6 +10,11 @@
 
 .new-product-box {
   width: 360px;
+  border:#fdf7f1;
+  border-style: solid;
+  border-width: 1px;
+  margin-bottom: 40px;
+  box-shadow: 3px 6px #f8f3ec;
 }
 
 .new-image-box {
