@@ -47,6 +47,13 @@
         </td>
       </ng-container>
 
+      <ng-container matColumnDef="OnSale">
+          <th mat-header-cell class="phone-column default-column" *matHeaderCellDef> On Sale </th>
+          <td mat-cell class="phone-column default-column" *matCellDef="let element">
+            <mat-checkbox color="primary" [(ngModel)]="element.OnSale" [disabled]="true"></mat-checkbox>
+          </td>
+        </ng-container>
+
       <ng-container matColumnDef="IsActive">
         <th mat-header-cell class="phone-column default-column" *matHeaderCellDef> Is Active </th>
         <td mat-cell class="phone-column default-column" *matCellDef="let element">

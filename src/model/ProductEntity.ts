@@ -4,6 +4,7 @@ export class ProductEntity {
   Description: string;
   IsActive: boolean;
   IsNew: boolean;
+  OnSale: boolean;
   Price: number;
   CreateDate: Date;
   UpdateDate: Date;

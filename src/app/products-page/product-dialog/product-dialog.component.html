@@ -43,6 +43,12 @@
         </div>
 
         <div class="form-group">
+            <mat-checkbox color="primary" [(ngModel)]="model.OnSale" name="OnSale">
+              <label>On Sale</label>
+            </mat-checkbox>
+          </div>
+
+        <div class="form-group">
           <mat-form-field>
             <input matInput placeholder="Price" [(ngModel)]="model.Price" name="Price">
           </mat-form-field>

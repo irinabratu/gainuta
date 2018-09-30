@@ -9,8 +9,11 @@
       <div class="col-md-12 new-product-box">
         <div class="new-image-box">
           <img src="{{item.ImageUrl}}" alt="{{item.Id}}" class="new-image-style" />
-          <span *ngIf="item.IsNew" class="new-product-new">
+          <!-- <span *ngIf="item.IsNew" class="new-product-new">
             {{ item.IsNew ? 'NEW' : ''}}
+          </span> -->
+          <span *ngIf="item.IsNew" class="new-product-sale">
+              {{ item.IsNew ? 'SALE' : ''}}
           </span>
         </div>
         <div class="new-product-info">
