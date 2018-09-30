@@ -17,7 +17,7 @@ export class ProductsListComponent implements OnInit {
 
   showSpinner: boolean;
   products: ProductEntity[];
-  displayedColumns: string[] = ['Actions', 'Title', 'Description', 'CreateDate', 'Price', 'IsNew', 'OnSale' 'IsActive'];
+  displayedColumns: string[] = ['Actions', 'Title', 'Description', 'CreateDate', 'Price', 'IsNew', 'OnSale', 'IsActive'];
 
   constructor(private http: HttpClient, private messageService: MessageService,
     private alertMessageService: AlertMessageService, private dialog: MatDialog) {
