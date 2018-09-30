@@ -1,14 +1,15 @@
 <div class="container">
   <div class="row first-row">
-    <span class="page-title">Spend your pesos here !</span>
+    <div class="col-sm-8 shop-welcome">Spend your pesos here !</div>
+    <!-- <div class="col-sm-4 shop-sort">Sort by</div> -->
   </div>
 
   <div class="row">
-    <div class="col-md-6 col-s-6 col-xs-12 col-lg-4 product-repeated" *ngFor="let item of products">
+    <div class="col-md-6 col-sm-6 col-xs-12 col-lg-4 product-repeated" *ngFor="let item of products">
       <div class="col-md-12 new-product-box">
         <div class="new-image-box">
           <img src="{{item.ImageUrl}}" alt="{{item.Id}}" class="new-image-style" />
-          <span class="new-product-new">
+          <span *ngIf="item.IsNew" class="new-product-new">
             {{ item.IsNew ? 'NEW' : ''}}
           </span>
         </div>
@@ -17,22 +18,23 @@
             <div class="new-product-title">
                 {{ item.Title }}
             </div>
-            <div class="new-product-description">
+            <!-- <div class="new-product-description">
                 {{ item.Description }}
-            </div>
+            </div> -->
           </div>
           <div class="new-product-footer-group">
-            <div class="col-md-4 new-product-footer">
+            <div class="new-product-footer prices-footer">
               <span class="new-product-price">
-                <span>{{item.Price + ' RON'}}</span>
+                <span class="old-price">{{item.Price + ' RON'}}</span>
+                <span class="new-price">{{item.Price + ' RON'}}</span>
               </span>
             </div>
-            <div class="col-md-4 new-product-footer">
+            <!-- <div class="col-xs-4 new-product-footer prices-footer">
               <span class="new-product-promo-price">
                 <span>{{item.Price + ' RON'}}</span>
               </span>
-            </div>
-            <div class="col-md-4 new-product-footer">
+            </div> -->
+            <div class="new-product-footer add-to-cart-footer">
               <button mat-raised-button type="submit" (click)="onClickAdd(item)" class="add-to-cart-btn">
                 <span class="glyphicon glyphicon-shopping-cart shopping-cart-icon"></span>
                 <span class="add-to-cart-btn-text">Add</span>

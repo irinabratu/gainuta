@@ -1,7 +1,3 @@
-.product-repeated {
-
-}
-
 .new-image-style {
   max-width: 100%;
   display: inline-block;
@@ -9,7 +5,7 @@
 }
 
 .new-product-box {
-  width: 360px;
+  height: 455px;
   border:#fdf7f1;
   border-style: solid;
   border-width: 1px;
@@ -22,6 +18,15 @@
   text-align: center;
 }
 
+.add-to-cart-footer {
+  padding-right: 4px;
+  padding-top: 6px;
+}
+
+.new-price {
+  padding-left: 15px;
+}
+
 .new-image-box:before
 {
     content: '';
@@ -30,14 +35,13 @@
     vertical-align: middle;
 }
 
-.new-product-info {
-  min-height: 120px;
-}
-
 .new-product-des-title {
-  height: 65px;
+  text-align: center;
+  height: 25px;
+  border-bottom:#fdf7f1;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
 }
-
 
 .new-product-new{
   position: absolute;
@@ -56,8 +60,9 @@
   overflow: hidden;
 }
 
-.new-product-footer {
-  padding-top: 10px;
+.new-product-footer-group {
+  padding-top: 3px;
+  text-align: center;
 }
 
 .new-product-new {
@@ -80,12 +85,35 @@
   font-size: 15px;
 }
 
-.new-product-promo-price {
-  font-size: 16px;
+.new-price {
+  font-size: 18px;
   font-weight: bolder;
   color: #aa4c3c;
 }
 
-.new-product-footer {
-  padding-top: 10px;
+.shopping-cart-icon {
+  padding-right: 4px;
+  padding-bottom: 4px;
+}
+
+.add-to-cart-btn-text {
+  font-family: Nunito Sans, sans-serif;
+}
+
+.old-price {
+  text-decoration: line-through;
+}
+
+.shop-welcome {
+  padding-left: 16px;
+  font-weight: bolder;
+  font-size: 20px;
+}
+
+.shop-sort {
+  font-size: 15px;
+}
+
+.first-row {
+  padding-bottom: 20px;
 }
