@@ -1,6 +1,6 @@
 # Gainuta
 
-Deployed: https://gainuta.firebaseapp.com
+Deployed: https://ainutagainuta.firebaseapp.com/home
 
 ## Features
 - Angular 6.1
